@@ -1,0 +1,17 @@
+[
+  {
+    "id": "natural-earth-coastline",
+    "title": "Natural Earth 1:10m Coastline (v5)",
+    "url": "https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-coastline/"
+  },
+  {
+    "id": "openfreemap",
+    "title": "OpenFreeMap Liberty basemap (OpenStreetMap data)",
+    "url": "https://openfreemap.org/"
+  },
+  {
+    "id": "aws-terrain-tiles",
+    "title": "Terrain Tiles on AWS Open Data (Mapzen/Tilezen)",
+    "url": "https://registry.opendata.aws/terrain-tiles/"
+  }
+]

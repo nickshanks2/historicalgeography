@@ -1,10 +1,10 @@
-import MapLoader from "@/components/MapLoader";
+import Explorer from "@/components/Explorer";
 
 export default function Home() {
   return (
-    <main className="h-dvh w-full">
+    <main>
       <h1 className="sr-only">HistoricalGeography.io: Santa Monica Bay</h1>
-      <MapLoader />
+      <Explorer />
     </main>
   );
 }

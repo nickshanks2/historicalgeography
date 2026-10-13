@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import {
@@ -10,9 +10,22 @@ import {
   TERRAIN_EXAGGERATION,
   TERRAIN_TILES_URL,
 } from "@/config/map";
+import {
+  DEFAULT_ERA_ID,
+  ERAS,
+  PLACEHOLDER_COASTLINE_URL,
+} from "@/config/eras";
 
-export default function Map() {
+const coastlineLayerId = (eraId: string) => `era-coastline-${eraId}`;
+
+type MapProps = {
+  eraId: string;
+};
+
+export default function Map({ eraId }: MapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<maplibregl.Map | null>(null);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -26,7 +39,9 @@ export default function Map() {
       style: BASEMAP_STYLE_URL,
       ...INITIAL_VIEW,
       maxPitch: 75,
+      attributionControl: { compact: true },
     });
+    mapRef.current = map;
 
     map.addControl(
       new maplibregl.NavigationControl({ visualizePitch: true }),
@@ -69,10 +84,52 @@ export default function Map() {
         }),
         "top-right",
       );
+
+      map.addSource("era-coastline", {
+        type: "geojson",
+        data: PLACEHOLDER_COASTLINE_URL,
+        attribution: "Made with Natural Earth",
+      });
+      // One layer per era, shown one at a time. (Toggling visibility rather
+      // than changing paint, which terrain's draped-layer cache ignores.)
+      for (const era of ERAS) {
+        map.addLayer({
+          id: coastlineLayerId(era.id),
+          type: "line",
+          source: "era-coastline",
+          layout: {
+            "line-cap": "round",
+            "line-join": "round",
+            visibility: era.id === DEFAULT_ERA_ID ? "visible" : "none",
+          },
+          paint: {
+            "line-color": era.color,
+            "line-width": ["interpolate", ["linear"], ["zoom"], 8, 3, 14, 6],
+          },
+        });
+      }
+
+      setLoaded(true);
     });
 
-    return () => map.remove();
+    return () => {
+      mapRef.current = null;
+      map.remove();
+    };
   }, []);
+
+  useEffect(() => {
+    if (!loaded) return;
+    const map = mapRef.current;
+    if (!map) return;
+    for (const era of ERAS) {
+      map.setLayoutProperty(
+        coastlineLayerId(era.id),
+        "visibility",
+        era.id === eraId ? "visible" : "none",
+      );
+    }
+  }, [eraId, loaded]);
 
   return <div ref={containerRef} className="h-full w-full" />;
 }
