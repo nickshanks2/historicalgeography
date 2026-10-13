@@ -9,10 +9,16 @@ import { INITIAL_VIEW, MODERN_STYLE_URL, TERRAIN_EXAGGERATION } from "@/config/m
 import { type FeatureInfo, toFeatureInfo } from "@/map/featureInfo";
 import { STYLE_IMAGE_PIXEL_RATIO, makeStyleImage } from "@/map/patterns";
 import { INSPECTABLE_LAYER_PREFIX, buildModernStyle, buildPastStyle } from "@/map/styles";
+import { type SpotHistory, spotHistory } from "@/map/throughTime";
+
+export type Tap = { feature: FeatureInfo | null; history: SpotHistory };
+
+export type FlyTarget = { center: [number, number]; zoom: number; id: number };
 
 type MapProps = {
   era: Era;
-  onInspect: (feature: FeatureInfo | null) => void;
+  onTap: (tap: Tap) => void;
+  flyTo: FlyTarget | null;
 };
 
 const TAP_TOLERANCE_PX = 10;
@@ -31,6 +37,26 @@ function tapPriority(feature: maplibregl.MapGeoJSONFeature) {
   return landmark + (GEOMETRY_PRIORITY[feature.geometry.type] ?? 3);
 }
 
+/**
+ * The camera from a shared link (#view=zoom/lat/lng/bearing/pitch), read once
+ * on first load: removing a map clears the hash, which would lose it if the
+ * map is ever created twice.
+ */
+let sharedView: Partial<maplibregl.CameraOptions> | null | undefined;
+function viewFromUrl() {
+  if (sharedView !== undefined) return sharedView;
+  const m = window.location.hash.match(/view=([-\d.]+)\/([-\d.]+)\/([-\d.]+)(?:\/([-\d.]+))?(?:\/([-\d.]+))?/);
+  sharedView = m
+    ? {
+        zoom: Number(m[1]),
+        center: [Number(m[3]), Number(m[2])],
+        bearing: Number(m[4] ?? 0),
+        pitch: Number(m[5] ?? 0),
+      }
+    : null;
+  return sharedView;
+}
+
 let modernBase: Promise<maplibregl.StyleSpecification> | null = null;
 function loadModernBase() {
   modernBase ??= fetch(MODERN_STYLE_URL).then((res) => {
@@ -40,16 +66,16 @@ function loadModernBase() {
   return modernBase;
 }
 
-export default function Map({ era, onInspect }: MapProps) {
+export default function Map({ era, onTap, flyTo }: MapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const terrainOnRef = useRef(true);
-  const onInspectRef = useRef(onInspect);
+  const onTapRef = useRef(onTap);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    onInspectRef.current = onInspect;
-  }, [onInspect]);
+    onTapRef.current = onTap;
+  }, [onTap]);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -65,7 +91,13 @@ export default function Map({ era, onInspect }: MapProps) {
       container: containerRef.current,
       style: { version: 8, sources: {}, layers: [] },
       ...INITIAL_VIEW,
-      maxPitch: 75,
+      ...viewFromUrl(),
+      // Look out toward the horizon, not just down at the ground.
+      maxPitch: 85,
+      maxZoom: 19,
+      // Keep the camera in the URL (#view=zoom/lat/lng/bearing/pitch) so a
+      // place can be shared, bookmarked or cited.
+      hash: "view",
       attributionControl: { compact: true },
     });
     mapRef.current = map;
@@ -128,7 +160,10 @@ export default function Map({ era, onInspect }: MapProps) {
         )
         .map((feature, order) => ({ feature, order }))
         .sort((a, b) => tapPriority(a.feature) - tapPriority(b.feature) || a.order - b.order);
-      onInspectRef.current(hits.length ? toFeatureInfo(hits[0].feature.properties) : null);
+      onTapRef.current({
+        feature: hits.length ? toFeatureInfo(hits[0].feature.properties) : null,
+        history: spotHistory(map, e.lngLat),
+      });
     });
 
     setReady(true);
@@ -157,6 +192,17 @@ export default function Map({ era, onInspect }: MapProps) {
       cancelled = true;
     };
   }, [era, ready]);
+
+  useEffect(() => {
+    if (!ready || !flyTo) return;
+    mapRef.current?.flyTo({
+      center: flyTo.center,
+      zoom: flyTo.zoom,
+      pitch: Math.min(mapRef.current.getPitch(), 60),
+      duration: 2500,
+      essential: true,
+    });
+  }, [flyTo, ready]);
 
   return <div ref={containerRef} className="h-full w-full" />;
 }

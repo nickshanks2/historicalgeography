@@ -6,6 +6,10 @@ Interactive map that shows what real places looked like centuries ago. Users dra
 
 Pilot region: Santa Monica Bay, from the Santa Monica Mountains to the Ballona wetlands and Baldwin Hills.
 
+Purpose: let anyone see what the ground they stand on looked like in each era, for personal, professional and research use. It must be as engaging as it is informative, and accuracy wins: more sourced detail is always better than more decoration.
+
+Core interactions: drag the time slider (or press `[` / `]`); tap anywhere for "this spot through time" (what the data records there in every era, with sources); search places, addresses and historical names; share or cite a view by link (`?era=1850#view=zoom/lat/lng/bearing/pitch`).
+
 Long-term goal: a fully navigable, Google-Earth-like 3D model with renderings for every era. The current 2.5D MapLibre map is the beta; keep data and styling choices compatible with that direction (time-ranged 3D-ready geometry, sourced heights where available).
 
 ## Eras

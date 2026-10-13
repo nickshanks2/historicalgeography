@@ -5,6 +5,7 @@ import type {
   ExpressionSpecification,
   FilterSpecification,
   LayerSpecification,
+  SkySpecification,
   SourceSpecification,
   StyleSpecification,
 } from "maplibre-gl";
@@ -449,6 +450,34 @@ function builtLayers(year: number): LayerSpecification[] {
   ];
 }
 
+/** Sky and distance haze, so a tilted view reads as a landscape to the horizon. */
+const SKY: Record<Era["style"], SkySpecification> = {
+  painted: {
+    "sky-color": "#bcd3db",
+    "horizon-color": "#efe4cc",
+    "fog-color": "#efe4cc",
+    "sky-horizon-blend": 0.7,
+    "horizon-fog-blend": 0.6,
+    "fog-ground-blend": 0.75,
+  },
+  built: {
+    "sky-color": "#c9dbe4",
+    "horizon-color": "#f2eee6",
+    "fog-color": "#f2eee6",
+    "sky-horizon-blend": 0.7,
+    "horizon-fog-blend": 0.6,
+    "fog-ground-blend": 0.8,
+  },
+  modern: {
+    "sky-color": "#9cc8eb",
+    "horizon-color": "#e6eef4",
+    "fog-color": "#e6eef4",
+    "sky-horizon-blend": 0.6,
+    "horizon-fog-blend": 0.6,
+    "fog-ground-blend": 0.85,
+  },
+};
+
 function withTerrain(style: StyleSpecification, terrainOn: boolean): StyleSpecification {
   const withSources = { ...style, sources: { ...style.sources, ...terrainSources() } };
   return terrainOn
@@ -468,22 +497,39 @@ export function buildPastStyle(era: Era, terrainOn: boolean): StyleSpecification
         "{$1}",
       ),
       sources: datasetSources(),
+      sky: SKY[era.style],
       layers: withSourceLayers(era.style === "painted" ? paintedLayers(year) : builtLayers(year)),
     },
     terrainOn,
   );
 }
 
+/**
+ * Invisible layers that make MapLibre load our datasets in the Today era,
+ * so "this spot through time" can read them.
+ */
+function probeLayers(): LayerSpecification[] {
+  return withSourceLayers(
+    (["landscape", "built"] as const).map((source) => ({
+      id: `probe-${source}`,
+      type: "fill" as const,
+      source,
+      paint: { "fill-opacity": 0 },
+    })),
+  );
+}
+
 /** The modern basemap with our terrain and hillshade added. */
 export function buildModernStyle(base: StyleSpecification, terrainOn: boolean): StyleSpecification {
   const firstSymbol = base.layers.findIndex((layer) => layer.type === "symbol");
-  const layers = [...base.layers];
+  const layers = [...probeLayers(), ...base.layers];
   layers.splice(
-    firstSymbol === -1 ? layers.length : firstSymbol,
+    firstSymbol === -1 ? layers.length : firstSymbol + 2,
     0,
     hillshade("#000000", "#ffffff", "#000000", 0.4),
   );
-  return withTerrain({ ...base, layers }, terrainOn);
+  const sources = { ...base.sources, ...datasetSources() };
+  return withTerrain({ ...base, sources, layers, sky: SKY.modern }, terrainOn);
 }
 
 /** Feature types each era style draws, for the legend. */

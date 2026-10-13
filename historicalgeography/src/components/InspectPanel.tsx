@@ -1,6 +1,7 @@
-import { CONFIDENCE_LABELS } from "@/config/eras";
+import { CONFIDENCE_LABELS, type Era } from "@/config/eras";
 import { TYPE_LABELS } from "@/map/featureTypes";
 import type { FeatureInfo } from "@/map/featureInfo";
+import { type SpotHistory, spotLabel } from "@/map/throughTime";
 import sources from "../../data/sources.json";
 
 type Source = { id: string; title: string; url: string | null };
@@ -20,9 +21,7 @@ function dateRange(f: FeatureInfo) {
   return "Present in every era shown";
 }
 
-type InspectPanelProps = { feature: FeatureInfo; onClose: () => void };
-
-export default function InspectPanel({ feature, onClose }: InspectPanelProps) {
+function FeatureDetails({ feature }: { feature: FeatureInfo }) {
   const typeLabel = TYPE_LABELS[feature.type] ?? feature.type;
   const title = feature.name_tongva ?? feature.name ?? feature.name_spanish ?? typeLabel;
   const otherNames = [
@@ -31,34 +30,17 @@ export default function InspectPanel({ feature, onClose }: InspectPanelProps) {
   ].filter(Boolean);
 
   return (
-    <section
-      aria-label="Feature details"
-      className="absolute inset-x-0 bottom-0 z-10 max-h-[55%] overflow-y-auto rounded-t-2xl bg-white px-4 pt-3 pb-4 shadow-[0_-4px_16px_rgba(0,0,0,0.15)]"
-    >
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <h2 className="text-lg leading-tight font-semibold">{title}</h2>
-          {otherNames.length > 0 && (
-            <p className="text-sm text-stone-600">{otherNames.join(" · ")}</p>
-          )}
-          {title !== typeLabel && <p className="text-sm text-stone-500">{typeLabel}</p>}
-          {feature.subtype && feature.subtype !== title && (
-            <p className="text-sm text-stone-500">{feature.subtype}</p>
-          )}
-        </div>
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close details"
-          className="-mt-1 -mr-2 flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-2xl text-stone-500"
-        >
-          ×
-        </button>
-      </div>
+    <>
+      <h2 className="text-lg leading-tight font-semibold">{title}</h2>
+      {otherNames.length > 0 && <p className="text-sm text-stone-600">{otherNames.join(" · ")}</p>}
+      {title !== typeLabel && <p className="text-sm text-stone-500">{typeLabel}</p>}
+      {feature.subtype && feature.subtype !== title && (
+        <p className="text-sm text-stone-500">{feature.subtype}</p>
+      )}
 
       {feature.sample && (
         <p className="mt-2 rounded bg-amber-100 px-2 py-1 text-sm text-amber-900">
-          Sample for style review: the shape and dates are placeholders, not historical data.
+          Placeholder: the shape and dates are not yet from a historical source.
         </p>
       )}
 
@@ -84,12 +66,7 @@ export default function InspectPanel({ feature, onClose }: InspectPanelProps) {
           return (
             <li key={id}>
               {source.url ? (
-                <a
-                  href={source.url}
-                  target="_blank"
-                  rel="noopener"
-                  className="text-blue-800 underline"
-                >
+                <a href={source.url} target="_blank" rel="noopener" className="text-blue-800 underline">
                   {source.title}
                 </a>
               ) : (
@@ -99,6 +76,91 @@ export default function InspectPanel({ feature, onClose }: InspectPanelProps) {
           );
         })}
       </ul>
+    </>
+  );
+}
+
+function ThroughTime({
+  history,
+  currentEra,
+  onEra,
+}: {
+  history: SpotHistory;
+  currentEra: Era;
+  onEra: (eraId: string) => void;
+}) {
+  const { lng, lat } = history.lngLat;
+  return (
+    <>
+      <h2 className="text-base leading-tight font-semibold">This spot through time</h2>
+      <p className="text-xs text-stone-500">
+        {lat.toFixed(5)}, {lng.toFixed(5)} · tap an era to see it
+      </p>
+      <ol className="mt-2 space-y-0.5 text-sm">
+        {history.eras.map(({ era, features }) => {
+          const current = era.id === currentEra.id;
+          return (
+            <li key={era.id}>
+              <button
+                type="button"
+                onClick={() => onEra(era.id)}
+                aria-current={current ? "true" : undefined}
+                className={`flex w-full gap-3 rounded-md px-2 py-1.5 text-left ${
+                  current ? "bg-stone-100" : "hover:bg-stone-50"
+                }`}
+              >
+                <span className={`w-12 shrink-0 ${current ? "font-bold" : "text-stone-500"}`}>
+                  {era.label}
+                </span>
+                <span className={features.length ? "" : "text-stone-400"}>
+                  {features.length
+                    ? features.map((f) => spotLabel(f) + (f.info.sample ? "*" : "")).join(" · ")
+                    : era.style === "modern"
+                      ? "See the modern map"
+                      : "Nothing recorded here yet"}
+                </span>
+              </button>
+            </li>
+          );
+        })}
+      </ol>
+      {history.eras.some((e) => e.features.some((f) => f.info.sample)) && (
+        <p className="mt-1 text-xs text-stone-500">* placeholder, not yet from a source</p>
+      )}
+    </>
+  );
+}
+
+type InspectPanelProps = {
+  feature: FeatureInfo | null;
+  history: SpotHistory | null;
+  era: Era;
+  onEra: (eraId: string) => void;
+  onClose: () => void;
+};
+
+export default function InspectPanel({ feature, history, era, onEra, onClose }: InspectPanelProps) {
+  return (
+    <section
+      aria-label="Feature details"
+      className="absolute inset-x-0 bottom-0 z-10 max-h-[60%] overflow-y-auto rounded-t-2xl bg-white px-4 pt-3 pb-4 shadow-[0_-4px_16px_rgba(0,0,0,0.15)]"
+    >
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label="Close details"
+        className="absolute top-2 right-2 flex h-11 w-11 items-center justify-center rounded-full text-2xl text-stone-500"
+      >
+        ×
+      </button>
+      <div className="pr-10">
+        {feature && <FeatureDetails feature={feature} />}
+        {history && (
+          <div className={feature ? "mt-4 border-t border-stone-200 pt-3" : ""}>
+            <ThroughTime history={history} currentEra={era} onEra={onEra} />
+          </div>
+        )}
+      </div>
     </section>
   );
 }
