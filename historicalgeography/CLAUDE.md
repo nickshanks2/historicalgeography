@@ -6,6 +6,8 @@ Interactive map that shows what real places looked like centuries ago. Users dra
 
 Pilot region: Santa Monica Bay, from the Santa Monica Mountains to the Ballona wetlands and Baldwin Hills.
 
+Long-term goal: a fully navigable, Google-Earth-like 3D model with renderings for every era. The current 2.5D MapLibre map is the beta; keep data and styling choices compatible with that direction (time-ranged 3D-ready geometry, sourced heights where available).
+
 ## Eras
 
 | id | Label | Year | Confidence | Map style |
@@ -67,16 +69,21 @@ Every feature carries:
 - `confidence`: `documented` | `inferred` | `modeled`
 - `source_ids`: list of ids from `data/sources.json`
 - `sample` (optional boolean): placeholder geometry for style review only. Sample features are always labelled as samples in the UI and must be replaced by sourced data before launch.
+- `subtype` (optional): the source's finer class, e.g. "Valley Freshwater Marsh"
+- `observed_year` (optional): year the source map, survey or photo recorded the feature
+- `source_note` (optional): how the source mapped it, e.g. "Mapped from: Tsheet Chase 1867."
+
+Natural features with no known end date are kept until 1900 or the year after their source last recorded them, whichever is later, and marked `end_approx`. Phases 3 and 4 refine this from later maps.
 
 Feature types:
 
-- Land cover (polygons): `water`, `wetland`, `salt_marsh`, `dune`, `beach`, `coastal_sage_scrub`, `chaparral`, `grassland`, `oak_woodland`, `riparian`, `open_field`
-- Water lines: `coastline`, `river`, `creek`
+- Land cover (polygons): `water`, `wetland`, `salt_marsh`, `flat` (salt or tidal flat), `dune`, `beach`, `coastal_sage_scrub`, `chaparral`, `grassland`, `oak_woodland`, `riparian`, `open_field`, `ocean`
+- Water: `coastline`, `river`, `creek` (lines), `spring` (point)
 - People and places: `village` (point), `trail` (line), `rancho` (polygon), `adobe` (point)
 - Built: `street`, `building`, `pier`, `rail`, `streetcar`, `park`
 - Orientation: `landmark` (in `data/landmarks.geojson`, shown only in past eras)
 
-Canonical datasets live in `data/` (GeoJSON) and are copied or tiled into `public/data/` at build time; never edit generated files in `public/data/`.
+Canonical datasets live in `data/` (GeoJSON). The landscape is built by `pipeline/build_landscape.py` into `data/features/landscape.geojson` and `data/tiles/landscape.pmtiles`; `scripts/prepare-public.mjs` copies what the map loads into `public/data/` at build time. Never edit generated files in `public/data/`. See `pipeline/README.md` for running the pipeline.
 
 ## Pages
 

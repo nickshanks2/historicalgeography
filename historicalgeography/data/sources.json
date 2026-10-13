@@ -23,5 +23,100 @@
     "id": "style-sample",
     "title": "Sample shape for style review only: not historical data. Replaced by sourced data in Phase 2.",
     "url": null
+  },
+  {
+    "id": "noaa-T-01153",
+    "title": "NOAA T-sheet T-01153 (1870): Sea Coast From Pt. Fermin to Pt. St. Vincente, CA",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-01153.zip"
+  },
+  {
+    "id": "noaa-T-01231",
+    "title": "NOAA T-sheet T-01231 (1871): Point St. Vincent Northwards, CA",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-01231.zip"
+  },
+  {
+    "id": "noaa-T-01427",
+    "title": "NOAA T-sheet T-01427 (1876): Topography Of Vicinity Of Santa Monica Cal., CA",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-01427.zip"
+  },
+  {
+    "id": "noaa-T-01432A",
+    "title": "NOAA T-sheet T-01432A (1876): Coast of California, CA",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-01432A.zip"
+  },
+  {
+    "id": "noaa-T-01432B",
+    "title": "NOAA T-sheet T-01432B (1876): W. Beach Control Pt. To Vicinity of Santa Monica, CA",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-01432B.zip"
+  },
+  {
+    "id": "noaa-T-03819",
+    "title": "NOAA T-sheet T-03819 (1920): Long Beach and Vicinity, California",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-03819.zip"
+  },
+  {
+    "id": "noaa-T-03820",
+    "title": "NOAA T-sheet T-03820 (1920): West Long Beach to Pt. Fermin, California",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-03820.zip"
+  },
+  {
+    "id": "noaa-T-04825",
+    "title": "NOAA T-sheet T-04825 (1933): Point Fermin to Point Vicente, California",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-04825.zip"
+  },
+  {
+    "id": "noaa-T-04826",
+    "title": "NOAA T-sheet T-04826 (1933): Point Vicente to Redondo Beach, California",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-04826.zip"
+  },
+  {
+    "id": "noaa-T-04827A",
+    "title": "NOAA T-sheet T-04827A (1933): Redondo Beach to Playa del Rey, California",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-04827A.zip"
+  },
+  {
+    "id": "noaa-T-04827B",
+    "title": "NOAA T-sheet T-04827B (1933): Redondo Beach to Playa del Rey, California",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-04827B.zip"
+  },
+  {
+    "id": "noaa-T-04828",
+    "title": "NOAA T-sheet T-04828 (1933): Vicinity of Santa Monica, California",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-04828.zip"
+  },
+  {
+    "id": "noaa-T-04829",
+    "title": "NOAA T-sheet T-04829 (1933): Pacific Palisades to Malibu Beach, California",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-04829.zip"
+  },
+  {
+    "id": "noaa-T-04830",
+    "title": "NOAA T-sheet T-04830 (1933): Malibu Beach to Point Dume, California",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-04830.zip"
+  },
+  {
+    "id": "noaa-T-04831",
+    "title": "NOAA T-sheet T-04831 (1933): Point Dume to Arroyo Sequit, California",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-04831.zip"
+  },
+  {
+    "id": "noaa-T-04832",
+    "title": "NOAA T-sheet T-04832 (1933): Arroyo Sequit to Sycamore Creek, California",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-04832.zip"
+  },
+  {
+    "id": "ballona-he",
+    "title": "Dark, Stein et al. (2011), Historical Ecology of the Ballona Creek Watershed, SCCWRP Technical Report 671: GIS habitat, channel and spring layers",
+    "url": "https://ballonahe.org/"
+  },
+  {
+    "id": "landfire-bps",
+    "title": "LANDFIRE Biophysical Settings (LF 2020, CONUS), USGS / USDA Forest Service",
+    "url": "https://landfire.gov/vegetation/bps"
+  },
+  {
+    "id": "usgs-nhd",
+    "title": "USGS National Hydrography Dataset, HU8 18070104 (Santa Monica Bay)",
+    "url": "https://www.usgs.gov/national-hydrography/national-hydrography-dataset"
   }
 ]

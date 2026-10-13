@@ -1,0 +1,8 @@
+# Python + GDAL pipeline (GDAL comes bundled in the pyogrio and rasterio wheels).
+# Also needs mdbtools for NOAA's .mdb files: apt-get install mdbtools
+numpy>=2
+pyogrio>=0.11
+rasterio>=1.4
+shapely>=2.1
+pyproj>=3.7
+mapbox-vector-tile>=2.1

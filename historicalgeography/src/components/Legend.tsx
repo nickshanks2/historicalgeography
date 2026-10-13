@@ -2,7 +2,7 @@
 
 import { useMemo, type ReactNode } from "react";
 import { type Era, eraYear } from "@/config/eras";
-import type { FeatureInfo } from "@/map/featureInfo";
+import type { FeatureSummary } from "@/map/useDatasets";
 import {
   BUILT,
   BUILT_LAND,
@@ -44,6 +44,7 @@ const BUILT_FILLS: Record<string, string> = {
 const ICONS: Record<string, string> = {
   village: "icon-village",
   adobe: "icon-adobe",
+  spring: "icon-spring",
   landmark: "icon-landmark",
 };
 
@@ -89,7 +90,7 @@ function Swatch({ style, type }: { style: "painted" | "built"; type: string }): 
   return <span className="h-5 w-7 shrink-0" />;
 }
 
-type LegendProps = { era: Era; features: FeatureInfo[]; onClose: () => void };
+type LegendProps = { era: Era; features: FeatureSummary[]; onClose: () => void };
 
 export default function Legend({ era, features, onClose }: LegendProps) {
   const items = useMemo(() => {

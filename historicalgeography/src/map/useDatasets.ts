@@ -1,26 +1,26 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { DATASETS } from "@/config/map";
-import type { FeatureInfo } from "./featureInfo";
+import { DATASET_SUMMARY_URL } from "@/config/map";
 
-type Dataset = { features: { properties: FeatureInfo }[] };
+/** One row per distinct (type, years, sample) across all datasets. */
+export type FeatureSummary = {
+  type: string;
+  start_year: number | null;
+  end_year: number | null;
+  sample: boolean;
+};
 
-/** All feature properties from our datasets (the map fetches the same URLs). */
-export function useDatasetFeatures(): FeatureInfo[] {
-  const [features, setFeatures] = useState<FeatureInfo[]>([]);
+/** What our datasets contain, for the legend and the sample notice. */
+export function useDatasetSummary(): FeatureSummary[] {
+  const [features, setFeatures] = useState<FeatureSummary[]>([]);
 
   useEffect(() => {
     let cancelled = false;
-    Promise.all(
-      Object.values(DATASETS).map((url) =>
-        fetch(url).then((res) => res.json() as Promise<Dataset>),
-      ),
-    )
-      .then((datasets) => {
-        if (!cancelled) {
-          setFeatures(datasets.flatMap((d) => d.features.map((f) => f.properties)));
-        }
+    fetch(DATASET_SUMMARY_URL)
+      .then((res) => res.json() as Promise<FeatureSummary[]>)
+      .then((rows) => {
+        if (!cancelled) setFeatures(rows);
       })
       .catch((err) => console.error(err));
     return () => {

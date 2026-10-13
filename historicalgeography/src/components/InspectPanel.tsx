@@ -42,6 +42,9 @@ export default function InspectPanel({ feature, onClose }: InspectPanelProps) {
             <p className="text-sm text-stone-600">{otherNames.join(" · ")}</p>
           )}
           {title !== typeLabel && <p className="text-sm text-stone-500">{typeLabel}</p>}
+          {feature.subtype && feature.subtype !== title && (
+            <p className="text-sm text-stone-500">{feature.subtype}</p>
+          )}
         </div>
         <button
           type="button"
@@ -62,9 +65,16 @@ export default function InspectPanel({ feature, onClose }: InspectPanelProps) {
       <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-sm">
         <dt className="text-stone-500">Dates</dt>
         <dd>{dateRange(feature)}</dd>
+        {feature.observed_year != null && (
+          <>
+            <dt className="text-stone-500">Recorded</dt>
+            <dd>{feature.observed_year}</dd>
+          </>
+        )}
         <dt className="text-stone-500">Confidence</dt>
         <dd>{CONFIDENCE_LABELS[feature.confidence] ?? feature.confidence}</dd>
       </dl>
+      {feature.source_note && <p className="mt-2 text-sm text-stone-600">{feature.source_note}</p>}
 
       <h3 className="mt-3 text-sm text-stone-500">Sources</h3>
       <ul className="mt-1 space-y-1 text-sm">

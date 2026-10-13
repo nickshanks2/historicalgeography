@@ -19,7 +19,7 @@ export default function EraCard({ era, showsSamples }: EraCardProps) {
       </p>
       {showsSamples && (
         <p className="mt-1 rounded bg-amber-100 px-1.5 py-0.5 text-[11px] leading-tight text-amber-900">
-          Style preview: sample shapes, not real data
+          Includes placeholder features, labelled when tapped
         </p>
       )}
     </div>

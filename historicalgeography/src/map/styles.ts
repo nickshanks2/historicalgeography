@@ -41,9 +41,10 @@ function terrainSources(): Record<string, SourceSpecification> {
 function datasetSources(): Record<string, SourceSpecification> {
   return {
     landscape: {
-      type: "geojson",
-      data: DATASETS.landscape,
-      attribution: "Made with Natural Earth",
+      type: "vector",
+      url: `pmtiles://${absolute(DATASETS.landscape)}`,
+      attribution:
+        "Ballona Historical Ecology Project · LANDFIRE · NOAA T-sheets · USGS NHD · Made with Natural Earth",
     },
     built: { type: "geojson", data: DATASETS.built },
     landmarks: {
@@ -52,6 +53,19 @@ function datasetSources(): Record<string, SourceSpecification> {
       attribution: "Landmarks © OpenStreetMap contributors",
     },
   };
+}
+
+function absolute(path: string) {
+  return new URL(path, window.location.origin).href;
+}
+
+/** Vector-tile layers need the tile layer name; ours matches the source. */
+function withSourceLayers(layers: LayerSpecification[]): LayerSpecification[] {
+  return layers.map((layer) =>
+    "source" in layer && layer.source === "landscape"
+      ? ({ ...layer, "source-layer": "landscape" } as LayerSpecification)
+      : layer,
+  );
 }
 
 function typeFilter(types: readonly string[], year: number): FilterSpecification {
@@ -287,7 +301,7 @@ function paintedLayers(year: number): LayerSpecification[] {
       id: "hg-places",
       type: "symbol",
       source: "landscape",
-      filter: typeFilter(["village", "adobe"], year),
+      filter: typeFilter(["village", "adobe", "spring"], year),
       layout: {
         "icon-image": ["concat", "icon-", ["get", "type"]],
         "icon-allow-overlap": true,
@@ -449,12 +463,12 @@ export function buildPastStyle(era: Era, terrainOn: boolean): StyleSpecification
     {
       version: 8,
       name: `era-${era.id}`,
-      glyphs: new URL(GLYPHS_URL, window.location.origin).href.replace(
+      glyphs: absolute(GLYPHS_URL).replace(
         /%7B(\w+)%7D/g,
         "{$1}",
       ),
       sources: datasetSources(),
-      layers: era.style === "painted" ? paintedLayers(year) : builtLayers(year),
+      layers: withSourceLayers(era.style === "painted" ? paintedLayers(year) : builtLayers(year)),
     },
     terrainOn,
   );
@@ -484,6 +498,7 @@ export const STYLE_TYPES: Record<"painted" | "built", readonly string[]> = {
     "rancho",
     "village",
     "adobe",
+    "spring",
     "landmark",
   ],
   built: [

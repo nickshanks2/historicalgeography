@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
+import { Protocol } from "pmtiles";
 import type { Era } from "@/config/eras";
 import { INITIAL_VIEW, MODERN_STYLE_URL, TERRAIN_EXAGGERATION } from "@/config/map";
 import { type FeatureInfo, toFeatureInfo } from "@/map/featureInfo";
@@ -56,6 +57,9 @@ export default function Map({ era, onInspect }: MapProps) {
     maplibregl.setWorkerUrl(
       new URL("/maplibre-gl-worker.mjs", window.location.origin).href,
     );
+    // Our vector tiles are single PMTiles files read with range requests.
+    const pmtiles = new Protocol();
+    maplibregl.addProtocol("pmtiles", pmtiles.tile);
 
     const map = new maplibregl.Map({
       container: containerRef.current,
@@ -131,6 +135,7 @@ export default function Map({ era, onInspect }: MapProps) {
     return () => {
       mapRef.current = null;
       map.remove();
+      maplibregl.removeProtocol("pmtiles");
     };
   }, []);
 

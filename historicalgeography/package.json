@@ -13,6 +13,7 @@
   "dependencies": {
     "maplibre-gl": "^6.14.0",
     "next": "16.4.0",
+    "pmtiles": "^4.5.0",
     "react": "19.3.0",
     "react-dom": "19.3.0"
   },

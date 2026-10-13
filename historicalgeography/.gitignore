@@ -43,3 +43,7 @@ next-env.d.ts
 # copied in by scripts/prepare-public.mjs at build time
 /public/maplibre-gl-worker.mjs
 /public/data/
+
+# raw source downloads (pipeline/fetch_sources.py)
+/pipeline/raw/
+__pycache__/

@@ -14,13 +14,16 @@ export const TERRAIN_EXAGGERATION = 1.5;
 // Self-hosted label fonts for our own era styles (see data/LICENSES.md).
 export const GLYPHS_URL = "/fonts/{fontstack}/{range}.pbf";
 
-// Time-ranged datasets, copied from data/ at build time.
+// Time-ranged datasets, copied from data/ at build time
+// (scripts/prepare-public.mjs). The landscape is vector tiles (PMTiles).
 export const DATASETS = {
-  landscape: "/data/features/landscape.geojson",
+  landscape: "/data/tiles/landscape.pmtiles",
   built: "/data/features/built.geojson",
   landmarks: "/data/landmarks.geojson",
 } as const;
-export type DatasetId = keyof typeof DATASETS;
+
+/** Type, years and sample flag of every feature, for the legend. */
+export const DATASET_SUMMARY_URL = "/data/summary.json";
 
 // Pilot region: Santa Monica Bay.
 export const INITIAL_VIEW = {

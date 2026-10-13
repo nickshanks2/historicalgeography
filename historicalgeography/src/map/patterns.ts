@@ -91,6 +91,18 @@ function landCoverPainter(type: LandCoverType | "ocean"): Painter {
           ctx.fill();
         });
       };
+    case "flat":
+      return (ctx, rand) => {
+        stroke(ctx, ink, 0.7, 0.5);
+        scatter(ctx, rand, 7, (x, y, r) => {
+          // Short cracked-mud strokes.
+          ctx.beginPath();
+          ctx.moveTo(x - 3, y);
+          ctx.lineTo(x, y + jitter(r, 1.5));
+          ctx.lineTo(x + 3, y + jitter(r, 1));
+          ctx.stroke();
+        });
+      };
     case "dune":
       return (ctx, rand) => {
         stroke(ctx, ink, 1, 0.55);
@@ -234,6 +246,20 @@ const ICONS: Record<string, () => HTMLCanvasElement> = {
       ctx.lineTo(8, 3);
       ctx.lineTo(14, 6.5);
       ctx.stroke();
+    }),
+  "icon-spring": () =>
+    icon(12, (ctx) => {
+      ctx.fillStyle = "#cfe6ee";
+      ctx.strokeStyle = PAINTED_INK.spring;
+      ctx.lineWidth = 1.3;
+      ctx.beginPath();
+      ctx.arc(6, 6, 3.6, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = PAINTED_INK.spring;
+      ctx.beginPath();
+      ctx.arc(6, 6, 1.3, 0, Math.PI * 2);
+      ctx.fill();
     }),
   "icon-landmark": () =>
     icon(8, (ctx) => {

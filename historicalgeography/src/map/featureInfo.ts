@@ -14,6 +14,12 @@ export type FeatureInfo = {
   confidence: Confidence;
   source_ids: string[];
   sample?: boolean;
+  /** Finer class from the source, e.g. "Valley Freshwater Marsh". */
+  subtype?: string | null;
+  /** Year the source map or survey recorded this feature. */
+  observed_year?: number | null;
+  /** How the source mapped it, e.g. "Mapped from: Tsheet Chase 1867." */
+  source_note?: string | null;
 };
 
 /**

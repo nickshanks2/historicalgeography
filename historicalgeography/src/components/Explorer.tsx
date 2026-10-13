@@ -6,7 +6,7 @@ import { DEFAULT_ERA_ID, eraYear, findEra } from "@/config/eras";
 import type { FeatureInfo } from "@/map/featureInfo";
 import { STYLE_TYPES } from "@/map/styles";
 import { existsIn } from "@/map/timeFilter";
-import { useDatasetFeatures } from "@/map/useDatasets";
+import { useDatasetSummary } from "@/map/useDatasets";
 import EraCard from "./EraCard";
 import InspectPanel from "./InspectPanel";
 import Legend from "./Legend";
@@ -24,7 +24,7 @@ export default function Explorer() {
   const [eraId, setEraId] = useState(DEFAULT_ERA_ID);
   const [sheet, setSheet] = useState<Sheet>(null);
   const era = findEra(eraId);
-  const features = useDatasetFeatures();
+  const features = useDatasetSummary();
 
   const showsSamples = useMemo(() => {
     if (era.style === "modern") return false;
