@@ -6,23 +6,35 @@ Interactive map that shows what real places looked like centuries ago. Users dra
 
 Pilot region: Santa Monica Bay, from the Santa Monica Mountains to the Ballona wetlands and Baldwin Hills.
 
-## Eras (v1)
+## Eras
 
-| id | Label | Confidence |
-| --- | --- | --- |
-| `today` | Today | documented |
-| `1900` | 1900 | documented |
-| `1800` | 1800 | documented-inferred |
-| `1600` | 1600 | inferred |
-| `1000` | ~1000 | modeled |
+| id | Label | Year | Confidence | Map style |
+| --- | --- | --- | --- | --- |
+| `1000` | ~1000 | 1000 | modeled | painted |
+| `1600` | 1600 | 1600 | inferred | painted |
+| `1800` | 1800 | 1800 | documented-inferred | painted |
+| `1850` | 1850 | 1850 | documented-inferred | painted |
+| `1900` | 1900 | 1900 | documented | built |
+| `1925` | 1925 | 1925 | documented | built |
+| `1950` | 1950 | 1950 | documented | built |
+| `today` | Today | current year | documented | modern |
 
-Eras are defined in one config file (`src/config/eras.ts`). Never hard-code era lists anywhere else.
+Eras are defined in one config file (`src/config/eras.ts`). Never hard-code era lists anywhere else. The slider runs oldest to newest, left to right, and must stay usable one-handed on a phone.
+
+## Era map styles
+
+- **The modern basemap (today's streets, buildings, parks, labels) appears ONLY in `today`.** Every other era is drawn entirely from our own layers, with nothing from the modern basemap.
+- **Orientation in past eras is landmark labels only**, no modern streets: small, subtle "today: ..." labels from `data/landmarks.geojson` (about 15 to 20 well-known points).
+- **Painted (pre-1900: 1000, 1600, 1800, 1850):** soft, hand-drawn land-cover look on terrain hillshade, with a textured fill per land type (wetland, salt marsh, dune, beach, coastal sage scrub, chaparral, grassland, oak woodland, willow/riparian, open water). Shows creeks, the era's coastline and river course, and Tongva villages and trails, with Tongva names where sources give them. 1850 adds rancho boundaries and adobes.
+- **The LA River reaches the ocean through Ballona Creek in 1000, 1600 and 1800.** It shifted to San Pedro Bay in the 1825 flood.
+- **Built (1900, 1925, 1950):** the built environment redrawn as clean styled layers: streets with their names as of that year, building footprints, piers, rail and streetcar lines and parks, plus whatever natural land cover still remained (e.g. Ballona wetlands, open fields).
+- Every era has a legend, and tapping a feature opens an inspect panel with its name, dates, confidence and sources.
 
 ## Stack
 
 - Next.js (App Router, TypeScript), deployed on Vercel
 - MapLibre GL JS for the map, with terrain
-- Vector layers as PMTiles, one file per era per region
+- Vector layers as PMTiles built from the time-ranged datasets (see Data model); small or sample layers may be served as GeoJSON
 - Tailwind CSS for styling
 - Place-page content in Markdown/MDX under `content/places/<region>/<place>/<era>.mdx`
 - Data pipeline in Python + GDAL under `pipeline/` (never runs on the website)
@@ -38,14 +50,33 @@ Use free/open map sources only. No paid Mapbox or Google Maps keys.
 5. **Track licenses.** Every data file and image gets an entry in `data/LICENSES.md` (source, license, attribution text).
 6. **Ads never cover the map canvas.**
 
-## Layer data model
+## Data model
 
-Each era layer is a PMTiles file with features that carry:
+**Never make a separate copy of the map per era.** Features live in time-ranged datasets, and each era is a filter on years. This applies to the built environment (streets, buildings, piers, rail) and to natural features that changed (river course, wetlands, dunes, coastline). Adding an era later must need no new data, only a new entry in `src/config/eras.ts`.
 
-- `type`: one of `water`, `wetland`, `dune`, `scrub`, `grassland`, `woodland`, `riparian`, `village`, `trail`
-- `name` (optional), `name_tongva` (optional)
+A feature is shown in an era with year `Y` when `start_year <= Y` and (`end_year` is null or `Y < end_year`). For `today`, `Y` is the current year.
+
+Every feature carries:
+
+- `id`: stable, unique within its dataset
+- `type`: see the type list below
+- `name` (optional), `name_tongva` (optional), `name_spanish` (optional)
+- `start_year`: year it appeared, or null if it predates the earliest era
+- `end_year`: year it was removed or changed, or null if it still exists
+- `start_approx` / `end_approx` (optional booleans): the year is approximate ("built ~1909")
 - `confidence`: `documented` | `inferred` | `modeled`
 - `source_ids`: list of ids from `data/sources.json`
+- `sample` (optional boolean): placeholder geometry for style review only. Sample features are always labelled as samples in the UI and must be replaced by sourced data before launch.
+
+Feature types:
+
+- Land cover (polygons): `water`, `wetland`, `salt_marsh`, `dune`, `beach`, `coastal_sage_scrub`, `chaparral`, `grassland`, `oak_woodland`, `riparian`, `open_field`
+- Water lines: `coastline`, `river`, `creek`
+- People and places: `village` (point), `trail` (line), `rancho` (polygon), `adobe` (point)
+- Built: `street`, `building`, `pier`, `rail`, `streetcar`, `park`
+- Orientation: `landmark` (in `data/landmarks.geojson`, shown only in past eras)
+
+Canonical datasets live in `data/` (GeoJSON) and are copied or tiled into `public/data/` at build time; never edit generated files in `public/data/`.
 
 ## Pages
 
@@ -64,6 +95,15 @@ Every place-era page needs: title answering the search question ("What did Santa
 - Keep the site fast: static generation where possible, lazy-load the map.
 - Explain anything I need to do outside the code (DNS, accounts, API keys) in plain steps.
 - Never commit secrets. Use `.env.local` and Vercel environment variables.
+
+## Build phases
+
+1. Era styles and basemap switch: 8 eras, modern basemap only in `today`, hillshade, landmark labels, painted style with sample polygons, legend, inspect panel.
+2. Pre-1900 landscape from real data: Ballona Historical Ecology GIS, LANDFIRE Biophysical Settings, NOAA T-sheets, processed in `pipeline/` (Python + GDAL) to PMTiles.
+3. The 1900 city: georeferenced USGS historical topos and Sanborn maps, a dev-only tracing tool at `/admin/trace`, reusing OSM street geometry with `start_year` where streets match.
+4. 1925 and 1950: later topos, Sanborn updates and UCSB aerial photos, adding and ending features by year.
+
+Stop after each phase with a Vercel preview for review.
 
 ## Key sources (start here)
 

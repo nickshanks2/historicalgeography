@@ -1,12 +1,11 @@
-"""Clip the Natural Earth 10m coastline to the pilot region.
+"""Clip coastline polylines to a bounding box.
 
-Builds the placeholder coastline used by every era until real
-reconstructions exist. Standard library only.
+Used by build_style_samples.py. Can also be run on its own to clip the
+Natural Earth 10m coastline to the pilot region. Standard library only.
 
     curl -L -o ne_10m_coastline.geojson \
       https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_coastline.geojson
-    python3 pipeline/clip_coastline.py ne_10m_coastline.geojson \
-      public/data/placeholder/coastline.geojson
+    python3 pipeline/clip_coastline.py ne_10m_coastline.geojson coastline.geojson
 """
 
 import json

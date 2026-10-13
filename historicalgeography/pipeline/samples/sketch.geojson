@@ -1,0 +1,2156 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "chaparral-sm-mtns",
+    "dataset": "landscape",
+    "type": "chaparral",
+    "name": null,
+    "start_year": null,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.75,
+       34.065
+      ],
+      [
+       -118.6,
+       34.07
+      ],
+      [
+       -118.53,
+       34.075
+      ],
+      [
+       -118.47,
+       34.085
+      ],
+      [
+       -118.44,
+       34.1
+      ],
+      [
+       -118.44,
+       34.2
+      ],
+      [
+       -118.75,
+       34.2
+      ],
+      [
+       -118.75,
+       34.065
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sage-sm-slopes",
+    "dataset": "landscape",
+    "type": "coastal_sage_scrub",
+    "name": null,
+    "start_year": null,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.75,
+       34.03
+      ],
+      [
+       -118.6,
+       34.04
+      ],
+      [
+       -118.55,
+       34.038
+      ],
+      [
+       -118.52,
+       34.033
+      ],
+      [
+       -118.5,
+       34.022
+      ],
+      [
+       -118.49,
+       34.03
+      ],
+      [
+       -118.47,
+       34.05
+      ],
+      [
+       -118.45,
+       34.065
+      ],
+      [
+       -118.44,
+       34.1
+      ],
+      [
+       -118.47,
+       34.085
+      ],
+      [
+       -118.53,
+       34.075
+      ],
+      [
+       -118.6,
+       34.07
+      ],
+      [
+       -118.75,
+       34.065
+      ],
+      [
+       -118.75,
+       34.03
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "sage-baldwin-hills",
+    "dataset": "landscape",
+    "type": "coastal_sage_scrub",
+    "name": null,
+    "start_year": null,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.395,
+       34.02
+      ],
+      [
+       -118.375,
+       34.032
+      ],
+      [
+       -118.352,
+       34.022
+      ],
+      [
+       -118.355,
+       33.998
+      ],
+      [
+       -118.385,
+       33.993
+      ],
+      [
+       -118.395,
+       34.02
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "grass-coastal-plain",
+    "dataset": "landscape",
+    "type": "grassland",
+    "name": null,
+    "start_year": null,
+    "end_year": 1900,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.5,
+       34.022
+      ],
+      [
+       -118.48,
+       34.0
+      ],
+      [
+       -118.465,
+       33.993
+      ],
+      [
+       -118.43,
+       33.998
+      ],
+      [
+       -118.405,
+       34.006
+      ],
+      [
+       -118.395,
+       34.022
+      ],
+      [
+       -118.37,
+       34.04
+      ],
+      [
+       -118.3,
+       34.05
+      ],
+      [
+       -118.3,
+       34.08
+      ],
+      [
+       -118.4,
+       34.075
+      ],
+      [
+       -118.44,
+       34.065
+      ],
+      [
+       -118.47,
+       34.05
+      ],
+      [
+       -118.49,
+       34.03
+      ],
+      [
+       -118.5,
+       34.022
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "grass-westchester",
+    "dataset": "landscape",
+    "type": "grassland",
+    "name": null,
+    "start_year": null,
+    "end_year": 1925,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.43,
+       33.957
+      ],
+      [
+       -118.4,
+       33.962
+      ],
+      [
+       -118.355,
+       33.99
+      ],
+      [
+       -118.3,
+       33.99
+      ],
+      [
+       -118.3,
+       33.92
+      ],
+      [
+       -118.39,
+       33.915
+      ],
+      [
+       -118.41,
+       33.94
+      ],
+      [
+       -118.43,
+       33.957
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "oak-sawtelle",
+    "dataset": "landscape",
+    "type": "oak_woodland",
+    "name": null,
+    "start_year": null,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.465,
+       34.058
+      ],
+      [
+       -118.44,
+       34.052
+      ],
+      [
+       -118.422,
+       34.064
+      ],
+      [
+       -118.432,
+       34.082
+      ],
+      [
+       -118.457,
+       34.076
+      ],
+      [
+       -118.465,
+       34.058
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "oak-baldwin",
+    "dataset": "landscape",
+    "type": "oak_woodland",
+    "name": null,
+    "start_year": null,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.372,
+       34.026
+      ],
+      [
+       -118.36,
+       34.03
+      ],
+      [
+       -118.355,
+       34.018
+      ],
+      [
+       -118.366,
+       34.012
+      ],
+      [
+       -118.372,
+       34.026
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "wetland-ballona",
+    "dataset": "landscape",
+    "type": "wetland",
+    "name": null,
+    "start_year": null,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.478,
+       33.99
+      ],
+      [
+       -118.455,
+       33.996
+      ],
+      [
+       -118.43,
+       33.996
+      ],
+      [
+       -118.405,
+       34.006
+      ],
+      [
+       -118.392,
+       33.995
+      ],
+      [
+       -118.41,
+       33.979
+      ],
+      [
+       -118.435,
+       33.968
+      ],
+      [
+       -118.452,
+       33.961
+      ],
+      [
+       -118.47,
+       33.972
+      ],
+      [
+       -118.478,
+       33.99
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "wetland-ballona-remnant",
+    "dataset": "landscape",
+    "type": "wetland",
+    "name": null,
+    "start_year": 1925,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.445,
+       33.973
+      ],
+      [
+       -118.425,
+       33.976
+      ],
+      [
+       -118.408,
+       33.98
+      ],
+      [
+       -118.41,
+       33.97
+      ],
+      [
+       -118.432,
+       33.964
+      ],
+      [
+       -118.448,
+       33.962
+      ],
+      [
+       -118.445,
+       33.973
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "saltmarsh-ballona",
+    "dataset": "landscape",
+    "type": "salt_marsh",
+    "name": null,
+    "start_year": null,
+    "end_year": 1925,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.47,
+       33.985
+      ],
+      [
+       -118.45,
+       33.989
+      ],
+      [
+       -118.435,
+       33.983
+      ],
+      [
+       -118.44,
+       33.97
+      ],
+      [
+       -118.455,
+       33.963
+      ],
+      [
+       -118.466,
+       33.97
+      ],
+      [
+       -118.47,
+       33.985
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "lagoon-ballona",
+    "dataset": "landscape",
+    "type": "water",
+    "name": "Ballona lagoon",
+    "start_year": null,
+    "end_year": 1925,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.463,
+       33.979
+      ],
+      [
+       -118.452,
+       33.981
+      ],
+      [
+       -118.446,
+       33.975
+      ],
+      [
+       -118.455,
+       33.969
+      ],
+      [
+       -118.462,
+       33.972
+      ],
+      [
+       -118.463,
+       33.979
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "dunes-el-segundo",
+    "dataset": "landscape",
+    "type": "dune",
+    "name": null,
+    "start_year": null,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.452,
+       33.958
+      ],
+      [
+       -118.43,
+       33.958
+      ],
+      [
+       -118.405,
+       33.92
+      ],
+      [
+       -118.393,
+       33.885
+      ],
+      [
+       -118.41,
+       33.885
+      ],
+      [
+       -118.425,
+       33.915
+      ],
+      [
+       -118.445,
+       33.94
+      ],
+      [
+       -118.452,
+       33.958
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "dunes-venice",
+    "dataset": "landscape",
+    "type": "dune",
+    "name": null,
+    "start_year": null,
+    "end_year": 1925,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.488,
+       34.0
+      ],
+      [
+       -118.474,
+       34.0
+      ],
+      [
+       -118.462,
+       33.985
+      ],
+      [
+       -118.47,
+       33.982
+      ],
+      [
+       -118.482,
+       33.99
+      ],
+      [
+       -118.488,
+       34.0
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "fields-plain",
+    "dataset": "landscape",
+    "type": "open_field",
+    "name": null,
+    "start_year": 1880,
+    "end_year": 1950,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.48,
+       34.03
+      ],
+      [
+       -118.44,
+       34.045
+      ],
+      [
+       -118.4,
+       34.035
+      ],
+      [
+       -118.41,
+       34.012
+      ],
+      [
+       -118.45,
+       34.005
+      ],
+      [
+       -118.475,
+       34.012
+      ],
+      [
+       -118.48,
+       34.03
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "fields-westchester",
+    "dataset": "landscape",
+    "type": "open_field",
+    "name": null,
+    "start_year": 1925,
+    "end_year": 1950,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.42,
+       33.955
+      ],
+      [
+       -118.39,
+       33.958
+      ],
+      [
+       -118.36,
+       33.975
+      ],
+      [
+       -118.35,
+       33.94
+      ],
+      [
+       -118.395,
+       33.93
+      ],
+      [
+       -118.42,
+       33.955
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "creek-santa-monica-canyon",
+    "dataset": "landscape",
+    "type": "creek",
+    "name": "Santa Monica Canyon creek",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.512,
+      34.08
+     ],
+     [
+      -118.517,
+      34.06
+     ],
+     [
+      -118.519,
+      34.045
+     ],
+     [
+      -118.5195,
+      34.036
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "creek-rustic-canyon",
+    "dataset": "landscape",
+    "type": "creek",
+    "name": "Rustic Canyon creek",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.54,
+      34.095
+     ],
+     [
+      -118.53,
+      34.075
+     ],
+     [
+      -118.522,
+      34.058
+     ],
+     [
+      -118.518,
+      34.05
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "creek-topanga",
+    "dataset": "landscape",
+    "type": "creek",
+    "name": "Topanga Creek",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.605,
+      34.11
+     ],
+     [
+      -118.598,
+      34.085
+     ],
+     [
+      -118.588,
+      34.06
+     ],
+     [
+      -118.5835,
+      34.042
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "creek-centinela",
+    "dataset": "landscape",
+    "type": "creek",
+    "name": "Centinela Creek",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.36,
+      33.972
+     ],
+     [
+      -118.385,
+      33.978
+     ],
+     [
+      -118.405,
+      33.984
+     ],
+     [
+      -118.42,
+      33.986
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "creek-sawtelle",
+    "dataset": "landscape",
+    "type": "creek",
+    "name": "Sawtelle creek",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.45,
+      34.075
+     ],
+     [
+      -118.445,
+      34.05
+     ],
+     [
+      -118.44,
+      34.03
+     ],
+     [
+      -118.43,
+      34.01
+     ],
+     [
+      -118.425,
+      33.997
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "river-la-via-ballona",
+    "dataset": "landscape",
+    "type": "river",
+    "name": "Los Angeles River",
+    "start_year": null,
+    "end_year": 1825,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.23,
+      34.07
+     ],
+     [
+      -118.27,
+      34.055
+     ],
+     [
+      -118.31,
+      34.048
+     ],
+     [
+      -118.35,
+      34.045
+     ],
+     [
+      -118.372,
+      34.038
+     ],
+     [
+      -118.388,
+      34.024
+     ],
+     [
+      -118.402,
+      34.01
+     ],
+     [
+      -118.42,
+      33.994
+     ],
+     [
+      -118.44,
+      33.981
+     ],
+     [
+      -118.455,
+      33.97
+     ],
+     [
+      -118.462,
+      33.962
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "creek-ballona",
+    "dataset": "landscape",
+    "type": "creek",
+    "name": "Ballona Creek",
+    "start_year": 1825,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.372,
+      34.038
+     ],
+     [
+      -118.388,
+      34.024
+     ],
+     [
+      -118.402,
+      34.01
+     ],
+     [
+      -118.42,
+      33.994
+     ],
+     [
+      -118.44,
+      33.981
+     ],
+     [
+      -118.455,
+      33.97
+     ],
+     [
+      -118.462,
+      33.962
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "river-la-san-pedro",
+    "dataset": "landscape",
+    "type": "river",
+    "name": "Los Angeles River",
+    "start_year": 1825,
+    "end_year": null,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.23,
+      34.07
+     ],
+     [
+      -118.228,
+      34.02
+     ],
+     [
+      -118.215,
+      33.95
+     ],
+     [
+      -118.2,
+      33.87
+     ],
+     [
+      -118.205,
+      33.77
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "village-kuruvungna",
+    "dataset": "landscape",
+    "type": "village",
+    "name": null,
+    "start_year": null,
+    "end_year": 1870,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true,
+    "name_tongva": "Kuruvungna"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.4541,
+     34.0433
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "village-guashna",
+    "dataset": "landscape",
+    "type": "village",
+    "name": null,
+    "start_year": null,
+    "end_year": 1870,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true,
+    "name_tongva": "Guashna"
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.44,
+     33.962
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "trail-coast",
+    "dataset": "landscape",
+    "type": "trail",
+    "name": null,
+    "start_year": null,
+    "end_year": 1900,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.4541,
+      34.0433
+     ],
+     [
+      -118.48,
+      34.042
+     ],
+     [
+      -118.505,
+      34.038
+     ],
+     [
+      -118.53,
+      34.04
+     ],
+     [
+      -118.56,
+      34.045
+     ],
+     [
+      -118.583,
+      34.045
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "trail-ballona",
+    "dataset": "landscape",
+    "type": "trail",
+    "name": null,
+    "start_year": null,
+    "end_year": 1900,
+    "confidence": "modeled",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.4541,
+      34.0433
+     ],
+     [
+      -118.448,
+      34.025
+     ],
+     [
+      -118.43,
+      34.005
+     ],
+     [
+      -118.425,
+      33.985
+     ],
+     [
+      -118.43,
+      33.97
+     ],
+     [
+      -118.44,
+      33.962
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "rancho-san-vicente",
+    "dataset": "landscape",
+    "type": "rancho",
+    "name": null,
+    "start_year": 1839,
+    "end_year": 1900,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true,
+    "name_spanish": "Rancho San Vicente y Santa M\u00f3nica"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.522,
+       34.034
+      ],
+      [
+       -118.49,
+       34.005
+      ],
+      [
+       -118.462,
+       34.02
+      ],
+      [
+       -118.44,
+       34.05
+      ],
+      [
+       -118.47,
+       34.077
+      ],
+      [
+       -118.51,
+       34.072
+      ],
+      [
+       -118.522,
+       34.034
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "rancho-la-ballona",
+    "dataset": "landscape",
+    "type": "rancho",
+    "name": null,
+    "start_year": 1839,
+    "end_year": 1900,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true,
+    "name_spanish": "Rancho La Ballona"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.49,
+       34.005
+      ],
+      [
+       -118.462,
+       33.975
+      ],
+      [
+       -118.42,
+       33.958
+      ],
+      [
+       -118.38,
+       33.99
+      ],
+      [
+       -118.39,
+       34.03
+      ],
+      [
+       -118.44,
+       34.05
+      ],
+      [
+       -118.462,
+       34.02
+      ],
+      [
+       -118.49,
+       34.005
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "rancho-boca",
+    "dataset": "landscape",
+    "type": "rancho",
+    "name": null,
+    "start_year": 1839,
+    "end_year": 1900,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true,
+    "name_spanish": "Rancho Boca de Santa Monica"
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.6,
+       34.042
+      ],
+      [
+       -118.522,
+       34.034
+      ],
+      [
+       -118.51,
+       34.072
+      ],
+      [
+       -118.55,
+       34.082
+      ],
+      [
+       -118.6,
+       34.072
+      ],
+      [
+       -118.6,
+       34.042
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "adobe-sepulveda",
+    "dataset": "landscape",
+    "type": "adobe",
+    "name": "Sep\u00falveda adobe",
+    "start_year": 1840,
+    "end_year": 1900,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.468,
+     34.045
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "adobe-machado",
+    "dataset": "landscape",
+    "type": "adobe",
+    "name": "Machado adobe",
+    "start_year": 1840,
+    "end_year": 1900,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.405,
+     34.0
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "pier-santa-monica",
+    "dataset": "built",
+    "type": "pier",
+    "name": "Santa Monica Pier",
+    "start_year": 1909,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.4983,
+       34.0101
+      ],
+      [
+       -118.5037,
+       34.0063
+      ],
+      [
+       -118.504,
+       34.0068
+      ],
+      [
+       -118.4987,
+       34.0106
+      ],
+      [
+       -118.4983,
+       34.0101
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "street-ocean",
+    "dataset": "built",
+    "type": "street",
+    "name": "Ocean Avenue",
+    "start_year": 1875,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.5153,
+      34.034
+     ],
+     [
+      -118.5025,
+      34.0196
+     ],
+     [
+      -118.4974,
+      34.0124
+     ],
+     [
+      -118.491,
+      34.0035
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "street-main",
+    "dataset": "built",
+    "type": "street",
+    "name": "Main Street",
+    "start_year": 1875,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.4925,
+      34.016
+     ],
+     [
+      -118.4825,
+      34.0005
+     ],
+     [
+      -118.4775,
+      33.9905
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "street-colorado",
+    "dataset": "built",
+    "type": "street",
+    "name": "Colorado Avenue",
+    "start_year": 1875,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.4974,
+      34.0124
+     ],
+     [
+      -118.481,
+      34.0225
+     ],
+     [
+      -118.465,
+      34.032
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "street-wilshire",
+    "dataset": "built",
+    "type": "street",
+    "name": "Wilshire Boulevard",
+    "start_year": 1925,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.5025,
+      34.0196
+     ],
+     [
+      -118.48,
+      34.0335
+     ],
+     [
+      -118.45,
+      34.0515
+     ],
+     [
+      -118.43,
+      34.0615
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "street-windward",
+    "dataset": "built",
+    "type": "street",
+    "name": "Windward Avenue",
+    "start_year": 1905,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.4795,
+      33.9875
+     ],
+     [
+      -118.471,
+      33.991
+     ],
+     [
+      -118.465,
+      33.994
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "building-sm-0",
+    "dataset": "built",
+    "type": "building",
+    "name": null,
+    "start_year": 1900,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.4955,
+       34.0145
+      ],
+      [
+       -118.49480000000001,
+       34.01492
+      ],
+      [
+       -118.49522,
+       34.01548
+      ],
+      [
+       -118.49592000000001,
+       34.01506
+      ],
+      [
+       -118.4955,
+       34.0145
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "building-sm-1",
+    "dataset": "built",
+    "type": "building",
+    "name": null,
+    "start_year": 1900,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.4935,
+       34.0165
+      ],
+      [
+       -118.4928,
+       34.01692
+      ],
+      [
+       -118.49322,
+       34.01748
+      ],
+      [
+       -118.49392,
+       34.01706
+      ],
+      [
+       -118.4935,
+       34.0165
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "building-sm-2",
+    "dataset": "built",
+    "type": "building",
+    "name": null,
+    "start_year": 1900,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.4915,
+       34.0135
+      ],
+      [
+       -118.49080000000001,
+       34.01392
+      ],
+      [
+       -118.49122,
+       34.01448
+      ],
+      [
+       -118.49192000000001,
+       34.01406
+      ],
+      [
+       -118.4915,
+       34.0135
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "building-sm-3",
+    "dataset": "built",
+    "type": "building",
+    "name": null,
+    "start_year": 1925,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.4895,
+       34.0155
+      ],
+      [
+       -118.48880000000001,
+       34.01592
+      ],
+      [
+       -118.48922,
+       34.01648
+      ],
+      [
+       -118.48992000000001,
+       34.01606
+      ],
+      [
+       -118.4895,
+       34.0155
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "building-sm-4",
+    "dataset": "built",
+    "type": "building",
+    "name": null,
+    "start_year": 1925,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.494,
+       34.0118
+      ],
+      [
+       -118.4933,
+       34.01222
+      ],
+      [
+       -118.49372,
+       34.01278
+      ],
+      [
+       -118.49442,
+       34.01236
+      ],
+      [
+       -118.494,
+       34.0118
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "building-sm-5",
+    "dataset": "built",
+    "type": "building",
+    "name": null,
+    "start_year": 1925,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.4875,
+       34.0125
+      ],
+      [
+       -118.4868,
+       34.01292
+      ],
+      [
+       -118.48722,
+       34.01348
+      ],
+      [
+       -118.48792,
+       34.01306
+      ],
+      [
+       -118.4875,
+       34.0125
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "rail-sm",
+    "dataset": "built",
+    "type": "rail",
+    "name": "Railroad",
+    "start_year": 1875,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.4974,
+      34.0124
+     ],
+     [
+      -118.47,
+      34.025
+     ],
+     [
+      -118.43,
+      34.03
+     ],
+     [
+      -118.39,
+      34.033
+     ],
+     [
+      -118.33,
+      34.035
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "streetcar-sm-venice",
+    "dataset": "built",
+    "type": "streetcar",
+    "name": "Streetcar line",
+    "start_year": 1900,
+    "end_year": 1950,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      -118.4925,
+      34.016
+     ],
+     [
+      -118.4825,
+      34.0005
+     ],
+     [
+      -118.4775,
+      33.9905
+     ],
+     [
+      -118.47,
+      33.982
+     ],
+     [
+      -118.462,
+      33.97
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "park-palisades",
+    "dataset": "built",
+    "type": "park",
+    "name": "Palisades Park",
+    "start_year": 1892,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.5153,
+       34.0345
+      ],
+      [
+       -118.5025,
+       34.0201
+      ],
+      [
+       -118.4978,
+       34.0128
+      ],
+      [
+       -118.4985,
+       34.0123
+      ],
+      [
+       -118.5032,
+       34.0193
+      ],
+      [
+       -118.516,
+       34.0338
+      ],
+      [
+       -118.5153,
+       34.0345
+      ]
+     ]
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "canals-venice",
+    "dataset": "built",
+    "type": "water",
+    "name": "Venice canals",
+    "start_year": 1905,
+    "end_year": null,
+    "confidence": "inferred",
+    "source_ids": [
+     "style-sample"
+    ],
+    "sample": true
+   },
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -118.47,
+       33.988
+      ],
+      [
+       -118.462,
+       33.991
+      ],
+      [
+       -118.458,
+       33.985
+      ],
+      [
+       -118.466,
+       33.982
+      ],
+      [
+       -118.47,
+       33.988
+      ]
+     ]
+    ]
+   }
+  }
+ ]
+}

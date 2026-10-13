@@ -40,5 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# copied from node_modules at build time
+# copied in by scripts/prepare-public.mjs at build time
 /public/maplibre-gl-worker.mjs
+/public/data/

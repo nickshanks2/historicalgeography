@@ -13,5 +13,15 @@
     "id": "aws-terrain-tiles",
     "title": "Terrain Tiles on AWS Open Data (Mapzen/Tilezen)",
     "url": "https://registry.opendata.aws/terrain-tiles/"
+  },
+  {
+    "id": "openstreetmap",
+    "title": "OpenStreetMap (modern landmark positions)",
+    "url": "https://www.openstreetmap.org/copyright"
+  },
+  {
+    "id": "style-sample",
+    "title": "Sample shape for style review only: not historical data. Replaced by sourced data in Phase 2.",
+    "url": null
   }
 ]

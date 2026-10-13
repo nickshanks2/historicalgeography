@@ -3,29 +3,52 @@
 import { useEffect, useRef, useState } from "react";
 import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
-import {
-  BASEMAP_STYLE_URL,
-  INITIAL_VIEW,
-  TERRAIN_ATTRIBUTION,
-  TERRAIN_EXAGGERATION,
-  TERRAIN_TILES_URL,
-} from "@/config/map";
-import {
-  DEFAULT_ERA_ID,
-  ERAS,
-  PLACEHOLDER_COASTLINE_URL,
-} from "@/config/eras";
-
-const coastlineLayerId = (eraId: string) => `era-coastline-${eraId}`;
+import type { Era } from "@/config/eras";
+import { INITIAL_VIEW, MODERN_STYLE_URL, TERRAIN_EXAGGERATION } from "@/config/map";
+import { type FeatureInfo, toFeatureInfo } from "@/map/featureInfo";
+import { STYLE_IMAGE_PIXEL_RATIO, makeStyleImage } from "@/map/patterns";
+import { INSPECTABLE_LAYER_PREFIX, buildModernStyle, buildPastStyle } from "@/map/styles";
 
 type MapProps = {
-  eraId: string;
+  era: Era;
+  onInspect: (feature: FeatureInfo | null) => void;
 };
 
-export default function Map({ eraId }: MapProps) {
+const TAP_TOLERANCE_PX = 10;
+const GEOMETRY_PRIORITY: Record<string, number> = {
+  Point: 0,
+  MultiPoint: 0,
+  LineString: 1,
+  MultiLineString: 1,
+  Polygon: 2,
+  MultiPolygon: 2,
+};
+
+/** Lower wins: points, then lines, then areas; landmarks only as a last resort. */
+function tapPriority(feature: maplibregl.MapGeoJSONFeature) {
+  const landmark = feature.properties.type === "landmark" ? 10 : 0;
+  return landmark + (GEOMETRY_PRIORITY[feature.geometry.type] ?? 3);
+}
+
+let modernBase: Promise<maplibregl.StyleSpecification> | null = null;
+function loadModernBase() {
+  modernBase ??= fetch(MODERN_STYLE_URL).then((res) => {
+    if (!res.ok) throw new Error(`Basemap style: HTTP ${res.status}`);
+    return res.json();
+  });
+  return modernBase;
+}
+
+export default function Map({ era, onInspect }: MapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
-  const [loaded, setLoaded] = useState(false);
+  const terrainOnRef = useRef(true);
+  const onInspectRef = useRef(onInspect);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    onInspectRef.current = onInspect;
+  }, [onInspect]);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -36,82 +59,75 @@ export default function Map({ eraId }: MapProps) {
 
     const map = new maplibregl.Map({
       container: containerRef.current,
-      style: BASEMAP_STYLE_URL,
+      style: { version: 8, sources: {}, layers: [] },
       ...INITIAL_VIEW,
       maxPitch: 75,
       attributionControl: { compact: true },
     });
     mapRef.current = map;
+    if (process.env.NODE_ENV === "development") {
+      (window as unknown as { hgMap: maplibregl.Map }).hgMap = map;
+    }
 
+    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
+    map.addControl(new maplibregl.GeolocateControl({}), "top-right");
     map.addControl(
-      new maplibregl.NavigationControl({ visualizePitch: true }),
+      new maplibregl.TerrainControl({ source: "terrain", exaggeration: TERRAIN_EXAGGERATION }),
       "top-right",
     );
-    map.addControl(new maplibregl.GeolocateControl({}), "top-right");
-    map.addControl(new maplibregl.ScaleControl({}), "bottom-left");
-
-    map.on("load", () => {
-      const terrainSource = {
-        type: "raster-dem" as const,
-        tiles: [TERRAIN_TILES_URL],
-        encoding: "terrarium" as const,
-        tileSize: 256,
-        maxzoom: 15,
-        attribution: TERRAIN_ATTRIBUTION,
-      };
-      map.addSource("terrain", terrainSource);
-      map.addSource("hillshade", terrainSource);
-
-      // Draw hillshading beneath labels and roads.
-      const firstSymbolLayer = map
-        .getStyle()
-        .layers.find((layer) => layer.type === "symbol");
-      map.addLayer(
-        {
-          id: "hillshade",
-          type: "hillshade",
-          source: "hillshade",
-          paint: { "hillshade-exaggeration": 0.4 },
-        },
-        firstSymbolLayer?.id,
-      );
-
-      map.setTerrain({ source: "terrain", exaggeration: TERRAIN_EXAGGERATION });
-      map.addControl(
-        new maplibregl.TerrainControl({
-          source: "terrain",
-          exaggeration: TERRAIN_EXAGGERATION,
-        }),
-        "top-right",
-      );
-
-      map.addSource("era-coastline", {
-        type: "geojson",
-        data: PLACEHOLDER_COASTLINE_URL,
-        attribution: "Made with Natural Earth",
+    // Remember the user's terrain toggle across era switches. (Not the map's
+    // "terrain" event: that also fires while a new style replaces the old.)
+    map
+      .getContainer()
+      .querySelector(".maplibregl-ctrl-terrain, .maplibregl-ctrl-terrain-enabled")
+      ?.addEventListener("click", () => {
+        terrainOnRef.current = Boolean(map.getTerrain());
       });
-      // One layer per era, shown one at a time. (Toggling visibility rather
-      // than changing paint, which terrain's draped-layer cache ignores.)
-      for (const era of ERAS) {
-        map.addLayer({
-          id: coastlineLayerId(era.id),
-          type: "line",
-          source: "era-coastline",
-          layout: {
-            "line-cap": "round",
-            "line-join": "round",
-            visibility: era.id === DEFAULT_ERA_ID ? "visible" : "none",
-          },
-          paint: {
-            "line-color": era.color,
-            "line-width": ["interpolate", ["linear"], ["zoom"], 8, 3, 14, 6],
-          },
-        });
-      }
+    map.addControl(new maplibregl.ScaleControl({}), "bottom-right");
 
-      setLoaded(true);
+    // Textures and icons are drawn on demand, so they survive style switches.
+    map.setMissingStyleImageResolver((id) => {
+      const canvas = makeStyleImage(id);
+      if (!canvas || map.hasImage(id)) return;
+      const ctx = canvas.getContext("2d")!;
+      map.addImage(id, ctx.getImageData(0, 0, canvas.width, canvas.height), {
+        pixelRatio: STYLE_IMAGE_PIXEL_RATIO,
+      });
     });
 
+    // On a phone MapLibre opens the credits when they first load; fold them
+    // behind the (i) button once each era has loaded, so they don't cover
+    // the map and legend button.
+    map.on("style.load", () => {
+      map.once("idle", () => {
+        map
+          .getContainer()
+          .querySelector(".maplibregl-ctrl-attrib")
+          ?.classList.remove("maplibregl-compact-show");
+      });
+    });
+
+    map.on("click", (e) => {
+      const { x, y } = e.point;
+      const t = TAP_TOLERANCE_PX;
+      const layers = map
+        .getStyle()
+        .layers.map((layer) => layer.id)
+        .filter((id) => id.startsWith(INSPECTABLE_LAYER_PREFIX));
+      const hits = map
+        .queryRenderedFeatures(
+          [
+            [x - t, y - t],
+            [x + t, y + t],
+          ],
+          { layers },
+        )
+        .map((feature, order) => ({ feature, order }))
+        .sort((a, b) => tapPriority(a.feature) - tapPriority(b.feature) || a.order - b.order);
+      onInspectRef.current(hits.length ? toFeatureInfo(hits[0].feature.properties) : null);
+    });
+
+    setReady(true);
     return () => {
       mapRef.current = null;
       map.remove();
@@ -119,17 +135,23 @@ export default function Map({ eraId }: MapProps) {
   }, []);
 
   useEffect(() => {
-    if (!loaded) return;
     const map = mapRef.current;
-    if (!map) return;
-    for (const era of ERAS) {
-      map.setLayoutProperty(
-        coastlineLayerId(era.id),
-        "visibility",
-        era.id === eraId ? "visible" : "none",
-      );
-    }
-  }, [eraId, loaded]);
+    if (!ready || !map) return;
+    let cancelled = false;
+
+    (async () => {
+      const terrainOn = terrainOnRef.current;
+      const style =
+        era.style === "modern"
+          ? buildModernStyle(await loadModernBase(), terrainOn)
+          : buildPastStyle(era, terrainOn);
+      if (!cancelled) map.setStyle(style);
+    })().catch((err) => console.error(err));
+
+    return () => {
+      cancelled = true;
+    };
+  }, [era, ready]);
 
   return <div ref={containerRef} className="h-full w-full" />;
 }

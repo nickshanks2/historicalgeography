@@ -1,0 +1,446 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "santa-monica-pier",
+    "type": "landmark",
+    "name": "Santa Monica Pier",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.4988,
+     34.0092
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "palisades-park",
+    "type": "landmark",
+    "name": "Palisades Park bluffs",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.5085,
+     34.0236
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "wilshire-ocean",
+    "type": "landmark",
+    "name": "Wilshire & Ocean",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.5022,
+     34.0196
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "santa-monica-canyon",
+    "type": "landmark",
+    "name": "Santa Monica Canyon",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.5186,
+     34.0318
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "pacific-palisades",
+    "type": "landmark",
+    "name": "Pacific Palisades",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.526,
+     34.0453
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "topanga-beach",
+    "type": "landmark",
+    "name": "Topanga Beach",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.5815,
+     34.0389
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "getty-center",
+    "type": "landmark",
+    "name": "Getty Center",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.4741,
+     34.078
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "ucla",
+    "type": "landmark",
+    "name": "UCLA",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.4452,
+     34.0689
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "century-city",
+    "type": "landmark",
+    "name": "Century City",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.417,
+     34.057
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "kuruvungna-springs",
+    "type": "landmark",
+    "name": "Kuruvungna Springs",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.4541,
+     34.0433
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "santa-monica-airport",
+    "type": "landmark",
+    "name": "Santa Monica Airport",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.4513,
+     34.0158
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "venice-beach",
+    "type": "landmark",
+    "name": "Venice Beach",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.4729,
+     33.985
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "venice-canals",
+    "type": "landmark",
+    "name": "Venice Canals",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.466,
+     33.985
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "marina-del-rey",
+    "type": "landmark",
+    "name": "Marina del Rey",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.451,
+     33.98
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "ballona-wetlands",
+    "type": "landmark",
+    "name": "Ballona Wetlands",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.437,
+     33.969
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "ballona-creek-mouth",
+    "type": "landmark",
+    "name": "Ballona Creek mouth",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.459,
+     33.962
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "playa-del-rey",
+    "type": "landmark",
+    "name": "Playa del Rey",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.4475,
+     33.9575
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "lmu",
+    "type": "landmark",
+    "name": "Loyola Marymount University",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.418,
+     33.97
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "culver-city",
+    "type": "landmark",
+    "name": "Culver City",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.3967,
+     34.0234
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "baldwin-hills-overlook",
+    "type": "landmark",
+    "name": "Baldwin Hills Scenic Overlook",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.3837,
+     34.0177
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "id": "lax",
+    "type": "landmark",
+    "name": "LAX",
+    "start_year": null,
+    "end_year": null,
+    "confidence": "documented",
+    "source_ids": [
+     "openstreetmap"
+    ]
+   },
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -118.4085,
+     33.9416
+    ]
+   }
+  }
+ ]
+}
