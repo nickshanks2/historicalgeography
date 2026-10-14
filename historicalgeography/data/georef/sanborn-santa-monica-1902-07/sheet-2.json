@@ -1,0 +1,58 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 2,
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0002",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 2488,
+   "py": 3723,
+   "lng": -118.4912373,
+   "lat": 34.0223666
+  },
+  {
+   "px": 553,
+   "py": 3723,
+   "lng": -118.4920068,
+   "lat": 34.0217458
+  },
+  {
+   "px": 553,
+   "py": 184,
+   "lng": -118.4934145,
+   "lat": 34.0229486
+  },
+  {
+   "px": 2488,
+   "py": 184,
+   "lng": -118.4926464,
+   "lat": 34.0235768
+  },
+  {
+   "px": 4874,
+   "py": 184,
+   "lng": -118.4917177,
+   "lat": 34.0243235
+  },
+  {
+   "px": 4874,
+   "py": 3723,
+   "lng": -118.4903019,
+   "lat": 34.0231214
+  },
+  {
+   "px": 553,
+   "py": 7519,
+   "lng": -118.4904451,
+   "lat": 34.0204105
+  },
+  {
+   "px": 4874,
+   "py": 7519,
+   "lng": -118.4887367,
+   "lat": 34.0217846
+  }
+ ],
+ "note": "Block corners where 9th, 10th and 11th Streets meet Nevada (Wilshire), Arizona and Oregon (Santa Monica) Avenues; real corners are OSM centreline intersections offset by half an 80 ft street. The corner south of Arizona at 10th was dropped: the sheet draws Arizona narrower than 80 ft."
+}

@@ -6,3 +6,4 @@ rasterio>=1.4
 shapely>=2.1
 pyproj>=3.7
 mapbox-vector-tile>=2.1
+pmtiles>=3.4

@@ -8,7 +8,14 @@ import type { Era } from "@/config/eras";
 import { INITIAL_VIEW, MODERN_STYLE_URL, TERRAIN_EXAGGERATION } from "@/config/map";
 import { type FeatureInfo, toFeatureInfo } from "@/map/featureInfo";
 import { STYLE_IMAGE_PIXEL_RATIO, makeStyleImage } from "@/map/patterns";
-import { INSPECTABLE_LAYER_PREFIX, buildModernStyle, buildPastStyle } from "@/map/styles";
+import type { Overlay } from "@/map/overlays";
+import {
+  INSPECTABLE_LAYER_PREFIX,
+  OVERLAY_LAYER_PREFIX,
+  buildModernStyle,
+  buildPastStyle,
+  withOverlay,
+} from "@/map/styles";
 import { type SpotHistory, spotHistory } from "@/map/throughTime";
 
 export type Tap = { feature: FeatureInfo | null; history: SpotHistory };
@@ -17,6 +24,7 @@ export type FlyTarget = { center: [number, number]; zoom: number; id: number };
 
 type MapProps = {
   era: Era;
+  overlay: Overlay | null;
   onTap: (tap: Tap) => void;
   flyTo: FlyTarget | null;
 };
@@ -66,7 +74,7 @@ function loadModernBase() {
   return modernBase;
 }
 
-export default function Map({ era, onTap, flyTo }: MapProps) {
+export default function Map({ era, overlay, onTap, flyTo }: MapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const terrainOnRef = useRef(true);
@@ -174,6 +182,14 @@ export default function Map({ era, onTap, flyTo }: MapProps) {
     };
   }, []);
 
+  // Rebuild the style when the era or the chosen old map changes (opacity
+  // changes are applied in place below).
+  const overlaySet = overlay?.set ?? null;
+  const opacityRef = useRef(overlay?.opacity ?? 0);
+  useEffect(() => {
+    opacityRef.current = overlay?.opacity ?? 0;
+  }, [overlay?.opacity]);
+
   useEffect(() => {
     const map = mapRef.current;
     if (!ready || !map) return;
@@ -181,17 +197,32 @@ export default function Map({ era, onTap, flyTo }: MapProps) {
 
     (async () => {
       const terrainOn = terrainOnRef.current;
-      const style =
+      const base =
         era.style === "modern"
           ? buildModernStyle(await loadModernBase(), terrainOn)
           : buildPastStyle(era, terrainOn);
+      const style = withOverlay(
+        base,
+        overlaySet && { set: overlaySet, opacity: opacityRef.current },
+        era.style === "modern",
+      );
       if (!cancelled) map.setStyle(style);
     })().catch((err) => console.error(err));
 
     return () => {
       cancelled = true;
     };
-  }, [era, ready]);
+  }, [era, overlaySet, ready]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!ready || !map || !overlay || !map.isStyleLoaded()) return;
+    for (const layer of map.getStyle().layers) {
+      if (layer.id.startsWith(OVERLAY_LAYER_PREFIX)) {
+        map.setPaintProperty(layer.id, "raster-opacity", overlay.opacity);
+      }
+    }
+  }, [overlay, ready]);
 
   useEffect(() => {
     if (!ready || !flyTo) return;

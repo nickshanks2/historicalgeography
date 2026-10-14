@@ -116,6 +116,17 @@ Every place-era page needs: title answering the search question ("What did Santa
 
 Stop after each phase with a Vercel preview for review.
 
+## Tracing tools (development only)
+
+Run `npm run dev`, then:
+
+- `/admin/trace`: draw or correct built features over an old map (Line, Area, Rectangle, Point), adopt a modern OSM street whose course is unchanged (`O`), or adopt every OSM street inside a rectangle (`G`) and delete the ones the old map doesn't show. Set the type, the name as of that year, years, confidence and sources (new features default to the old-map sheet under them). Save writes `data/features/built.geojson`; it refuses to drop features it didn't load or to save a feature without a source.
+- `/admin/georef`: pin Sanborn sheets to the map. Click a street or block corner on the sheet, then the same corner today; 3+ pairs give a live preview and per-point error (aim for 4–8 points under ~5 m). Block corners are more reliable than street centres: Sanborn sometimes draws streets narrower than they are. Saves `data/georef/<atlas>/sheet-<n>.json`; then run `python3 pipeline/build_sanborn.py` to turn pinned sheets into overlays.
+
+Both pages and their APIs return 404 in production. Commit the data files they write.
+
+Old maps for every era are offered as overlays ("Old maps" button; `?map=<set>` in links): built by `pipeline/build_overlays.py` (USGS topos, NOAA T-sheets, from `pipeline/overlays.json`) and `pipeline/build_sanborn.py` (Sanborn sheets).
+
 ## Key sources (start here)
 
 - Ballona Historical Ecology Project GIS: https://www.ballonahe.org/

@@ -1,0 +1,47 @@
+{
+  "_comment": "Historical maps shown as optional overlays. Each set is one choice in the map's 'Old maps' menu; its sheets are tiled by build_overlays.py.",
+  "sets": [
+    {
+      "id": "coast-survey-1870s",
+      "title": "US Coast Survey T-sheets, 1876–1887",
+      "publisher": "US Coast Survey (NOAA)",
+      "sheets": [
+        {"id": "T-01427", "kind": "noaa-tsheet", "zip": "T-01427", "year": 1876},
+        {"id": "T-01791", "kind": "noaa-tsheet", "zip": "T-01791", "year": 1887}
+      ]
+    },
+    {
+      "id": "usgs-62500-1900",
+      "title": "USGS topographic maps 1:62,500, 1896–1903",
+      "publisher": "US Geological Survey",
+      "sheets": [
+        {"id": "usgs-santa-monica-1902", "kind": "usgs-topo", "name": "Santa Monica", "year": 1902, "scale": 62500, "key": "StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Santa Monica_298948_1902_62500_geo.tif"},
+        {"id": "usgs-calabasas-1903", "kind": "usgs-topo", "name": "Calabasas", "year": 1903, "scale": 62500, "key": "StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Calabasas_296956_1903_62500_geo.tif"},
+        {"id": "usgs-redondo-1896", "kind": "usgs-topo", "name": "Redondo", "year": 1896, "scale": 62500, "key": "StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Redondo_298753_1896_62500_geo.tif"}
+      ]
+    },
+    {
+      "id": "usgs-24000-1920s",
+      "title": "USGS topographic maps 1:24,000, 1924–1928",
+      "publisher": "US Geological Survey",
+      "sheets": [
+        {"id": "usgs-venice-1924", "kind": "usgs-topo", "name": "Venice", "year": 1924, "scale": 24000, "key": "StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Venice_295606_1924_24000_geo.tif"},
+        {"id": "usgs-sawtelle-1925", "kind": "usgs-topo", "name": "Sawtelle", "year": 1925, "scale": 24000, "key": "StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Sawtelle_295108_1925_24000_geo.tif"},
+        {"id": "usgs-inglewood-1924", "kind": "usgs-topo", "name": "Inglewood", "year": 1924, "scale": 24000, "key": "StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Inglewood_291567_1924_24000_geo.tif"},
+        {"id": "usgs-topanga-canyon-1928", "kind": "usgs-topo", "name": "Topanga Canyon", "year": 1928, "scale": 24000, "key": "StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Topanga Canyon_295494_1928_24000_geo.tif"}
+      ]
+    },
+    {
+      "id": "usgs-24000-1950",
+      "title": "USGS topographic maps 1:24,000, 1950–1952",
+      "publisher": "US Geological Survey",
+      "sheets": [
+        {"id": "usgs-venice-1950", "kind": "usgs-topo", "name": "Venice", "year": 1950, "scale": 24000, "key": "StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Venice_301115_1950_24000_geo.tif"},
+        {"id": "usgs-beverly-hills-1950", "kind": "usgs-topo", "name": "Beverly Hills", "year": 1950, "scale": 24000, "key": "StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Beverly Hills_288350_1950_24000_geo.tif"},
+        {"id": "usgs-inglewood-1950", "kind": "usgs-topo", "name": "Inglewood", "year": 1950, "scale": 24000, "key": "StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Inglewood_291570_1950_24000_geo.tif"},
+        {"id": "usgs-topanga-1952", "kind": "usgs-topo", "name": "Topanga", "year": 1952, "scale": 24000, "key": "StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Topanga_295491_1952_24000_geo.tif"},
+        {"id": "usgs-malibu-beach-1951", "kind": "usgs-topo", "name": "Malibu Beach", "year": 1951, "scale": 24000, "key": "StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Malibu Beach_292669_1951_24000_geo.tif"}
+      ]
+    }
+  ]
+}

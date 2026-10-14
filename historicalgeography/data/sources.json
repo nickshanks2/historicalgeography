@@ -118,5 +118,80 @@
     "id": "usgs-nhd",
     "title": "USGS National Hydrography Dataset, HU8 18070104 (Santa Monica Bay)",
     "url": "https://www.usgs.gov/national-hydrography/national-hydrography-dataset"
+  },
+  {
+    "id": "map-usgs-santa-monica-1902",
+    "title": "US Geological Survey, Santa Monica quadrangle, 1:62,500 (1902)",
+    "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Santa%20Monica_298948_1902_62500_geo.tif"
+  },
+  {
+    "id": "map-usgs-calabasas-1903",
+    "title": "US Geological Survey, Calabasas quadrangle, 1:62,500 (1903)",
+    "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Calabasas_296956_1903_62500_geo.tif"
+  },
+  {
+    "id": "map-usgs-redondo-1896",
+    "title": "US Geological Survey, Redondo quadrangle, 1:62,500 (1896)",
+    "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Redondo_298753_1896_62500_geo.tif"
+  },
+  {
+    "id": "map-T-01427",
+    "title": "NOAA T-sheet T-01427 (1876): Topography Of Vicinity Of Santa Monica Cal., CA",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-01427.zip"
+  },
+  {
+    "id": "map-T-01791",
+    "title": "NOAA T-sheet T-01791 (1887): Proposed Harbor of Port Ballona, CA",
+    "url": "https://nsde.ngs.noaa.gov/downloads/T-01791.zip"
+  },
+  {
+    "id": "map-usgs-venice-1924",
+    "title": "US Geological Survey, Venice quadrangle, 1:24,000 (1924)",
+    "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Venice_295606_1924_24000_geo.tif"
+  },
+  {
+    "id": "map-usgs-sawtelle-1925",
+    "title": "US Geological Survey, Sawtelle quadrangle, 1:24,000 (1925)",
+    "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Sawtelle_295108_1925_24000_geo.tif"
+  },
+  {
+    "id": "map-usgs-inglewood-1924",
+    "title": "US Geological Survey, Inglewood quadrangle, 1:24,000 (1924)",
+    "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Inglewood_291567_1924_24000_geo.tif"
+  },
+  {
+    "id": "map-usgs-topanga-canyon-1928",
+    "title": "US Geological Survey, Topanga Canyon quadrangle, 1:24,000 (1928)",
+    "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Topanga%20Canyon_295494_1928_24000_geo.tif"
+  },
+  {
+    "id": "map-usgs-venice-1950",
+    "title": "US Geological Survey, Venice quadrangle, 1:24,000 (1950)",
+    "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Venice_301115_1950_24000_geo.tif"
+  },
+  {
+    "id": "map-usgs-beverly-hills-1950",
+    "title": "US Geological Survey, Beverly Hills quadrangle, 1:24,000 (1950)",
+    "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Beverly%20Hills_288350_1950_24000_geo.tif"
+  },
+  {
+    "id": "map-usgs-inglewood-1950",
+    "title": "US Geological Survey, Inglewood quadrangle, 1:24,000 (1950)",
+    "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Inglewood_291570_1950_24000_geo.tif"
+  },
+  {
+    "id": "map-usgs-topanga-1952",
+    "title": "US Geological Survey, Topanga quadrangle, 1:24,000 (1952)",
+    "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Topanga_295491_1952_24000_geo.tif"
+  },
+  {
+    "id": "map-usgs-malibu-beach-1951",
+    "title": "US Geological Survey, Malibu Beach quadrangle, 1:24,000 (1951)",
+    "url": "https://prd-tnm.s3.amazonaws.com/StagedProducts/Maps/HistoricalTopo/GeoTIFF/CA/CA_Malibu%20Beach_292669_1951_24000_geo.tif"
+  },
+  {
+    "id": "map-sanborn-santa-monica-1902-07",
+    "title": "Sanborn Fire Insurance Map, Santa Monica, 1902-07 (Library of Congress, Geography and Map Division, Sanborn Maps Collection)",
+    "url": "https://www.loc.gov/item/sanborn00836_005/"
   }
 ]

@@ -18,6 +18,7 @@ import {
   TERRAIN_TILES_URL,
 } from "@/config/map";
 import { BUILT, BUILT_LAND, LAND_COVER_TYPES, PAINTED, PAINTED_INK } from "./featureTypes";
+import type { Overlay } from "./overlays";
 import { existsInFilter } from "./timeFilter";
 
 const FONT_REGULAR = ["noto-sans-regular"];
@@ -562,3 +563,46 @@ export const STYLE_TYPES: Record<"painted" | "built", readonly string[]> = {
     "landmark",
   ],
 };
+
+/** Layer ids of the historical map overlay currently in a style. */
+export const OVERLAY_LAYER_PREFIX = "overlay-";
+
+/**
+ * Add a historical map set as raster layers: above our land cover and
+ * terrain shading, below lines and labels (ours, or the modern basemap's),
+ * so the old map can be compared with what we draw on top of it.
+ */
+export function withOverlay(
+  style: StyleSpecification,
+  overlay: Overlay | null,
+  modern: boolean,
+): StyleSpecification {
+  if (!overlay) return style;
+  const sources = { ...style.sources };
+  const layers: LayerSpecification[] = [];
+  // Older sheets first, so newer ones draw on top where they overlap.
+  for (const sheet of [...overlay.set.sheets].sort((a, b) => a.year - b.year)) {
+    sources[`${OVERLAY_LAYER_PREFIX}${sheet.id}`] = {
+      type: "raster",
+      url: `pmtiles://${absolute(sheet.url)}`,
+      tileSize: 256,
+      attribution: `Historical map: ${overlay.set.publisher}`,
+    };
+    layers.push({
+      id: `${OVERLAY_LAYER_PREFIX}${sheet.id}`,
+      type: "raster",
+      source: `${OVERLAY_LAYER_PREFIX}${sheet.id}`,
+      paint: { "raster-opacity": overlay.opacity, "raster-fade-duration": 0 },
+    });
+  }
+  // Over the modern basemap, cover everything but its labels; over our own
+  // styles, stay below our lines too.
+  const at = style.layers.findIndex((l) =>
+    modern
+      ? l.type === "symbol"
+      : (l.type === "line" && l.id !== "landcover-edge" && l.id !== "coast-wash") || l.type === "symbol",
+  );
+  const all = [...style.layers];
+  all.splice(at === -1 ? all.length : at, 0, ...layers);
+  return { ...style, sources, layers: all };
+}

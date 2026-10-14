@@ -20,6 +20,15 @@ python3 pipeline/build_landscape.py      # -> data/features/landscape.geojson, d
 python3 pipeline/build_built_samples.py  # -> data/features/built.geojson (Phase 1 samples)
 ```
 
+Overlays and tracing reference:
+
+```bash
+python3 pipeline/build_overlays.py          # old maps -> data/overlays/*.pmtiles, data/overlays.json
+python3 pipeline/build_osm_reference.py     # today's named streets -> data/reference/osm_streets.geojson
+python3 pipeline/fetch_sanborn_index.py     # LOC Sanborn atlases -> data/reference/sanborn.json
+python3 pipeline/build_sanborn.py           # pinned Sanborn sheets (data/georef/) -> overlays
+```
+
 `build_landscape.py` also adds an entry to `data/sources.json` for every
 NOAA T-sheet it uses. Record any new source in `data/LICENSES.md` too.
 

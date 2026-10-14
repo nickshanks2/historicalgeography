@@ -1,0 +1,244 @@
+{
+ "sets": [
+  {
+   "id": "coast-survey-1870s",
+   "title": "US Coast Survey T-sheets, 1876–1887",
+   "publisher": "US Coast Survey (NOAA)",
+   "start_year": 1876,
+   "end_year": 1887,
+   "sheets": [
+    {
+     "id": "T-01427",
+     "year": 1876,
+     "url": "/data/overlays/T-01427.pmtiles",
+     "bounds": [
+      -118.60492,
+      33.97323,
+      -118.43433,
+      34.09172
+     ],
+     "maxzoom": 17,
+     "source_id": "map-T-01427"
+    },
+    {
+     "id": "T-01791",
+     "year": 1887,
+     "url": "/data/overlays/T-01791.pmtiles",
+     "bounds": [
+      -118.5163,
+      33.92931,
+      -118.42814,
+      34.05368
+     ],
+     "maxzoom": 17,
+     "source_id": "map-T-01791"
+    }
+   ]
+  },
+  {
+   "id": "usgs-62500-1900",
+   "title": "USGS topographic maps 1:62,500, 1896–1903",
+   "publisher": "US Geological Survey",
+   "start_year": 1896,
+   "end_year": 1903,
+   "sheets": [
+    {
+     "id": "usgs-santa-monica-1902",
+     "year": 1902,
+     "url": "/data/overlays/usgs-santa-monica-1902.pmtiles",
+     "bounds": [
+      -118.5009,
+      34.00001,
+      -118.25089,
+      34.25
+     ],
+     "maxzoom": 15,
+     "source_id": "map-usgs-santa-monica-1902"
+    },
+    {
+     "id": "usgs-calabasas-1903",
+     "year": 1903,
+     "url": "/data/overlays/usgs-calabasas-1903.pmtiles",
+     "bounds": [
+      -118.75091,
+      34.00001,
+      -118.5009,
+      34.25
+     ],
+     "maxzoom": 15,
+     "source_id": "map-usgs-calabasas-1903"
+    },
+    {
+     "id": "usgs-redondo-1896",
+     "year": 1896,
+     "url": "/data/overlays/usgs-redondo-1896.pmtiles",
+     "bounds": [
+      -118.5009,
+      33.75001,
+      -118.25089,
+      34.00001
+     ],
+     "maxzoom": 15,
+     "source_id": "map-usgs-redondo-1896"
+    }
+   ]
+  },
+  {
+   "id": "usgs-24000-1920s",
+   "title": "USGS topographic maps 1:24,000, 1924–1928",
+   "publisher": "US Geological Survey",
+   "start_year": 1924,
+   "end_year": 1928,
+   "sheets": [
+    {
+     "id": "usgs-venice-1924",
+     "year": 1924,
+     "url": "/data/overlays/usgs-venice-1924.pmtiles",
+     "bounds": [
+      -118.5009,
+      33.90001,
+      -118.40089,
+      34.00001
+     ],
+     "maxzoom": 16,
+     "source_id": "map-usgs-venice-1924"
+    },
+    {
+     "id": "usgs-sawtelle-1925",
+     "year": 1925,
+     "url": "/data/overlays/usgs-sawtelle-1925.pmtiles",
+     "bounds": [
+      -118.5009,
+      34.00001,
+      -118.40089,
+      34.10001
+     ],
+     "maxzoom": 16,
+     "source_id": "map-usgs-sawtelle-1925"
+    },
+    {
+     "id": "usgs-inglewood-1924",
+     "year": 1924,
+     "url": "/data/overlays/usgs-inglewood-1924.pmtiles",
+     "bounds": [
+      -118.40089,
+      33.90001,
+      -118.30089,
+      34.00001
+     ],
+     "maxzoom": 16,
+     "source_id": "map-usgs-inglewood-1924"
+    },
+    {
+     "id": "usgs-topanga-canyon-1928",
+     "year": 1928,
+     "url": "/data/overlays/usgs-topanga-canyon-1928.pmtiles",
+     "bounds": [
+      -118.6009,
+      34.00001,
+      -118.5009,
+      34.1
+     ],
+     "maxzoom": 16,
+     "source_id": "map-usgs-topanga-canyon-1928"
+    }
+   ]
+  },
+  {
+   "id": "usgs-24000-1950",
+   "title": "USGS topographic maps 1:24,000, 1950–1952",
+   "publisher": "US Geological Survey",
+   "start_year": 1950,
+   "end_year": 1952,
+   "sheets": [
+    {
+     "id": "usgs-venice-1950",
+     "year": 1950,
+     "url": "/data/overlays/usgs-venice-1950.pmtiles",
+     "bounds": [
+      -118.5009,
+      33.87501,
+      -118.37589,
+      34.00001
+     ],
+     "maxzoom": 16,
+     "source_id": "map-usgs-venice-1950"
+    },
+    {
+     "id": "usgs-beverly-hills-1950",
+     "year": 1950,
+     "url": "/data/overlays/usgs-beverly-hills-1950.pmtiles",
+     "bounds": [
+      -118.5009,
+      34.00001,
+      -118.37589,
+      34.125
+     ],
+     "maxzoom": 16,
+     "source_id": "map-usgs-beverly-hills-1950"
+    },
+    {
+     "id": "usgs-inglewood-1950",
+     "year": 1950,
+     "url": "/data/overlays/usgs-inglewood-1950.pmtiles",
+     "bounds": [
+      -118.37589,
+      33.87501,
+      -118.25089,
+      34.00001
+     ],
+     "maxzoom": 16,
+     "source_id": "map-usgs-inglewood-1950"
+    },
+    {
+     "id": "usgs-topanga-1952",
+     "year": 1952,
+     "url": "/data/overlays/usgs-topanga-1952.pmtiles",
+     "bounds": [
+      -118.6259,
+      34.00001,
+      -118.5009,
+      34.125
+     ],
+     "maxzoom": 16,
+     "source_id": "map-usgs-topanga-1952"
+    },
+    {
+     "id": "usgs-malibu-beach-1951",
+     "year": 1951,
+     "url": "/data/overlays/usgs-malibu-beach-1951.pmtiles",
+     "bounds": [
+      -118.75091,
+      34.00001,
+      -118.6259,
+      34.125
+     ],
+     "maxzoom": 16,
+     "source_id": "map-usgs-malibu-beach-1951"
+    }
+   ]
+  },
+  {
+   "id": "sanborn-santa-monica-1902-07",
+   "title": "Sanborn fire insurance maps, Santa Monica, 1902",
+   "publisher": "Sanborn Map Company (Library of Congress)",
+   "start_year": 1902,
+   "end_year": 1902,
+   "sheets": [
+    {
+     "id": "sanborn-santa-monica-1902-07-2",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-2.pmtiles",
+     "bounds": [
+      -118.49371,
+      34.0202,
+      -118.48808,
+      34.0249
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    }
+   ]
+  }
+ ]
+}

@@ -17,6 +17,12 @@ copyFileSync("data/features/built.geojson", "public/data/features/built.geojson"
 for (const file of readdirSync("data/tiles")) {
   if (file.endsWith(".pmtiles")) copyFileSync(`data/tiles/${file}`, `public/data/tiles/${file}`);
 }
+// Historical map overlays (pipeline/build_overlays.py).
+mkdirSync("public/data/overlays", { recursive: true });
+copyFileSync("data/overlays.json", "public/data/overlays.json");
+for (const file of readdirSync("data/overlays")) {
+  if (file.endsWith(".pmtiles")) copyFileSync(`data/overlays/${file}`, `public/data/overlays/${file}`);
+}
 
 const seen = new Set();
 const summary = [];
