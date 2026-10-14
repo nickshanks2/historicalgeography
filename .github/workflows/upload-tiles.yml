@@ -1,6 +1,8 @@
 # Upload the map's tile files (*.pmtiles) to the Cloudflare R2 bucket the
 # site reads them from (NEXT_PUBLIC_TILES_BASE_URL). Runs when tile files
-# change, or by hand from the Actions tab ("Run workflow").
+# change or this file changes, or by hand from the Actions tab ("Run
+# workflow", once it is on the default branch; on other branches open the
+# latest run and use "Re-run all jobs").
 #
 # Needs two repository secrets (Settings -> Secrets and variables -> Actions):
 #   CLOUDFLARE_API_TOKEN   R2 token with Object Read & Write on the bucket
@@ -14,6 +16,7 @@ on:
     paths:
       - "historicalgeography/data/tiles/**.pmtiles"
       - "historicalgeography/data/overlays/**.pmtiles"
+      - ".github/workflows/upload-tiles.yml"
 
 jobs:
   upload:
@@ -26,6 +29,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Check the Cloudflare secrets are set
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$TOKEN" ] || [ -z "$ACCOUNT" ]; then
+            echo "::error::Add the CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repository secrets, then re-run this job."
+            exit 1
+          fi
       - name: Upload changed tile files
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
