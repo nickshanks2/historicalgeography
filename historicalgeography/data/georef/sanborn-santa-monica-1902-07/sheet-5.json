@@ -1,0 +1,94 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 5,
+ "part": "",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0005",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 230,
+   "py": 392,
+   "lng": -118.4888843,
+   "lat": 34.0187608,
+   "corner": "Broadway / 9th Street"
+  },
+  {
+   "px": 3787,
+   "py": 392,
+   "lng": -118.4875384,
+   "lat": 34.017629,
+   "corner": "Colorado Avenue / 9th Street"
+  },
+  {
+   "px": 230,
+   "py": 2290,
+   "lng": -118.4896323,
+   "lat": 34.0181519,
+   "corner": "Broadway / 8th Street"
+  },
+  {
+   "px": 3787,
+   "py": 2290,
+   "lng": -118.488224,
+   "lat": 34.0169551,
+   "corner": "Colorado Avenue / 8th Street"
+  },
+  {
+   "px": 230,
+   "py": 2764,
+   "lng": -118.4898216,
+   "lat": 34.0179991,
+   "corner": "Broadway / 8th Street"
+  },
+  {
+   "px": 3787,
+   "py": 4690,
+   "lng": -118.4892051,
+   "lat": 34.0162228,
+   "corner": "Colorado Avenue / 7th Street"
+  },
+  {
+   "px": 230,
+   "py": 5174,
+   "lng": -118.4907673,
+   "lat": 34.0172354,
+   "corner": "Broadway / 7th Street"
+  },
+  {
+   "px": 3787,
+   "py": 7095,
+   "lng": -118.4901554,
+   "lat": 34.0154389,
+   "corner": "Colorado Avenue / 6th Street"
+  },
+  {
+   "px": 230,
+   "py": 7095,
+   "lng": -118.4915332,
+   "lat": 34.0166137,
+   "corner": "Broadway / 6th Street"
+  },
+  {
+   "px": 4248,
+   "py": 5174,
+   "lng": -118.489211,
+   "lat": 34.0159124,
+   "corner": "Colorado Avenue / 7th Street"
+  },
+  {
+   "px": 4248,
+   "py": 7095,
+   "lng": -118.4899718,
+   "lat": 34.0152813,
+   "corner": "Colorado Avenue / 6th Street"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  46,
+  184,
+  6450,
+  7256
+ ]
+}

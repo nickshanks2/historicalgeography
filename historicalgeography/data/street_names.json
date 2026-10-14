@@ -1,0 +1,64 @@
+{
+  "about": "Street names as printed on old maps, matched to today's OpenStreetMap streets. pipeline/build_streets.py turns each entry into a time-ranged street feature in data/features/built.geojson: the old name from shortly before the map (start_approx) until it was renamed, or, if the rename isn't yet dated, until the year after it was last seen (end_approx). 'straight' draws a straight street through where today's course is broken up (the 3rd Street Promenade and Santa Monica Place, Colorado Avenue's split carriageways). 'within' limits an entry to some sheets of the atlas, where the same modern street had different names. Sanborn prints streets without a suffix and avenues as 'Av.'.",
+  "atlases": [
+    {
+      "atlas": "sanborn-santa-monica-1902-07",
+      "replaces_samples": ["street-ocean", "street-main", "street-colorado", "building-sm-0", "building-sm-1", "building-sm-2", "rail-sm", "streetcar-sm-venice"],
+      "groups": {
+        "santa-monica": ["2", "3", "4", "5", "6a", "6b", "7b", "8a", "8b", "8c", "9", "10", "11", "12", "13", "14a", "14b", "14c", "15"],
+        "ocean-park": ["17", "18", "19a", "19b", "19c", "20"],
+        "ocean-park-inset": ["19b"]
+      },
+      "streets": [
+        {"name": "Ocean Avenue", "osm": ["Ocean Avenue"], "within": "santa-monica"},
+        {"name": "2nd Street", "osm": ["2nd Street", "Second Street"], "within": "santa-monica"},
+        {"name": "3rd Street", "osm": ["3rd Street", "Third Street"], "within": "santa-monica", "straight": true},
+        {"name": "4th Street", "osm": ["4th Street", "Fourth Street"], "within": "santa-monica"},
+        {"name": "5th Street", "osm": ["5th Street"], "within": "santa-monica"},
+        {"name": "6th Street", "osm": ["6th Street"], "within": "santa-monica"},
+        {"name": "7th Street", "osm": ["7th Street"], "within": "santa-monica"},
+        {"name": "8th Street", "osm": ["Lincoln Boulevard"], "within": "santa-monica"},
+        {"name": "9th Street", "osm": ["9th Street"], "within": "santa-monica"},
+        {"name": "10th Street", "osm": ["10th Street"], "within": "santa-monica"},
+        {"name": "11th Street", "osm": ["11th Street"], "within": "santa-monica"},
+        {"name": "Montana Avenue", "osm": ["Montana Avenue"], "within": "santa-monica"},
+        {"name": "Idaho Avenue", "osm": ["Idaho Avenue"], "within": "santa-monica"},
+        {"name": "Washington Avenue", "osm": ["Washington Avenue"], "within": "santa-monica"},
+        {"name": "California Avenue", "osm": ["California Avenue"], "within": "santa-monica"},
+        {
+          "name": "Nevada Avenue", "osm": ["Wilshire Boulevard"], "within": "santa-monica",
+          "renamed": {"to": "Wilshire Boulevard", "by": 1918, "source": "map-sanborn-santa-monica-1918",
+                      "note": "Still Nevada Avenue on the 1909 Sanborn atlas; Wilshire Boulevard on the 1918 atlas."}
+        },
+        {"name": "Arizona Avenue", "osm": ["Arizona Avenue"], "within": "santa-monica"},
+        {
+          "name": "Oregon Avenue", "osm": ["Santa Monica Boulevard"], "within": "santa-monica",
+          "renamed": {"to": "Santa Monica Boulevard", "by": 1918, "source": "map-sanborn-santa-monica-1918",
+                      "note": "Still Oregon Avenue on the 1909 Sanborn atlas; Santa Monica Boulevard on the 1918 atlas."}
+        },
+        {
+          "name": "Utah Avenue", "osm": ["Broadway"], "within": "santa-monica",
+          "last_seen": {"year": 1918, "source": "map-sanborn-santa-monica-1918"}
+        },
+        {
+          "name": "Railroad Avenue", "osm": ["Colorado Avenue"], "within": "santa-monica", "straight": true,
+          "renamed": {"to": "Colorado Avenue", "by": 1909, "source": "map-sanborn-santa-monica-1909-04",
+                      "note": "Colorado Avenue on the 1909 Sanborn atlas."}
+        },
+        {"name": "South Ocean Avenue", "osm": ["Ocean Avenue", "Ocean Way"], "within": "ocean-park"},
+        {"name": "South 2nd Street", "osm": ["Main Street"], "within": "ocean-park"},
+        {"name": "Lake Street", "osm": ["2nd Street"], "within": "ocean-park"},
+        {"name": "South 3rd Street", "osm": ["3rd Street"], "within": "ocean-park"},
+        {"name": "South 4th Street", "osm": ["4th Street"], "within": "ocean-park"},
+        {"name": "Bay Street", "osm": ["Bay Street"], "within": "ocean-park"},
+        {"name": "Bicknell Avenue", "osm": ["Bicknell Avenue"], "within": "ocean-park"},
+        {"name": "Pacific Street", "osm": ["Pacific Street"], "within": "ocean-park"},
+        {"name": "Strand Street", "osm": ["Strand Street"], "within": "ocean-park"},
+        {"name": "Hollister Avenue", "osm": ["Hollister Avenue"], "within": "ocean-park", "not_within": "ocean-park-inset"},
+        {"name": "Broad Street", "osm": ["Hollister Avenue"], "within": "ocean-park-inset"},
+        {"name": "Hill Street", "osm": ["Hill Street"], "within": "ocean-park"},
+        {"name": "Ash Street", "osm": ["Ashland Avenue"], "within": "ocean-park"}
+      ]
+    }
+  ]
+}

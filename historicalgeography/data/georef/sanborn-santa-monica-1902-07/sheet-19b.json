@@ -1,0 +1,59 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 19,
+ "part": "b",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0019",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 5381,
+   "py": 392,
+   "lng": -118.4858613,
+   "lat": 34.0053048,
+   "corner": "Strand Street / 2nd Street"
+  },
+  {
+   "px": 5667,
+   "py": 392,
+   "lng": -118.4857429,
+   "lat": 34.0054003,
+   "corner": "Strand Street / 2nd Street"
+  },
+  {
+   "px": 5381,
+   "py": 2396,
+   "lng": -118.4851804,
+   "lat": 34.0046102,
+   "corner": "Hollister Avenue / 2nd Street"
+  },
+  {
+   "px": 5667,
+   "py": 2396,
+   "lng": -118.4850621,
+   "lat": 34.0047057,
+   "corner": "Hollister Avenue / 2nd Street"
+  },
+  {
+   "px": 5381,
+   "py": 2820,
+   "lng": -118.4850198,
+   "lat": 34.0044723,
+   "corner": "Hollister Avenue / 2nd Street"
+  },
+  {
+   "px": 5630,
+   "py": 2833,
+   "lng": -118.4849015,
+   "lat": 34.0045678,
+   "corner": "Hollister Avenue / 2nd Street"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  3755,
+  0,
+  6450,
+  4814
+ ]
+}

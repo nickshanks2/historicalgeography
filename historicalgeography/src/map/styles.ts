@@ -16,6 +16,7 @@ import {
   TERRAIN_ATTRIBUTION,
   TERRAIN_EXAGGERATION,
   TERRAIN_TILES_URL,
+  tileFileUrl,
 } from "@/config/map";
 import { BUILT, BUILT_LAND, LAND_COVER_TYPES, PAINTED, PAINTED_INK } from "./featureTypes";
 import type { Overlay } from "./overlays";
@@ -44,11 +45,15 @@ function datasetSources(): Record<string, SourceSpecification> {
   return {
     landscape: {
       type: "vector",
-      url: `pmtiles://${absolute(DATASETS.landscape)}`,
+      url: `pmtiles://${tileFileUrl(DATASETS.landscape)}`,
       attribution:
         "Ballona Historical Ecology Project · LANDFIRE · NOAA T-sheets · USGS NHD · Made with Natural Earth",
     },
-    built: { type: "geojson", data: DATASETS.built },
+    built: {
+      type: "geojson",
+      data: DATASETS.built,
+      attribution: "Sanborn maps: Library of Congress · Street courses © OpenStreetMap contributors",
+    },
     landmarks: {
       type: "geojson",
       data: DATASETS.landmarks,
@@ -584,7 +589,7 @@ export function withOverlay(
   for (const sheet of [...overlay.set.sheets].sort((a, b) => a.year - b.year)) {
     sources[`${OVERLAY_LAYER_PREFIX}${sheet.id}`] = {
       type: "raster",
-      url: `pmtiles://${absolute(sheet.url)}`,
+      url: `pmtiles://${tileFileUrl(sheet.url)}`,
       tileSize: 256,
       attribution: `Historical map: ${overlay.set.publisher}`,
     };

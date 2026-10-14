@@ -1,0 +1,59 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 18,
+ "part": "",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0018",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 2202,
+   "py": 806,
+   "lng": -118.4887517,
+   "lat": 34.0045257,
+   "corner": "Pacific Street / Ocean Way"
+  },
+  {
+   "px": 2202,
+   "py": 2580,
+   "lng": -118.4881299,
+   "lat": 34.0038917,
+   "corner": "Strand Street / Ocean Way"
+  },
+  {
+   "px": 2202,
+   "py": 2820,
+   "lng": -118.4880381,
+   "lat": 34.0038129,
+   "corner": "Strand Street / Ocean Way"
+  },
+  {
+   "px": 5390,
+   "py": 806,
+   "lng": -118.487388,
+   "lat": 34.0054783,
+   "corner": "Pacific Street / Main Street"
+  },
+  {
+   "px": 5390,
+   "py": 2580,
+   "lng": -118.4867664,
+   "lat": 34.0048431,
+   "corner": "Strand Street / Main Street"
+  },
+  {
+   "px": 5390,
+   "py": 2820,
+   "lng": -118.4866747,
+   "lat": 34.0047643,
+   "corner": "Strand Street / Main Street"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  0,
+  631,
+  6450,
+  7648
+ ]
+}

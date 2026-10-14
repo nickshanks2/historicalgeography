@@ -1,0 +1,73 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 14,
+ "part": "c",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0014",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 1405,
+   "py": 5068,
+   "lng": -118.4970633,
+   "lat": 34.0147345,
+   "corner": "Santa Monica Boulevard / 2nd Street"
+  },
+  {
+   "px": 1405,
+   "py": 5971,
+   "lng": -118.4974462,
+   "lat": 34.0144322,
+   "corner": "Santa Monica Boulevard / 2nd Street|Ocean Avenue"
+  },
+  {
+   "px": 1405,
+   "py": 6072,
+   "lng": -118.4974936,
+   "lat": 34.014394,
+   "corner": "Santa Monica Boulevard / 2nd Street|Ocean Avenue"
+  },
+  {
+   "px": 1405,
+   "py": 7049,
+   "lng": -118.4978529,
+   "lat": 34.0141107,
+   "corner": "Santa Monica Boulevard / Ocean Avenue"
+  },
+  {
+   "px": 4976,
+   "py": 5068,
+   "lng": -118.4956773,
+   "lat": 34.0135593,
+   "corner": "Broadway / 2nd Street"
+  },
+  {
+   "px": 4976,
+   "py": 5971,
+   "lng": -118.4960529,
+   "lat": 34.0132552,
+   "corner": "Broadway / 2nd Street|Ocean Avenue"
+  },
+  {
+   "px": 4976,
+   "py": 6072,
+   "lng": -118.4961002,
+   "lat": 34.013217,
+   "corner": "Broadway / 2nd Street|Ocean Avenue"
+  },
+  {
+   "px": 4976,
+   "py": 7049,
+   "lng": -118.4964522,
+   "lat": 34.0129321,
+   "corner": "Broadway / Ocean Avenue"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  1170,
+  4584,
+  5211,
+  7344
+ ]
+}

@@ -230,10 +230,322 @@
      "year": 1902,
      "url": "/data/overlays/sanborn-santa-monica-1902-07-2.pmtiles",
      "bounds": [
-      -118.49371,
-      34.0202,
+      -118.49367,
+      34.02024,
       -118.48808,
       34.0249
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-3",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-3.pmtiles",
+     "bounds": [
+      -118.49647,
+      34.01848,
+      -118.49104,
+      34.02304
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-4",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-4.pmtiles",
+     "bounds": [
+      -118.49418,
+      34.01659,
+      -118.48883,
+      34.02103
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-5",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-5.pmtiles",
+     "bounds": [
+      -118.49166,
+      34.01451,
+      -118.4864,
+      34.01889
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-6a",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-6a.pmtiles",
+     "bounds": [
+      -118.49041,
+      34.01818,
+      -118.48696,
+      34.02108
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-6b",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-6b.pmtiles",
+     "bounds": [
+      -118.50164,
+      34.01966,
+      -118.49713,
+      34.02343
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-7b",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-7b.pmtiles",
+     "bounds": [
+      -118.4993,
+      34.01762,
+      -118.4947,
+      34.02143
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-8a",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-8a.pmtiles",
+     "bounds": [
+      -118.49674,
+      34.01564,
+      -118.4923,
+      34.01935
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-8b",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-8b.pmtiles",
+     "bounds": [
+      -118.50757,
+      34.02087,
+      -118.50495,
+      34.02304
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-8c",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-8c.pmtiles",
+     "bounds": [
+      -118.49565,
+      34.01525,
+      -118.49424,
+      34.01644
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-9",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-9.pmtiles",
+     "bounds": [
+      -118.49504,
+      34.01333,
+      -118.49007,
+      34.01742
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-10",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-10.pmtiles",
+     "bounds": [
+      -118.50594,
+      34.01955,
+      -118.50152,
+      34.02319
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-11",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-11.pmtiles",
+     "bounds": [
+      -118.50443,
+      34.01735,
+      -118.49904,
+      34.02185
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-12",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-12.pmtiles",
+     "bounds": [
+      -118.50218,
+      34.01539,
+      -118.49674,
+      34.01989
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-13",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-13.pmtiles",
+     "bounds": [
+      -118.49964,
+      34.01408,
+      -118.49517,
+      34.01776
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-14a",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-14a.pmtiles",
+     "bounds": [
+      -118.4962,
+      34.01423,
+      -118.49409,
+      34.01604
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-14b",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-14b.pmtiles",
+     "bounds": [
+      -118.49715,
+      34.01348,
+      -118.49447,
+      34.01572
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-14c",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-14c.pmtiles",
+     "bounds": [
+      -118.49807,
+      34.01275,
+      -118.4954,
+      34.01495
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-15",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-15.pmtiles",
+     "bounds": [
+      -118.49646,
+      34.01147,
+      -118.49255,
+      34.0147
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-17",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-17.pmtiles",
+     "bounds": [
+      -118.49209,
+      34.00398,
+      -118.48663,
+      34.00859
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-18",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-18.pmtiles",
+     "bounds": [
+      -118.48976,
+      34.00144,
+      -118.48452,
+      34.00586
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-19a",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-19a.pmtiles",
+     "bounds": [
+      -118.48539,
+      34.00076,
+      -118.48094,
+      34.00462
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-19b",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-19b.pmtiles",
+     "bounds": [
+      -118.48669,
+      34.00322,
+      -118.48388,
+      34.00581
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-19c",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-19c.pmtiles",
+     "bounds": [
+      -118.482,
+      34.00192,
+      -118.47979,
+      34.00375
+     ],
+     "maxzoom": 21,
+     "source_id": "map-sanborn-santa-monica-1902-07"
+    },
+    {
+     "id": "sanborn-santa-monica-1902-07-20",
+     "year": 1902,
+     "url": "/data/overlays/sanborn-santa-monica-1902-07-20.pmtiles",
+     "bounds": [
+      -118.48254,
+      33.99837,
+      -118.47724,
+      34.00286
      ],
      "maxzoom": 21,
      "source_id": "map-sanborn-santa-monica-1902-07"

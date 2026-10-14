@@ -1,0 +1,87 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 8,
+ "part": "a",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0008",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 286,
+   "py": 369,
+   "lng": -118.4948419,
+   "lat": 34.0191188,
+   "corner": "Arizona Avenue / 6th Street"
+  },
+  {
+   "px": 3824,
+   "py": 369,
+   "lng": -118.4934735,
+   "lat": 34.0179674,
+   "corner": "Santa Monica Boulevard / 6th Street"
+  },
+  {
+   "px": 4308,
+   "py": 369,
+   "lng": -118.49329,
+   "lat": 34.0178098,
+   "corner": "Santa Monica Boulevard / 6th Street"
+  },
+  {
+   "px": 286,
+   "py": 2290,
+   "lng": -118.4956008,
+   "lat": 34.0185191,
+   "corner": "Arizona Avenue / 5th Street"
+  },
+  {
+   "px": 3824,
+   "py": 2290,
+   "lng": -118.4942217,
+   "lat": 34.0173421,
+   "corner": "Santa Monica Boulevard / 5th Street"
+  },
+  {
+   "px": 286,
+   "py": 2764,
+   "lng": -118.4957902,
+   "lat": 34.0183663,
+   "corner": "Arizona Avenue / 5th Street"
+  },
+  {
+   "px": 3824,
+   "py": 4653,
+   "lng": -118.4951609,
+   "lat": 34.0165792,
+   "corner": "Santa Monica Boulevard / 4th Street"
+  },
+  {
+   "px": 286,
+   "py": 4653,
+   "lng": -118.4965494,
+   "lat": 34.0177663,
+   "corner": "Arizona Avenue / 4th Street"
+  },
+  {
+   "px": 4308,
+   "py": 4653,
+   "lng": -118.4949773,
+   "lat": 34.0164216,
+   "corner": "Santa Monica Boulevard / 4th Street"
+  },
+  {
+   "px": 4308,
+   "py": 5137,
+   "lng": -118.4951667,
+   "lat": 34.0162688,
+   "corner": "Santa Monica Boulevard / 4th Street"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  0,
+  0,
+  6450,
+  4884
+ ]
+}

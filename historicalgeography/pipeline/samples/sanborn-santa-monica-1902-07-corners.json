@@ -1,0 +1,2640 @@
+{
+ "_comment": "Block corners read off the July 1902 Santa Monica Sanborn sheets (1400 px previews). Streets by today's OSM names: 1902 Nevada Av = Wilshire Boulevard, Oregon Av = Santa Monica Boulevard, Utah Av = Broadway, Railroad Av = Colorado Avenue; 8th Street = Lincoln Boulevard (aliases). [x, y, avenue, street, aSide, sSide, avenueWidthFt, streetWidthFt]",
+ "shown_width": 1400,
+ "grid": {
+  "inland": [
+   [
+    "Arizona Avenue",
+    "9th Street"
+   ],
+   [
+    "Arizona Avenue",
+    "11th Street"
+   ]
+  ],
+  "southeast": [
+   [
+    "Wilshire Boulevard",
+    "10th Street"
+   ],
+   [
+    "Santa Monica Boulevard",
+    "10th Street"
+   ]
+  ]
+ },
+ "sheets": {
+  "2": {
+   "parts": [
+    {
+     "id": "",
+     "crop": [
+      25,
+      0,
+      1400,
+      1660
+     ],
+     "points": [
+      [
+       540,
+       808,
+       "Arizona Avenue",
+       "10th Street",
+       -1,
+       -1
+      ],
+      [
+       120,
+       808,
+       "Arizona Avenue",
+       "9th Street",
+       -1,
+       1
+      ],
+      [
+       120,
+       40,
+       "Wilshire Boulevard",
+       "9th Street",
+       1,
+       1
+      ],
+      [
+       540,
+       40,
+       "Wilshire Boulevard",
+       "10th Street",
+       1,
+       -1
+      ],
+      [
+       1058,
+       40,
+       "Wilshire Boulevard",
+       "11th Street",
+       1,
+       -1
+      ],
+      [
+       1058,
+       808,
+       "Arizona Avenue",
+       "11th Street",
+       -1,
+       -1
+      ],
+      [
+       120,
+       1632,
+       "Santa Monica Boulevard",
+       "9th Street",
+       -1,
+       1
+      ],
+      [
+       1058,
+       1632,
+       "Santa Monica Boulevard",
+       "11th Street",
+       -1,
+       -1
+      ]
+     ]
+    }
+   ]
+  },
+  "3": {
+   "parts": [
+    {
+     "id": "",
+     "crop": [
+      0,
+      20,
+      1400,
+      1610
+     ],
+     "points": [
+      [
+       72,
+       105,
+       "Wilshire Boulevard",
+       "9th Street",
+       1,
+       -1
+      ],
+      [
+       845,
+       105,
+       "Arizona Avenue",
+       "9th Street",
+       -1,
+       -1
+      ],
+      [
+       72,
+       515,
+       "Wilshire Boulevard",
+       "8th Street",
+       1,
+       1
+      ],
+      [
+       845,
+       515,
+       "Arizona Avenue",
+       "8th Street",
+       -1,
+       1
+      ],
+      [
+       72,
+       620,
+       "Wilshire Boulevard",
+       "8th Street",
+       1,
+       -1
+      ],
+      [
+       845,
+       1035,
+       "Arizona Avenue",
+       "7th Street",
+       -1,
+       1
+      ],
+      [
+       72,
+       1140,
+       "Wilshire Boulevard",
+       "7th Street",
+       1,
+       -1
+      ],
+      [
+       845,
+       1555,
+       "Arizona Avenue",
+       "6th Street",
+       -1,
+       1
+      ],
+      [
+       948,
+       105,
+       "Arizona Avenue",
+       "9th Street",
+       1,
+       -1
+      ],
+      [
+       948,
+       1555,
+       "Arizona Avenue",
+       "6th Street",
+       1,
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "4": {
+   "parts": [
+    {
+     "id": "",
+     "crop": [
+      0,
+      46,
+      1400,
+      1598
+     ],
+     "points": [
+      [
+       450,
+       95,
+       "Santa Monica Boulevard",
+       "9th Street",
+       -1,
+       -1
+      ],
+      [
+       555,
+       95,
+       "Santa Monica Boulevard",
+       "9th Street",
+       1,
+       -1
+      ],
+      [
+       1325,
+       95,
+       "Broadway",
+       "9th Street",
+       -1,
+       -1
+      ],
+      [
+       555,
+       515,
+       "Santa Monica Boulevard",
+       "8th Street",
+       1,
+       1
+      ],
+      [
+       1325,
+       515,
+       "Broadway",
+       "8th Street",
+       -1,
+       1
+      ],
+      [
+       450,
+       620,
+       "Santa Monica Boulevard",
+       "8th Street",
+       -1,
+       -1
+      ],
+      [
+       555,
+       620,
+       "Santa Monica Boulevard",
+       "8th Street",
+       1,
+       -1
+      ],
+      [
+       1325,
+       1030,
+       "Broadway",
+       "7th Street",
+       -1,
+       1
+      ],
+      [
+       555,
+       1130,
+       "Santa Monica Boulevard",
+       "7th Street",
+       1,
+       -1
+      ],
+      [
+       1325,
+       1545,
+       "Broadway",
+       "6th Street",
+       -1,
+       1
+      ],
+      [
+       450,
+       1545,
+       "Santa Monica Boulevard",
+       "6th Street",
+       -1,
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "5": {
+   "parts": [
+    {
+     "id": "",
+     "crop": [
+      10,
+      40,
+      1400,
+      1575
+     ],
+     "points": [
+      [
+       50,
+       85,
+       "Broadway",
+       "9th Street",
+       1,
+       -1
+      ],
+      [
+       822,
+       85,
+       "Colorado Avenue",
+       "9th Street",
+       -1,
+       -1
+      ],
+      [
+       50,
+       497,
+       "Broadway",
+       "8th Street",
+       1,
+       1
+      ],
+      [
+       822,
+       497,
+       "Colorado Avenue",
+       "8th Street",
+       -1,
+       1
+      ],
+      [
+       50,
+       600,
+       "Broadway",
+       "8th Street",
+       1,
+       -1
+      ],
+      [
+       822,
+       1018,
+       "Colorado Avenue",
+       "7th Street",
+       -1,
+       1
+      ],
+      [
+       50,
+       1123,
+       "Broadway",
+       "7th Street",
+       1,
+       -1
+      ],
+      [
+       822,
+       1540,
+       "Colorado Avenue",
+       "6th Street",
+       -1,
+       1
+      ],
+      [
+       50,
+       1540,
+       "Broadway",
+       "6th Street",
+       1,
+       1
+      ],
+      [
+       922,
+       1123,
+       "Colorado Avenue",
+       "7th Street",
+       1,
+       -1
+      ],
+      [
+       922,
+       1540,
+       "Colorado Avenue",
+       "6th Street",
+       1,
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "6": {
+   "parts": [
+    {
+     "id": "a",
+     "crop": [
+      0,
+      0,
+      1400,
+      520
+     ],
+     "points": [
+      [
+       60,
+       80,
+       "Santa Monica Boulevard",
+       "10th Street",
+       1,
+       -1
+      ],
+      [
+       835,
+       80,
+       "Broadway",
+       "10th Street",
+       -1,
+       -1
+      ],
+      [
+       60,
+       495,
+       "Santa Monica Boulevard",
+       "9th Street",
+       1,
+       1
+      ],
+      [
+       835,
+       495,
+       "Broadway",
+       "9th Street",
+       -1,
+       1
+      ],
+      [
+       938,
+       80,
+       "Broadway",
+       "10th Street",
+       1,
+       -1
+      ],
+      [
+       938,
+       495,
+       "Broadway",
+       "9th Street",
+       1,
+       1
+      ]
+     ]
+    },
+    {
+     "id": "b",
+     "crop": [
+      0,
+      565,
+      1400,
+      1660
+     ],
+     "points": [
+      [
+       65,
+       625,
+       "Washington Avenue",
+       "6th Street",
+       1,
+       -1
+      ],
+      [
+       835,
+       625,
+       "California Avenue",
+       "6th Street",
+       -1,
+       -1,
+       100,
+       80
+      ],
+      [
+       65,
+       1040,
+       "Washington Avenue",
+       "5th Street",
+       1,
+       1
+      ],
+      [
+       835,
+       1040,
+       "California Avenue",
+       "5th Street",
+       -1,
+       1,
+       100,
+       80
+      ],
+      [
+       65,
+       1143,
+       "Washington Avenue",
+       "5th Street",
+       1,
+       -1
+      ],
+      [
+       835,
+       1557,
+       "California Avenue",
+       "4th Street",
+       -1,
+       1,
+       100,
+       80
+      ],
+      [
+       65,
+       1557,
+       "Washington Avenue",
+       "4th Street",
+       1,
+       1
+      ],
+      [
+       963,
+       625,
+       "California Avenue",
+       "6th Street",
+       1,
+       -1,
+       100,
+       80
+      ],
+      [
+       963,
+       1557,
+       "California Avenue",
+       "4th Street",
+       1,
+       1,
+       100,
+       80
+      ]
+     ]
+    }
+   ]
+  },
+  "7": {
+   "parts": [
+    {
+     "id": "b",
+     "crop": [
+      0,
+      545,
+      1400,
+      1660
+     ],
+     "points": [
+      [
+       540,
+       628,
+       "Wilshire Boulevard",
+       "6th Street",
+       1,
+       -1,
+       100,
+       80
+      ],
+      [
+       1305,
+       628,
+       "Arizona Avenue",
+       "6th Street",
+       -1,
+       -1
+      ],
+      [
+       540,
+       1043,
+       "Wilshire Boulevard",
+       "5th Street",
+       1,
+       1,
+       100,
+       80
+      ],
+      [
+       1305,
+       1043,
+       "Arizona Avenue",
+       "5th Street",
+       -1,
+       1
+      ],
+      [
+       540,
+       1135,
+       "Wilshire Boulevard",
+       "5th Street",
+       1,
+       -1,
+       100,
+       80
+      ],
+      [
+       1305,
+       1555,
+       "Arizona Avenue",
+       "4th Street",
+       -1,
+       1
+      ],
+      [
+       540,
+       1555,
+       "Wilshire Boulevard",
+       "4th Street",
+       1,
+       1,
+       100,
+       80
+      ],
+      [
+       415,
+       628,
+       "Wilshire Boulevard",
+       "6th Street",
+       -1,
+       -1,
+       100,
+       80
+      ],
+      [
+       415,
+       1555,
+       "Wilshire Boulevard",
+       "4th Street",
+       -1,
+       1,
+       100,
+       80
+      ]
+     ]
+    }
+   ]
+  },
+  "8": {
+   "parts": [
+    {
+     "id": "a",
+     "crop": [
+      0,
+      0,
+      1400,
+      1060
+     ],
+     "points": [
+      [
+       62,
+       80,
+       "Arizona Avenue",
+       "6th Street",
+       1,
+       -1
+      ],
+      [
+       830,
+       80,
+       "Santa Monica Boulevard",
+       "6th Street",
+       -1,
+       -1
+      ],
+      [
+       935,
+       80,
+       "Santa Monica Boulevard",
+       "6th Street",
+       1,
+       -1
+      ],
+      [
+       62,
+       497,
+       "Arizona Avenue",
+       "5th Street",
+       1,
+       1
+      ],
+      [
+       830,
+       497,
+       "Santa Monica Boulevard",
+       "5th Street",
+       -1,
+       1
+      ],
+      [
+       62,
+       600,
+       "Arizona Avenue",
+       "5th Street",
+       1,
+       -1
+      ],
+      [
+       830,
+       1010,
+       "Santa Monica Boulevard",
+       "4th Street",
+       -1,
+       1
+      ],
+      [
+       62,
+       1010,
+       "Arizona Avenue",
+       "4th Street",
+       1,
+       1
+      ],
+      [
+       935,
+       1010,
+       "Santa Monica Boulevard",
+       "4th Street",
+       1,
+       1
+      ],
+      [
+       935,
+       1115,
+       "Santa Monica Boulevard",
+       "4th Street",
+       1,
+       -1
+      ]
+     ]
+    },
+    {
+     "id": "c",
+     "crop": [
+      880,
+      1060,
+      1400,
+      1325
+     ],
+     "points": [
+      [
+       62,
+       80,
+       "Arizona Avenue",
+       "6th Street",
+       1,
+       -1
+      ],
+      [
+       830,
+       80,
+       "Santa Monica Boulevard",
+       "6th Street",
+       -1,
+       -1
+      ],
+      [
+       935,
+       80,
+       "Santa Monica Boulevard",
+       "6th Street",
+       1,
+       -1
+      ],
+      [
+       62,
+       497,
+       "Arizona Avenue",
+       "5th Street",
+       1,
+       1
+      ],
+      [
+       830,
+       497,
+       "Santa Monica Boulevard",
+       "5th Street",
+       -1,
+       1
+      ],
+      [
+       62,
+       600,
+       "Arizona Avenue",
+       "5th Street",
+       1,
+       -1
+      ],
+      [
+       830,
+       1010,
+       "Santa Monica Boulevard",
+       "4th Street",
+       -1,
+       1
+      ],
+      [
+       62,
+       1010,
+       "Arizona Avenue",
+       "4th Street",
+       1,
+       1
+      ],
+      [
+       935,
+       1010,
+       "Santa Monica Boulevard",
+       "4th Street",
+       1,
+       1
+      ],
+      [
+       935,
+       1115,
+       "Santa Monica Boulevard",
+       "4th Street",
+       1,
+       -1
+      ]
+     ]
+    },
+    {
+     "id": "b",
+     "crop": [
+      0,
+      1080,
+      875,
+      1660
+     ],
+     "points": [
+      [
+       62,
+       1157,
+       "Montana Avenue",
+       "2nd Street",
+       1,
+       -1
+      ],
+      [
+       830,
+       1157,
+       "Idaho Avenue",
+       "2nd Street",
+       -1,
+       -1
+      ],
+      [
+       62,
+       1575,
+       "Montana Avenue",
+       "Ocean Avenue",
+       1,
+       1,
+       80,
+       100
+      ],
+      [
+       830,
+       1575,
+       "Idaho Avenue",
+       "Ocean Avenue",
+       -1,
+       1,
+       80,
+       100
+      ]
+     ]
+    }
+   ]
+  },
+  "9": {
+   "parts": [
+    {
+     "id": "",
+     "crop": [
+      0,
+      170,
+      1400,
+      1495
+     ],
+     "points": [
+      [
+       560,
+       243,
+       "Broadway",
+       "6th Street",
+       1,
+       -1
+      ],
+      [
+       1328,
+       243,
+       "Colorado Avenue",
+       "6th Street",
+       -1,
+       -1
+      ],
+      [
+       460,
+       243,
+       "Broadway",
+       "6th Street",
+       -1,
+       -1
+      ],
+      [
+       560,
+       655,
+       "Broadway",
+       "5th Street",
+       1,
+       1
+      ],
+      [
+       1328,
+       655,
+       "Colorado Avenue",
+       "5th Street",
+       -1,
+       1
+      ],
+      [
+       460,
+       655,
+       "Broadway",
+       "5th Street",
+       -1,
+       1
+      ],
+      [
+       560,
+       757,
+       "Broadway",
+       "5th Street",
+       1,
+       -1
+      ],
+      [
+       460,
+       1168,
+       "Broadway",
+       "4th Street",
+       -1,
+       1
+      ],
+      [
+       560,
+       1168,
+       "Broadway",
+       "4th Street",
+       1,
+       1
+      ],
+      [
+       1328,
+       1168,
+       "Colorado Avenue",
+       "4th Street",
+       -1,
+       1
+      ],
+      [
+       560,
+       1272,
+       "Broadway",
+       "4th Street",
+       1,
+       -1
+      ],
+      [
+       1328,
+       1272,
+       "Colorado Avenue",
+       "4th Street",
+       -1,
+       -1
+      ]
+     ]
+    }
+   ]
+  },
+  "10": {
+   "parts": [
+    {
+     "id": "",
+     "crop": [
+      517,
+      54,
+      1391,
+      1626
+     ],
+     "points": [
+      [
+       568,
+       105,
+       "Idaho Avenue",
+       "4th Street",
+       1,
+       -1
+      ],
+      [
+       1340,
+       105,
+       "Washington Avenue",
+       "4th Street",
+       -1,
+       -1
+      ],
+      [
+       568,
+       525,
+       "Idaho Avenue",
+       "3rd Street",
+       1,
+       1
+      ],
+      [
+       1340,
+       525,
+       "Washington Avenue",
+       "3rd Street",
+       -1,
+       1
+      ],
+      [
+       568,
+       628,
+       "Idaho Avenue",
+       "3rd Street",
+       1,
+       -1
+      ],
+      [
+       1340,
+       628,
+       "Washington Avenue",
+       "3rd Street",
+       -1,
+       -1
+      ],
+      [
+       568,
+       1040,
+       "Idaho Avenue",
+       "2nd Street",
+       1,
+       1
+      ],
+      [
+       1340,
+       1040,
+       "Washington Avenue",
+       "2nd Street",
+       -1,
+       1
+      ],
+      [
+       568,
+       1143,
+       "Idaho Avenue",
+       "2nd Street",
+       1,
+       -1
+      ],
+      [
+       1340,
+       1143,
+       "Washington Avenue",
+       "2nd Street",
+       -1,
+       -1
+      ],
+      [
+       568,
+       1562,
+       "Idaho Avenue",
+       "Ocean Avenue",
+       1,
+       1,
+       80,
+       100
+      ],
+      [
+       1340,
+       1562,
+       "Washington Avenue",
+       "Ocean Avenue",
+       -1,
+       1,
+       80,
+       100
+      ]
+     ]
+    }
+   ]
+  },
+  "11": {
+   "parts": [
+    {
+     "id": "",
+     "crop": [
+      0,
+      67,
+      1400,
+      1660
+     ],
+     "points": [
+      [
+       52,
+       118,
+       "Washington Avenue",
+       "4th Street",
+       1,
+       -1,
+       80,
+       80
+      ],
+      [
+       52,
+       528,
+       "Washington Avenue",
+       "3rd Street",
+       1,
+       1,
+       80,
+       80
+      ],
+      [
+       52,
+       630,
+       "Washington Avenue",
+       "3rd Street",
+       1,
+       -1,
+       80,
+       80
+      ],
+      [
+       52,
+       1040,
+       "Washington Avenue",
+       "2nd Street",
+       1,
+       1,
+       80,
+       80
+      ],
+      [
+       52,
+       1142,
+       "Washington Avenue",
+       "2nd Street",
+       1,
+       -1,
+       80,
+       80
+      ],
+      [
+       52,
+       1585,
+       "Washington Avenue",
+       "Ocean Avenue",
+       1,
+       1,
+       80,
+       100
+      ],
+      [
+       822,
+       118,
+       "California Avenue",
+       "4th Street",
+       -1,
+       -1,
+       100,
+       80
+      ],
+      [
+       822,
+       528,
+       "California Avenue",
+       "3rd Street",
+       -1,
+       1,
+       100,
+       80
+      ],
+      [
+       822,
+       630,
+       "California Avenue",
+       "3rd Street",
+       -1,
+       -1,
+       100,
+       80
+      ],
+      [
+       822,
+       1040,
+       "California Avenue",
+       "2nd Street",
+       -1,
+       1,
+       100,
+       80
+      ],
+      [
+       822,
+       1142,
+       "California Avenue",
+       "2nd Street",
+       -1,
+       -1,
+       100,
+       80
+      ],
+      [
+       822,
+       1585,
+       "California Avenue",
+       "Ocean Avenue",
+       -1,
+       1,
+       100,
+       100
+      ],
+      [
+       950,
+       118,
+       "California Avenue",
+       "4th Street",
+       1,
+       -1,
+       100,
+       80
+      ],
+      [
+       950,
+       528,
+       "California Avenue",
+       "3rd Street",
+       1,
+       1,
+       100,
+       80
+      ],
+      [
+       950,
+       630,
+       "California Avenue",
+       "3rd Street",
+       1,
+       -1,
+       100,
+       80
+      ],
+      [
+       950,
+       1040,
+       "California Avenue",
+       "2nd Street",
+       1,
+       1,
+       100,
+       80
+      ],
+      [
+       950,
+       1142,
+       "California Avenue",
+       "2nd Street",
+       1,
+       -1,
+       100,
+       80
+      ],
+      [
+       950,
+       1585,
+       "California Avenue",
+       "Ocean Avenue",
+       1,
+       1,
+       100,
+       100
+      ]
+     ]
+    }
+   ]
+  },
+  "12": {
+   "parts": [
+    {
+     "id": "",
+     "crop": [
+      0,
+      49,
+      1387,
+      1660
+     ],
+     "points": [
+      [
+       438,
+       100,
+       "Wilshire Boulevard",
+       "4th Street",
+       -1,
+       -1,
+       100,
+       80
+      ],
+      [
+       438,
+       515,
+       "Wilshire Boulevard",
+       "3rd Street",
+       -1,
+       1,
+       100,
+       80
+      ],
+      [
+       438,
+       617,
+       "Wilshire Boulevard",
+       "3rd Street",
+       -1,
+       -1,
+       100,
+       80
+      ],
+      [
+       438,
+       1028,
+       "Wilshire Boulevard",
+       "2nd Street",
+       -1,
+       1,
+       100,
+       80
+      ],
+      [
+       438,
+       1130,
+       "Wilshire Boulevard",
+       "2nd Street",
+       -1,
+       -1,
+       100,
+       80
+      ],
+      [
+       438,
+       1575,
+       "Wilshire Boulevard",
+       "Ocean Avenue",
+       -1,
+       1,
+       100,
+       100
+      ],
+      [
+       567,
+       100,
+       "Wilshire Boulevard",
+       "4th Street",
+       1,
+       -1,
+       100,
+       80
+      ],
+      [
+       567,
+       515,
+       "Wilshire Boulevard",
+       "3rd Street",
+       1,
+       1,
+       100,
+       80
+      ],
+      [
+       567,
+       617,
+       "Wilshire Boulevard",
+       "3rd Street",
+       1,
+       -1,
+       100,
+       80
+      ],
+      [
+       567,
+       1028,
+       "Wilshire Boulevard",
+       "2nd Street",
+       1,
+       1,
+       100,
+       80
+      ],
+      [
+       567,
+       1130,
+       "Wilshire Boulevard",
+       "2nd Street",
+       1,
+       -1,
+       100,
+       80
+      ],
+      [
+       567,
+       1575,
+       "Wilshire Boulevard",
+       "Ocean Avenue",
+       1,
+       1,
+       100,
+       100
+      ],
+      [
+       1336,
+       100,
+       "Arizona Avenue",
+       "4th Street",
+       -1,
+       -1,
+       80,
+       80
+      ],
+      [
+       1336,
+       515,
+       "Arizona Avenue",
+       "3rd Street",
+       -1,
+       1,
+       80,
+       80
+      ],
+      [
+       1336,
+       617,
+       "Arizona Avenue",
+       "3rd Street",
+       -1,
+       -1,
+       80,
+       80
+      ],
+      [
+       1336,
+       1028,
+       "Arizona Avenue",
+       "2nd Street",
+       -1,
+       1,
+       80,
+       80
+      ],
+      [
+       1336,
+       1130,
+       "Arizona Avenue",
+       "2nd Street",
+       -1,
+       -1,
+       80,
+       80
+      ],
+      [
+       1336,
+       1575,
+       "Arizona Avenue",
+       "Ocean Avenue",
+       -1,
+       1,
+       80,
+       100
+      ]
+     ]
+    }
+   ]
+  },
+  "13": {
+   "parts": [
+    {
+     "id": "",
+     "crop": [
+      265,
+      36,
+      1136,
+      1626
+     ],
+     "points": [
+      [
+       316,
+       87,
+       "Arizona Avenue",
+       "4th Street",
+       1,
+       -1,
+       80,
+       80
+      ],
+      [
+       316,
+       501,
+       "Arizona Avenue",
+       "3rd Street",
+       1,
+       1,
+       80,
+       80
+      ],
+      [
+       316,
+       607,
+       "Arizona Avenue",
+       "3rd Street",
+       1,
+       -1,
+       80,
+       80
+      ],
+      [
+       316,
+       1017,
+       "Arizona Avenue",
+       "2nd Street",
+       1,
+       1,
+       80,
+       80
+      ],
+      [
+       316,
+       1120,
+       "Arizona Avenue",
+       "2nd Street",
+       1,
+       -1,
+       80,
+       80
+      ],
+      [
+       316,
+       1562,
+       "Arizona Avenue",
+       "Ocean Avenue",
+       1,
+       1,
+       80,
+       100
+      ],
+      [
+       1085,
+       87,
+       "Santa Monica Boulevard",
+       "4th Street",
+       -1,
+       -1,
+       80,
+       80
+      ],
+      [
+       1085,
+       501,
+       "Santa Monica Boulevard",
+       "3rd Street",
+       -1,
+       1,
+       80,
+       80
+      ],
+      [
+       1085,
+       607,
+       "Santa Monica Boulevard",
+       "3rd Street",
+       -1,
+       -1,
+       80,
+       80
+      ],
+      [
+       1085,
+       1017,
+       "Santa Monica Boulevard",
+       "2nd Street",
+       -1,
+       1,
+       80,
+       80
+      ],
+      [
+       1085,
+       1120,
+       "Santa Monica Boulevard",
+       "2nd Street",
+       -1,
+       -1,
+       80,
+       80
+      ],
+      [
+       1085,
+       1562,
+       "Santa Monica Boulevard",
+       "Ocean Avenue",
+       -1,
+       1,
+       80,
+       100
+      ]
+     ]
+    }
+   ]
+  },
+  "14": {
+   "parts": [
+    {
+     "id": "a",
+     "points": [
+      [
+       305,
+       75,
+       "Santa Monica Boulevard",
+       "4th Street|3rd Street",
+       1,
+       -1,
+       80,
+       20
+      ],
+      [
+       305,
+       270,
+       "Santa Monica Boulevard",
+       "3rd Street",
+       1,
+       1,
+       80,
+       80
+      ],
+      [
+       1080,
+       75,
+       "Broadway",
+       "4th Street|3rd Street",
+       -1,
+       -1,
+       80,
+       20
+      ],
+      [
+       1080,
+       270,
+       "Broadway",
+       "3rd Street",
+       -1,
+       1,
+       80,
+       80
+      ]
+     ],
+     "crop": [
+      254,
+      62,
+      1131,
+      375
+     ]
+    },
+    {
+     "id": "b",
+     "points": [
+      [
+       305,
+       477,
+       "Santa Monica Boulevard",
+       "3rd Street",
+       1,
+       -1,
+       80,
+       80
+      ],
+      [
+       305,
+       670,
+       "Santa Monica Boulevard",
+       "3rd Street|2nd Street",
+       1,
+       1,
+       80,
+       20
+      ],
+      [
+       305,
+       690,
+       "Santa Monica Boulevard",
+       "3rd Street|2nd Street",
+       1,
+       -1,
+       80,
+       20
+      ],
+      [
+       305,
+       893,
+       "Santa Monica Boulevard",
+       "2nd Street",
+       1,
+       1,
+       80,
+       80
+      ],
+      [
+       1080,
+       477,
+       "Broadway",
+       "3rd Street",
+       -1,
+       -1,
+       80,
+       80
+      ],
+      [
+       1080,
+       670,
+       "Broadway",
+       "3rd Street|2nd Street",
+       -1,
+       1,
+       80,
+       20
+      ],
+      [
+       1080,
+       690,
+       "Broadway",
+       "3rd Street|2nd Street",
+       -1,
+       -1,
+       80,
+       20
+      ],
+      [
+       1080,
+       893,
+       "Broadway",
+       "2nd Street",
+       -1,
+       1,
+       80,
+       80
+      ]
+     ],
+     "crop": [
+      254,
+      375,
+      1131,
+      995
+     ]
+    },
+    {
+     "id": "c",
+     "points": [
+      [
+       305,
+       1100,
+       "Santa Monica Boulevard",
+       "2nd Street",
+       1,
+       -1,
+       80,
+       80
+      ],
+      [
+       305,
+       1296,
+       "Santa Monica Boulevard",
+       "2nd Street|Ocean Avenue",
+       1,
+       1,
+       80,
+       20
+      ],
+      [
+       305,
+       1318,
+       "Santa Monica Boulevard",
+       "2nd Street|Ocean Avenue",
+       1,
+       -1,
+       80,
+       20
+      ],
+      [
+       305,
+       1530,
+       "Santa Monica Boulevard",
+       "Ocean Avenue",
+       1,
+       1,
+       80,
+       100
+      ],
+      [
+       1080,
+       1100,
+       "Broadway",
+       "2nd Street",
+       -1,
+       -1,
+       80,
+       80
+      ],
+      [
+       1080,
+       1296,
+       "Broadway",
+       "2nd Street|Ocean Avenue",
+       -1,
+       1,
+       80,
+       20
+      ],
+      [
+       1080,
+       1318,
+       "Broadway",
+       "2nd Street|Ocean Avenue",
+       -1,
+       -1,
+       80,
+       20
+      ],
+      [
+       1080,
+       1530,
+       "Broadway",
+       "Ocean Avenue",
+       -1,
+       1,
+       80,
+       100
+      ]
+     ],
+     "crop": [
+      254,
+      995,
+      1131,
+      1594
+     ]
+    }
+   ]
+  },
+  "15": {
+   "parts": [
+    {
+     "id": "",
+     "crop": [
+      255,
+      184,
+      1126,
+      1494
+     ],
+     "points": [
+      [
+       306,
+       170,
+       "Broadway",
+       "4th Street|3rd Street",
+       1,
+       1,
+       80,
+       20
+      ],
+      [
+       306,
+       198,
+       "Broadway",
+       "4th Street|3rd Street",
+       1,
+       -1,
+       80,
+       20
+      ],
+      [
+       306,
+       393,
+       "Broadway",
+       "3rd Street",
+       1,
+       1,
+       80,
+       80
+      ],
+      [
+       306,
+       497,
+       "Broadway",
+       "3rd Street",
+       1,
+       -1,
+       80,
+       80
+      ],
+      [
+       306,
+       910,
+       "Broadway",
+       "2nd Street",
+       1,
+       1,
+       80,
+       80
+      ],
+      [
+       306,
+       1015,
+       "Broadway",
+       "2nd Street",
+       1,
+       -1,
+       80,
+       80
+      ],
+      [
+       306,
+       1430,
+       "Broadway",
+       "Ocean Avenue",
+       1,
+       1,
+       80,
+       100
+      ],
+      [
+       1075,
+       910,
+       "Colorado Avenue",
+       "2nd Street",
+       -1,
+       1,
+       80,
+       80
+      ],
+      [
+       1075,
+       1015,
+       "Colorado Avenue",
+       "2nd Street",
+       -1,
+       -1,
+       80,
+       80
+      ],
+      [
+       1075,
+       1430,
+       "Colorado Avenue",
+       "Ocean Avenue",
+       -1,
+       1,
+       80,
+       100
+      ]
+     ]
+    }
+   ]
+  },
+  "17": [
+   [
+    352,
+    1045,
+    "Bicknell Avenue",
+    "Ocean Avenue",
+    -1,
+    1,
+    80,
+    60
+   ],
+   [
+    352,
+    1140,
+    "Bicknell Avenue",
+    "Ocean Avenue",
+    1,
+    1,
+    80,
+    60
+   ],
+   [
+    352,
+    1535,
+    "Pacific Street",
+    "Ocean Way",
+    -1,
+    1,
+    60,
+    60
+   ],
+   [
+    1048,
+    578,
+    "Bay Street",
+    "Main Street",
+    -1,
+    -1,
+    60,
+    80
+   ],
+   [
+    1048,
+    655,
+    "Bay Street",
+    "Main Street",
+    1,
+    -1,
+    60,
+    80
+   ],
+   [
+    1048,
+    1045,
+    "Bicknell Avenue",
+    "Main Street",
+    -1,
+    -1,
+    80,
+    80
+   ],
+   [
+    1048,
+    1140,
+    "Bicknell Avenue",
+    "Main Street",
+    1,
+    -1,
+    80,
+    80
+   ],
+   [
+    1048,
+    1535,
+    "Pacific Street",
+    "Main Street",
+    -1,
+    -1,
+    60,
+    80
+   ],
+   [
+    1147,
+    578,
+    "Bay Street",
+    "Main Street",
+    -1,
+    1,
+    60,
+    80
+   ],
+   [
+    1147,
+    655,
+    "Bay Street",
+    "Main Street",
+    1,
+    1,
+    60,
+    80
+   ],
+   [
+    1147,
+    1045,
+    "Bicknell Avenue",
+    "Main Street",
+    -1,
+    1,
+    80,
+    80
+   ],
+   [
+    1147,
+    1140,
+    "Bicknell Avenue",
+    "Main Street",
+    1,
+    1,
+    80,
+    80
+   ],
+   [
+    1147,
+    1535,
+    "Pacific Street",
+    "Main Street",
+    -1,
+    1,
+    60,
+    80
+   ]
+  ],
+  "18": {
+   "parts": [
+    {
+     "id": "",
+     "crop": [
+      0,
+      137,
+      1400,
+      1660
+     ],
+     "points": [
+      [
+       478,
+       175,
+       "Pacific Street",
+       "Ocean Way",
+       1,
+       1,
+       60,
+       60
+      ],
+      [
+       478,
+       560,
+       "Strand Street",
+       "Ocean Way",
+       -1,
+       1,
+       40,
+       60
+      ],
+      [
+       478,
+       612,
+       "Strand Street",
+       "Ocean Way",
+       1,
+       1,
+       40,
+       60
+      ],
+      [
+       1170,
+       175,
+       "Pacific Street",
+       "Main Street",
+       1,
+       -1,
+       60,
+       80
+      ],
+      [
+       1170,
+       560,
+       "Strand Street",
+       "Main Street",
+       -1,
+       -1,
+       40,
+       80
+      ],
+      [
+       1170,
+       612,
+       "Strand Street",
+       "Main Street",
+       1,
+       -1,
+       40,
+       80
+      ]
+     ]
+    }
+   ]
+  },
+  "20": {
+   "parts": [
+    {
+     "id": "",
+     "crop": [
+      65,
+      56,
+      1400,
+      1660
+     ],
+     "points": [
+      [
+       97,
+       88,
+       "Hill Street",
+       "Main Street",
+       1,
+       1,
+       50,
+       50
+      ],
+      [
+       97,
+       905,
+       "Ashland Avenue",
+       "Main Street",
+       -1,
+       1,
+       43,
+       50
+      ],
+      [
+       97,
+       960,
+       "Ashland Avenue",
+       "Main Street",
+       1,
+       1,
+       43,
+       50
+      ],
+      [
+       357,
+       88,
+       "Hill Street",
+       "2nd Street",
+       1,
+       -1,
+       50,
+       48
+      ],
+      [
+       357,
+       905,
+       "Ashland Avenue",
+       "2nd Street",
+       -1,
+       -1,
+       43,
+       48
+      ],
+      [
+       357,
+       960,
+       "Ashland Avenue",
+       "2nd Street",
+       1,
+       -1,
+       43,
+       48
+      ],
+      [
+       418,
+       88,
+       "Hill Street",
+       "2nd Street",
+       1,
+       1,
+       50,
+       48
+      ],
+      [
+       418,
+       905,
+       "Ashland Avenue",
+       "2nd Street",
+       -1,
+       1,
+       43,
+       48
+      ],
+      [
+       418,
+       960,
+       "Ashland Avenue",
+       "2nd Street",
+       1,
+       1,
+       43,
+       48
+      ],
+      [
+       758,
+       88,
+       "Hill Street",
+       "3rd Street",
+       1,
+       -1,
+       50,
+       52
+      ],
+      [
+       758,
+       905,
+       "Ashland Avenue",
+       "3rd Street",
+       -1,
+       -1,
+       43,
+       52
+      ],
+      [
+       758,
+       960,
+       "Ashland Avenue",
+       "3rd Street",
+       1,
+       -1,
+       43,
+       52
+      ],
+      [
+       825,
+       88,
+       "Hill Street",
+       "3rd Street",
+       1,
+       1,
+       50,
+       52
+      ],
+      [
+       825,
+       905,
+       "Ashland Avenue",
+       "3rd Street",
+       -1,
+       1,
+       43,
+       52
+      ],
+      [
+       825,
+       960,
+       "Ashland Avenue",
+       "3rd Street",
+       1,
+       1,
+       43,
+       52
+      ],
+      [
+       1222,
+       88,
+       "Hill Street",
+       "4th Street",
+       1,
+       -1,
+       50,
+       49
+      ],
+      [
+       1222,
+       905,
+       "Ashland Avenue",
+       "4th Street",
+       -1,
+       -1,
+       43,
+       49
+      ],
+      [
+       1222,
+       960,
+       "Ashland Avenue",
+       "4th Street",
+       1,
+       -1,
+       43,
+       49
+      ]
+     ]
+    }
+   ]
+  },
+  "19": {
+   "parts": [
+    {
+     "id": "a",
+     "crop": [
+      0,
+      0,
+      815,
+      1660
+     ],
+     "similarity": true,
+     "points": [
+      [
+       100,
+       1555,
+       "Hill Street",
+       "Main Street",
+       -1,
+       1,
+       50,
+       50
+      ],
+      [
+       358,
+       1555,
+       "Hill Street",
+       "2nd Street",
+       -1,
+       -1,
+       50,
+       48
+      ],
+      [
+       425,
+       1555,
+       "Hill Street",
+       "2nd Street",
+       -1,
+       1,
+       50,
+       48
+      ],
+      [
+       757,
+       1555,
+       "Hill Street",
+       "3rd Street",
+       -1,
+       -1,
+       50,
+       52
+      ],
+      [
+       828,
+       1558,
+       "Hill Street",
+       "3rd Street",
+       -1,
+       1,
+       50,
+       52
+      ],
+      [
+       1228,
+       1558,
+       "Hill Street",
+       "4th Street",
+       -1,
+       -1,
+       50,
+       49
+      ]
+     ]
+    },
+    {
+     "id": "b",
+     "crop": [
+      815,
+      0,
+      1400,
+      1045
+     ],
+     "points": [
+      [
+       1168,
+       85,
+       "Strand Street",
+       "2nd Street",
+       1,
+       -1,
+       40,
+       50
+      ],
+      [
+       1230,
+       85,
+       "Strand Street",
+       "2nd Street",
+       1,
+       1,
+       40,
+       50
+      ],
+      [
+       1168,
+       520,
+       "Hollister Avenue",
+       "2nd Street",
+       -1,
+       -1,
+       70,
+       50
+      ],
+      [
+       1230,
+       520,
+       "Hollister Avenue",
+       "2nd Street",
+       -1,
+       1,
+       70,
+       50
+      ],
+      [
+       1168,
+       612,
+       "Hollister Avenue",
+       "2nd Street",
+       1,
+       -1,
+       70,
+       50
+      ],
+      [
+       1222,
+       615,
+       "Hollister Avenue",
+       "2nd Street",
+       1,
+       1,
+       70,
+       50
+      ]
+     ]
+    },
+    {
+     "id": "c",
+     "crop": [
+      815,
+      1045,
+      1400,
+      1660
+     ],
+     "similarity": true,
+     "points": [
+      [
+       100,
+       1555,
+       "Hill Street",
+       "Main Street",
+       -1,
+       1,
+       50,
+       50
+      ],
+      [
+       358,
+       1555,
+       "Hill Street",
+       "2nd Street",
+       -1,
+       -1,
+       50,
+       48
+      ],
+      [
+       425,
+       1555,
+       "Hill Street",
+       "2nd Street",
+       -1,
+       1,
+       50,
+       48
+      ],
+      [
+       757,
+       1555,
+       "Hill Street",
+       "3rd Street",
+       -1,
+       -1,
+       50,
+       52
+      ],
+      [
+       828,
+       1558,
+       "Hill Street",
+       "3rd Street",
+       -1,
+       1,
+       50,
+       52
+      ],
+      [
+       1228,
+       1558,
+       "Hill Street",
+       "4th Street",
+       -1,
+       -1,
+       50,
+       49
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ "aliases": {
+  "8th Street": [
+   "Lincoln Boulevard"
+  ],
+  "2nd Street": [
+   "2nd Street",
+   "Second Street"
+  ],
+  "3rd Street": [
+   "3rd Street",
+   "Third Street",
+   "3rd Street Promenade"
+  ],
+  "4th Street": [
+   "4th Street",
+   "Fourth Street"
+  ]
+ },
+ "todo": "Sheets 21-24 (Ocean Park west of Main Street) and the beach strips of sheets 7, 10 and 16: the 1902 grid there is gone, so they need tie points to neighbouring sheets or the 1902 topo.",
+ "crop_note": "Crops (preview px) keep each sheet to its own blocks, out to the centre of the bounding streets."
+}

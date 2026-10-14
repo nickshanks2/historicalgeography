@@ -1,0 +1,101 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 10,
+ "part": "",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0010",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 2617,
+   "py": 484,
+   "lng": -118.5030849,
+   "lat": 34.0230372,
+   "corner": "Idaho Avenue / 4th Street"
+  },
+  {
+   "px": 6174,
+   "py": 484,
+   "lng": -118.5017093,
+   "lat": 34.0218605,
+   "corner": "Washington Avenue / 4th Street"
+  },
+  {
+   "px": 2617,
+   "py": 2419,
+   "lng": -118.5038409,
+   "lat": 34.0224225,
+   "corner": "Idaho Avenue / 3rd Street"
+  },
+  {
+   "px": 6174,
+   "py": 2419,
+   "lng": -118.5024627,
+   "lat": 34.0212452,
+   "corner": "Washington Avenue / 3rd Street"
+  },
+  {
+   "px": 2617,
+   "py": 2893,
+   "lng": -118.5040303,
+   "lat": 34.0222697,
+   "corner": "Idaho Avenue / 3rd Street"
+  },
+  {
+   "px": 6174,
+   "py": 2893,
+   "lng": -118.5026521,
+   "lat": 34.0210924,
+   "corner": "Washington Avenue / 3rd Street"
+  },
+  {
+   "px": 2617,
+   "py": 4791,
+   "lng": -118.5047918,
+   "lat": 34.0216509,
+   "corner": "Idaho Avenue / 2nd Street"
+  },
+  {
+   "px": 6174,
+   "py": 4791,
+   "lng": -118.5034004,
+   "lat": 34.0204896,
+   "corner": "Washington Avenue / 2nd Street"
+  },
+  {
+   "px": 2617,
+   "py": 5266,
+   "lng": -118.5049811,
+   "lat": 34.0214981,
+   "corner": "Idaho Avenue / 2nd Street"
+  },
+  {
+   "px": 6174,
+   "py": 5266,
+   "lng": -118.5035898,
+   "lat": 34.0203368,
+   "corner": "Washington Avenue / 2nd Street"
+  },
+  {
+   "px": 2617,
+   "py": 7196,
+   "lng": -118.505735,
+   "lat": 34.0208988,
+   "corner": "Idaho Avenue / Ocean Avenue"
+  },
+  {
+   "px": 6174,
+   "py": 7196,
+   "lng": -118.5043538,
+   "lat": 34.0197166,
+   "corner": "Washington Avenue / Ocean Avenue"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  2382,
+  249,
+  6409,
+  7491
+ ]
+}

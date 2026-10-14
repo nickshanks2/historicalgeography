@@ -1,0 +1,80 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 7,
+ "part": "b",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0007",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 2488,
+   "py": 2893,
+   "lng": -118.4964108,
+   "lat": 34.020477,
+   "corner": "Wilshire Boulevard / 6th Street"
+  },
+  {
+   "px": 6012,
+   "py": 2893,
+   "lng": -118.4950254,
+   "lat": 34.0192764,
+   "corner": "Arizona Avenue / 6th Street"
+  },
+  {
+   "px": 2488,
+   "py": 4805,
+   "lng": -118.4971849,
+   "lat": 34.0198497,
+   "corner": "Wilshire Boulevard / 5th Street"
+  },
+  {
+   "px": 6012,
+   "py": 4805,
+   "lng": -118.4957843,
+   "lat": 34.0186767,
+   "corner": "Arizona Avenue / 5th Street"
+  },
+  {
+   "px": 2488,
+   "py": 5229,
+   "lng": -118.4973742,
+   "lat": 34.0196969,
+   "corner": "Wilshire Boulevard / 5th Street"
+  },
+  {
+   "px": 6012,
+   "py": 7164,
+   "lng": -118.4967329,
+   "lat": 34.0179239,
+   "corner": "Arizona Avenue / 4th Street"
+  },
+  {
+   "px": 2488,
+   "py": 7164,
+   "lng": -118.4981189,
+   "lat": 34.019103,
+   "corner": "Wilshire Boulevard / 4th Street"
+  },
+  {
+   "px": 1912,
+   "py": 2893,
+   "lng": -118.4966402,
+   "lat": 34.0206741,
+   "corner": "Wilshire Boulevard / 6th Street"
+  },
+  {
+   "px": 1912,
+   "py": 7164,
+   "lng": -118.4983483,
+   "lat": 34.0193001,
+   "corner": "Wilshire Boulevard / 4th Street"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  0,
+  2511,
+  6450,
+  7648
+ ]
+}

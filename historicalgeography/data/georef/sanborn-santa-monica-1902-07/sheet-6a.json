@@ -1,0 +1,59 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 6,
+ "part": "a",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0006",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 276,
+   "py": 369,
+   "lng": -118.4894865,
+   "lat": 34.0208629,
+   "corner": "Santa Monica Boulevard / 10th Street"
+  },
+  {
+   "px": 3847,
+   "py": 369,
+   "lng": -118.4881116,
+   "lat": 34.0197004,
+   "corner": "Broadway / 10th Street"
+  },
+  {
+   "px": 276,
+   "py": 2281,
+   "lng": -118.4902615,
+   "lat": 34.0202529,
+   "corner": "Santa Monica Boulevard / 9th Street"
+  },
+  {
+   "px": 3847,
+   "py": 2281,
+   "lng": -118.4888785,
+   "lat": 34.0190712,
+   "corner": "Broadway / 9th Street"
+  },
+  {
+   "px": 4322,
+   "py": 369,
+   "lng": -118.4879281,
+   "lat": 34.0195427,
+   "corner": "Broadway / 10th Street"
+  },
+  {
+   "px": 4322,
+   "py": 2281,
+   "lng": -118.4886949,
+   "lat": 34.0189135,
+   "corner": "Broadway / 9th Street"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  0,
+  0,
+  6450,
+  2396
+ ]
+}

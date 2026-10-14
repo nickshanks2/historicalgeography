@@ -27,6 +27,8 @@ TILEJSON = "https://tiles.openfreemap.org/planet"
 TRACE_BBOX = (-118.56, 33.96, -118.42, 34.08)
 ZOOM = 14
 STREET_CLASSES = {"motorway", "trunk", "primary", "secondary", "tertiary", "minor", "service"}
+# Pedestrian malls such as the Third Street Promenade were ordinary streets.
+PEDESTRIAN_SUBCLASSES = {"pedestrian"}
 
 
 HEADERS = {"User-Agent": "historicalgeography.io data pipeline"}
@@ -71,7 +73,10 @@ def main():
         convert = to_lnglat(x, y, ZOOM, layer["extent"])
         for f in layer["features"]:
             p = f["properties"]
-            if p.get("class") not in STREET_CLASSES or not p.get("name"):
+            street = p.get("class") in STREET_CLASSES or (
+                p.get("class") == "path" and p.get("subclass") in PEDESTRIAN_SUBCLASSES
+            )
+            if not street or not p.get("name"):
                 continue
             g = f["geometry"]
             lines = [g["coordinates"]] if g["type"] == "LineString" else g["coordinates"]

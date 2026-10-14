@@ -1,0 +1,143 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 11,
+ "part": "",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0011",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 240,
+   "py": 544,
+   "lng": -118.5015258,
+   "lat": 34.0217029,
+   "corner": "Washington Avenue / 4th Street"
+  },
+  {
+   "px": 240,
+   "py": 2433,
+   "lng": -118.5022792,
+   "lat": 34.0210876,
+   "corner": "Washington Avenue / 3rd Street"
+  },
+  {
+   "px": 240,
+   "py": 2902,
+   "lng": -118.5024686,
+   "lat": 34.0209348,
+   "corner": "Washington Avenue / 3rd Street"
+  },
+  {
+   "px": 240,
+   "py": 4791,
+   "lng": -118.5032169,
+   "lat": 34.020332,
+   "corner": "Washington Avenue / 2nd Street"
+  },
+  {
+   "px": 240,
+   "py": 5261,
+   "lng": -118.5034063,
+   "lat": 34.0201792,
+   "corner": "Washington Avenue / 2nd Street"
+  },
+  {
+   "px": 240,
+   "py": 7302,
+   "lng": -118.5041703,
+   "lat": 34.0195589,
+   "corner": "Washington Avenue / Ocean Avenue"
+  },
+  {
+   "px": 3787,
+   "py": 544,
+   "lng": -118.5001462,
+   "lat": 34.0205228,
+   "corner": "California Avenue / 4th Street"
+  },
+  {
+   "px": 3787,
+   "py": 2433,
+   "lng": -118.500902,
+   "lat": 34.0199111,
+   "corner": "California Avenue / 3rd Street"
+  },
+  {
+   "px": 3787,
+   "py": 2902,
+   "lng": -118.5010914,
+   "lat": 34.0197583,
+   "corner": "California Avenue / 3rd Street"
+  },
+  {
+   "px": 3787,
+   "py": 4791,
+   "lng": -118.5018579,
+   "lat": 34.019138,
+   "corner": "California Avenue / 2nd Street"
+  },
+  {
+   "px": 3787,
+   "py": 5261,
+   "lng": -118.5020473,
+   "lat": 34.0189852,
+   "corner": "California Avenue / 2nd Street"
+  },
+  {
+   "px": 3787,
+   "py": 7302,
+   "lng": -118.5028123,
+   "lat": 34.018366,
+   "corner": "California Avenue / Ocean Avenue"
+  },
+  {
+   "px": 4377,
+   "py": 544,
+   "lng": -118.4999168,
+   "lat": 34.0203258,
+   "corner": "California Avenue / 4th Street"
+  },
+  {
+   "px": 4377,
+   "py": 2433,
+   "lng": -118.5006726,
+   "lat": 34.0197141,
+   "corner": "California Avenue / 3rd Street"
+  },
+  {
+   "px": 4377,
+   "py": 2902,
+   "lng": -118.500862,
+   "lat": 34.0195613,
+   "corner": "California Avenue / 3rd Street"
+  },
+  {
+   "px": 4377,
+   "py": 4791,
+   "lng": -118.5016285,
+   "lat": 34.018941,
+   "corner": "California Avenue / 2nd Street"
+  },
+  {
+   "px": 4377,
+   "py": 5261,
+   "lng": -118.5018179,
+   "lat": 34.0187882,
+   "corner": "California Avenue / 2nd Street"
+  },
+  {
+   "px": 4377,
+   "py": 7302,
+   "lng": -118.5025829,
+   "lat": 34.018169,
+   "corner": "California Avenue / Ocean Avenue"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  0,
+  309,
+  6450,
+  7648
+ ]
+}

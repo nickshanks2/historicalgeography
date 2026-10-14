@@ -1,0 +1,102 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 17,
+ "part": "",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0017",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 1622,
+   "py": 4814,
+   "lng": -118.4896912,
+   "lat": 34.0054721,
+   "corner": "Bicknell Avenue / Ocean Avenue"
+  },
+  {
+   "px": 1622,
+   "py": 5252,
+   "lng": -118.4895077,
+   "lat": 34.0053145,
+   "corner": "Bicknell Avenue / Ocean Avenue"
+  },
+  {
+   "px": 1622,
+   "py": 7072,
+   "lng": -118.4888893,
+   "lat": 34.0046439,
+   "corner": "Pacific Street / Ocean Way"
+  },
+  {
+   "px": 4828,
+   "py": 2663,
+   "lng": -118.4891058,
+   "lat": 34.0071521,
+   "corner": "Bay Street / Main Street"
+  },
+  {
+   "px": 4828,
+   "py": 3018,
+   "lng": -118.4889682,
+   "lat": 34.0070339,
+   "corner": "Bay Street / Main Street"
+  },
+  {
+   "px": 4828,
+   "py": 4814,
+   "lng": -118.4883295,
+   "lat": 34.0063943,
+   "corner": "Bicknell Avenue / Main Street"
+  },
+  {
+   "px": 4828,
+   "py": 5252,
+   "lng": -118.4881459,
+   "lat": 34.0062367,
+   "corner": "Bicknell Avenue / Main Street"
+  },
+  {
+   "px": 4828,
+   "py": 7072,
+   "lng": -118.4875256,
+   "lat": 34.0055965,
+   "corner": "Pacific Street / Main Street"
+  },
+  {
+   "px": 5284,
+   "py": 2663,
+   "lng": -118.4889164,
+   "lat": 34.0073049,
+   "corner": "Bay Street / Main Street"
+  },
+  {
+   "px": 5284,
+   "py": 3018,
+   "lng": -118.4887788,
+   "lat": 34.0071867,
+   "corner": "Bay Street / Main Street"
+  },
+  {
+   "px": 5284,
+   "py": 4814,
+   "lng": -118.4881401,
+   "lat": 34.0065471,
+   "corner": "Bicknell Avenue / Main Street"
+  },
+  {
+   "px": 5284,
+   "py": 5252,
+   "lng": -118.4879566,
+   "lat": 34.0063895,
+   "corner": "Bicknell Avenue / Main Street"
+  },
+  {
+   "px": 5284,
+   "py": 7072,
+   "lng": -118.4873363,
+   "lat": 34.0057493,
+   "corner": "Pacific Street / Main Street"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json)."
+}

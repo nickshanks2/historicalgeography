@@ -1,0 +1,87 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 3,
+ "part": "",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0003",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 332,
+   "py": 484,
+   "lng": -118.4936038,
+   "lat": 34.0227959,
+   "corner": "Wilshire Boulevard / 9th Street"
+  },
+  {
+   "px": 3893,
+   "py": 484,
+   "lng": -118.4921961,
+   "lat": 34.021593,
+   "corner": "Arizona Avenue / 9th Street"
+  },
+  {
+   "px": 332,
+   "py": 2373,
+   "lng": -118.4943544,
+   "lat": 34.022182,
+   "corner": "Wilshire Boulevard / 8th Street"
+  },
+  {
+   "px": 3893,
+   "py": 2373,
+   "lng": -118.4929481,
+   "lat": 34.0209862,
+   "corner": "Arizona Avenue / 8th Street"
+  },
+  {
+   "px": 332,
+   "py": 2856,
+   "lng": -118.4945438,
+   "lat": 34.0220292,
+   "corner": "Wilshire Boulevard / 8th Street"
+  },
+  {
+   "px": 3893,
+   "py": 4768,
+   "lng": -118.4938817,
+   "lat": 34.0201997,
+   "corner": "Arizona Avenue / 7th Street"
+  },
+  {
+   "px": 332,
+   "py": 5252,
+   "lng": -118.4954789,
+   "lat": 34.0212699,
+   "corner": "Wilshire Boulevard / 7th Street"
+  },
+  {
+   "px": 3893,
+   "py": 7164,
+   "lng": -118.4948361,
+   "lat": 34.0194292,
+   "corner": "Arizona Avenue / 6th Street"
+  },
+  {
+   "px": 4368,
+   "py": 484,
+   "lng": -118.4920126,
+   "lat": 34.0214353,
+   "corner": "Arizona Avenue / 9th Street"
+  },
+  {
+   "px": 4368,
+   "py": 7164,
+   "lng": -118.4946526,
+   "lat": 34.0192716,
+   "corner": "Arizona Avenue / 6th Street"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  0,
+  92,
+  6450,
+  7417
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 14,
+ "part": "a",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0014",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 1405,
+   "py": 346,
+   "lng": -118.4955675,
+   "lat": 34.0159439,
+   "corner": "Santa Monica Boulevard / 4th Street|3rd Street"
+  },
+  {
+   "px": 1405,
+   "py": 1244,
+   "lng": -118.4959209,
+   "lat": 34.0156572,
+   "corner": "Santa Monica Boulevard / 3rd Street"
+  },
+  {
+   "px": 4976,
+   "py": 346,
+   "lng": -118.4942004,
+   "lat": 34.0147537,
+   "corner": "Broadway / 4th Street|3rd Street"
+  },
+  {
+   "px": 4976,
+   "py": 1244,
+   "lng": -118.4945559,
+   "lat": 34.0144659,
+   "corner": "Broadway / 3rd Street"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  1170,
+  286,
+  5211,
+  1728
+ ]
+}

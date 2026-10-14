@@ -1,0 +1,94 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 4,
+ "part": "",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0004",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 2073,
+   "py": 438,
+   "lng": -118.4906344,
+   "lat": 34.0202577,
+   "corner": "Santa Monica Boulevard / 9th Street"
+  },
+  {
+   "px": 2557,
+   "py": 438,
+   "lng": -118.4904509,
+   "lat": 34.0201001,
+   "corner": "Santa Monica Boulevard / 9th Street"
+  },
+  {
+   "px": 6104,
+   "py": 438,
+   "lng": -118.4890678,
+   "lat": 34.0189184,
+   "corner": "Broadway / 9th Street"
+  },
+  {
+   "px": 2557,
+   "py": 2373,
+   "lng": -118.4911926,
+   "lat": 34.0194896,
+   "corner": "Santa Monica Boulevard / 8th Street"
+  },
+  {
+   "px": 6104,
+   "py": 2373,
+   "lng": -118.4898158,
+   "lat": 34.0183095,
+   "corner": "Broadway / 8th Street"
+  },
+  {
+   "px": 2073,
+   "py": 2856,
+   "lng": -118.4915654,
+   "lat": 34.0194944,
+   "corner": "Santa Monica Boulevard / 8th Street"
+  },
+  {
+   "px": 2557,
+   "py": 2856,
+   "lng": -118.4913819,
+   "lat": 34.0193368,
+   "corner": "Santa Monica Boulevard / 8th Street"
+  },
+  {
+   "px": 6104,
+   "py": 4745,
+   "lng": -118.4907614,
+   "lat": 34.0175458,
+   "corner": "Broadway / 7th Street"
+  },
+  {
+   "px": 2557,
+   "py": 5206,
+   "lng": -118.4923411,
+   "lat": 34.018574,
+   "corner": "Santa Monica Boulevard / 7th Street"
+  },
+  {
+   "px": 6104,
+   "py": 7118,
+   "lng": -118.4917167,
+   "lat": 34.0167713,
+   "corner": "Broadway / 6th Street"
+  },
+  {
+   "px": 2073,
+   "py": 7118,
+   "lng": -118.4932841,
+   "lat": 34.0181202,
+   "corner": "Santa Monica Boulevard / 6th Street"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  0,
+  212,
+  6450,
+  7362
+ ]
+}

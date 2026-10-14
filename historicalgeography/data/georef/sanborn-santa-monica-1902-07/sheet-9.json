@@ -1,0 +1,101 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 9,
+ "part": "",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0009",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 2580,
+   "py": 1120,
+   "lng": -118.4917226,
+   "lat": 34.0164609,
+   "corner": "Broadway / 6th Street"
+  },
+  {
+   "px": 6118,
+   "py": 1120,
+   "lng": -118.4903447,
+   "lat": 34.0152861,
+   "corner": "Colorado Avenue / 6th Street"
+  },
+  {
+   "px": 2119,
+   "py": 1120,
+   "lng": -118.4919061,
+   "lat": 34.0166185,
+   "corner": "Broadway / 6th Street"
+  },
+  {
+   "px": 2580,
+   "py": 3018,
+   "lng": -118.4924759,
+   "lat": 34.0158502,
+   "corner": "Broadway / 5th Street"
+  },
+  {
+   "px": 6118,
+   "py": 3018,
+   "lng": -118.4910488,
+   "lat": 34.0146404,
+   "corner": "Colorado Avenue / 5th Street"
+  },
+  {
+   "px": 2119,
+   "py": 3018,
+   "lng": -118.4926594,
+   "lat": 34.0160078,
+   "corner": "Broadway / 5th Street"
+  },
+  {
+   "px": 2580,
+   "py": 3488,
+   "lng": -118.4926652,
+   "lat": 34.0156974,
+   "corner": "Broadway / 5th Street"
+  },
+  {
+   "px": 2119,
+   "py": 5381,
+   "lng": -118.4936083,
+   "lat": 34.0152324,
+   "corner": "Broadway / 4th Street"
+  },
+  {
+   "px": 2580,
+   "py": 5381,
+   "lng": -118.4934248,
+   "lat": 34.0150748,
+   "corner": "Broadway / 4th Street"
+  },
+  {
+   "px": 6118,
+   "py": 5381,
+   "lng": -118.4920907,
+   "lat": 34.0139396,
+   "corner": "Colorado Avenue / 4th Street"
+  },
+  {
+   "px": 2580,
+   "py": 5860,
+   "lng": -118.4936141,
+   "lat": 34.014922,
+   "corner": "Broadway / 4th Street"
+  },
+  {
+   "px": 6118,
+   "py": 5860,
+   "lng": -118.4922801,
+   "lat": 34.0137868,
+   "corner": "Colorado Avenue / 4th Street"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  0,
+  783,
+  6450,
+  6888
+ ]
+}

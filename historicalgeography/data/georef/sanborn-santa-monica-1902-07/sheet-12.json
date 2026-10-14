@@ -1,0 +1,143 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 12,
+ "part": "",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0012",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 2018,
+   "py": 461,
+   "lng": -118.4985376,
+   "lat": 34.0191473,
+   "corner": "Wilshire Boulevard / 4th Street"
+  },
+  {
+   "px": 2018,
+   "py": 2373,
+   "lng": -118.4992875,
+   "lat": 34.018531,
+   "corner": "Wilshire Boulevard / 3rd Street"
+  },
+  {
+   "px": 2018,
+   "py": 2843,
+   "lng": -118.4994768,
+   "lat": 34.0183782,
+   "corner": "Wilshire Boulevard / 3rd Street"
+  },
+  {
+   "px": 2018,
+   "py": 4736,
+   "lng": -118.500245,
+   "lat": 34.0177639,
+   "corner": "Wilshire Boulevard / 2nd Street"
+  },
+  {
+   "px": 2018,
+   "py": 5206,
+   "lng": -118.5004344,
+   "lat": 34.0176111,
+   "corner": "Wilshire Boulevard / 2nd Street"
+  },
+  {
+   "px": 2018,
+   "py": 7256,
+   "lng": -118.5012193,
+   "lat": 34.017001,
+   "corner": "Wilshire Boulevard / Ocean Avenue"
+  },
+  {
+   "px": 2612,
+   "py": 461,
+   "lng": -118.4983082,
+   "lat": 34.0189502,
+   "corner": "Wilshire Boulevard / 4th Street"
+  },
+  {
+   "px": 2612,
+   "py": 2373,
+   "lng": -118.4990581,
+   "lat": 34.018334,
+   "corner": "Wilshire Boulevard / 3rd Street"
+  },
+  {
+   "px": 2612,
+   "py": 2843,
+   "lng": -118.4992474,
+   "lat": 34.0181812,
+   "corner": "Wilshire Boulevard / 3rd Street"
+  },
+  {
+   "px": 2612,
+   "py": 4736,
+   "lng": -118.5000156,
+   "lat": 34.0175669,
+   "corner": "Wilshire Boulevard / 2nd Street"
+  },
+  {
+   "px": 2612,
+   "py": 5206,
+   "lng": -118.500205,
+   "lat": 34.0174141,
+   "corner": "Wilshire Boulevard / 2nd Street"
+  },
+  {
+   "px": 2612,
+   "py": 7256,
+   "lng": -118.5009899,
+   "lat": 34.016804,
+   "corner": "Wilshire Boulevard / Ocean Avenue"
+  },
+  {
+   "px": 6155,
+   "py": 461,
+   "lng": -118.4969223,
+   "lat": 34.0177711,
+   "corner": "Arizona Avenue / 4th Street"
+  },
+  {
+   "px": 6155,
+   "py": 2373,
+   "lng": -118.497677,
+   "lat": 34.0171615,
+   "corner": "Arizona Avenue / 3rd Street"
+  },
+  {
+   "px": 6155,
+   "py": 2843,
+   "lng": -118.4978663,
+   "lat": 34.0170087,
+   "corner": "Arizona Avenue / 3rd Street"
+  },
+  {
+   "px": 6155,
+   "py": 4736,
+   "lng": -118.4986214,
+   "lat": 34.0163834,
+   "corner": "Arizona Avenue / 2nd Street"
+  },
+  {
+   "px": 6155,
+   "py": 5206,
+   "lng": -118.4988108,
+   "lat": 34.0162306,
+   "corner": "Arizona Avenue / 2nd Street"
+  },
+  {
+   "px": 6155,
+   "py": 7256,
+   "lng": -118.4996058,
+   "lat": 34.0155983,
+   "corner": "Arizona Avenue / Ocean Avenue"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  0,
+  226,
+  6390,
+  7648
+ ]
+}

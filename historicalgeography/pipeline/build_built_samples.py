@@ -2,7 +2,8 @@
 
 Takes the `dataset: built` features from pipeline/samples/sketch.geojson.
 All are flagged `sample: true`; Phases 3 and 4 replace them with traced,
-sourced streets, buildings and piers.
+sourced streets, buildings and piers (and remove them from the sketch).
+Sourced features already in built.geojson are kept.
 
     python3 pipeline/build_built_samples.py
 """
@@ -17,15 +18,16 @@ OUT = ROOT / "data" / "features" / "built.geojson"
 
 def main():
     sketch = json.loads(SKETCH.read_text())["features"]
-    features = []
+    current = json.loads(OUT.read_text())["features"] if OUT.exists() else []
+    features = [f for f in current if not f["properties"].get("sample")]
     for feature in sketch:
         props = dict(feature["properties"])
         if props.pop("dataset") == "built":
             features.append({**feature, "properties": props})
-    OUT.write_text(
-        json.dumps({"type": "FeatureCollection", "features": features}, separators=(",", ":"))
-        + "\n"
-    )
+    features.sort(key=lambda f: str(f["properties"]["id"]))
+    OUT.write_text('{"type":"FeatureCollection","features":[\n'
+                   + ",\n".join(json.dumps(f, separators=(",", ":"), ensure_ascii=False) for f in features)
+                   + "\n]}\n")
     print(f"{len(features)} features -> {OUT.relative_to(ROOT)}")
 
 

@@ -125,6 +125,8 @@ Run `npm run dev`, then:
 
 Both pages and their APIs return 404 in production. Commit the data files they write.
 
+Batch alternatives in `pipeline/` (see `pipeline/README.md`): `georef_from_corners.py` pins a whole atlas from block corners read off the sheets; `extract_sanborn_buildings.py` traces every coloured building outline (construction type from the Sanborn colour) into `built.geojson`; `build_streets.py` writes streets named as printed on each atlas, with dated renames, from `data/street_names.json`. Features seen on one map only get `start_year` two years before it (`start_approx`), `observed_year`, and end the year after (`end_approx`) until a later map extends them.
+
 Old maps for every era are offered as overlays ("Old maps" button; `?map=<set>` in links): built by `pipeline/build_overlays.py` (USGS topos, NOAA T-sheets, from `pipeline/overlays.json`) and `pipeline/build_sanborn.py` (Sanborn sheets).
 
 ## Key sources (start here)

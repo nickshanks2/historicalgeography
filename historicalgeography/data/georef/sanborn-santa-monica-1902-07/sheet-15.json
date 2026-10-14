@@ -1,0 +1,87 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 15,
+ "part": "",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0015",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 1410,
+   "py": 783,
+   "lng": -118.4939696,
+   "lat": 34.0146342,
+   "corner": "Broadway / 4th Street|3rd Street"
+  },
+  {
+   "px": 1410,
+   "py": 912,
+   "lng": -118.4940169,
+   "lat": 34.014596,
+   "corner": "Broadway / 4th Street|3rd Street"
+  },
+  {
+   "px": 1410,
+   "py": 1811,
+   "lng": -118.4943723,
+   "lat": 34.0143083,
+   "corner": "Broadway / 3rd Street"
+  },
+  {
+   "px": 1410,
+   "py": 2290,
+   "lng": -118.4945617,
+   "lat": 34.0141555,
+   "corner": "Broadway / 3rd Street"
+  },
+  {
+   "px": 1410,
+   "py": 4192,
+   "lng": -118.4953044,
+   "lat": 34.0135544,
+   "corner": "Broadway / 2nd Street"
+  },
+  {
+   "px": 1410,
+   "py": 4676,
+   "lng": -118.4954938,
+   "lat": 34.0134016,
+   "corner": "Broadway / 2nd Street"
+  },
+  {
+   "px": 1410,
+   "py": 6588,
+   "lng": -118.4962686,
+   "lat": 34.0127745,
+   "corner": "Broadway / Ocean Avenue"
+  },
+  {
+   "px": 4953,
+   "py": 4192,
+   "lng": -118.4939656,
+   "lat": 34.0124241,
+   "corner": "Colorado Avenue / 2nd Street"
+  },
+  {
+   "px": 4953,
+   "py": 4676,
+   "lng": -118.4941549,
+   "lat": 34.0122713,
+   "corner": "Colorado Avenue / 2nd Street"
+  },
+  {
+   "px": 4953,
+   "py": 6588,
+   "lng": -118.4949005,
+   "lat": 34.0116119,
+   "corner": "Colorado Avenue / Ocean Avenue"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  1175,
+  848,
+  5188,
+  6883
+ ]
+}

@@ -1,0 +1,101 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 13,
+ "part": "",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0013",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 1456,
+   "py": 401,
+   "lng": -118.4967388,
+   "lat": 34.0176135,
+   "corner": "Arizona Avenue / 4th Street"
+  },
+  {
+   "px": 1456,
+   "py": 2308,
+   "lng": -118.4974935,
+   "lat": 34.0170039,
+   "corner": "Arizona Avenue / 3rd Street"
+  },
+  {
+   "px": 1456,
+   "py": 2797,
+   "lng": -118.4976828,
+   "lat": 34.0168511,
+   "corner": "Arizona Avenue / 3rd Street"
+  },
+  {
+   "px": 1456,
+   "py": 4685,
+   "lng": -118.4984379,
+   "lat": 34.0162258,
+   "corner": "Arizona Avenue / 2nd Street"
+  },
+  {
+   "px": 1456,
+   "py": 5160,
+   "lng": -118.4986273,
+   "lat": 34.016073,
+   "corner": "Arizona Avenue / 2nd Street"
+  },
+  {
+   "px": 1456,
+   "py": 7196,
+   "lng": -118.4994223,
+   "lat": 34.0154407,
+   "corner": "Arizona Avenue / Ocean Avenue"
+  },
+  {
+   "px": 4999,
+   "py": 401,
+   "lng": -118.4953502,
+   "lat": 34.0164264,
+   "corner": "Santa Monica Boulevard / 4th Street"
+  },
+  {
+   "px": 4999,
+   "py": 2308,
+   "lng": -118.4961044,
+   "lat": 34.0158148,
+   "corner": "Santa Monica Boulevard / 3rd Street"
+  },
+  {
+   "px": 4999,
+   "py": 2797,
+   "lng": -118.4962938,
+   "lat": 34.015662,
+   "corner": "Santa Monica Boulevard / 3rd Street"
+  },
+  {
+   "px": 4999,
+   "py": 4685,
+   "lng": -118.4970574,
+   "lat": 34.0150449,
+   "corner": "Santa Monica Boulevard / 2nd Street"
+  },
+  {
+   "px": 4999,
+   "py": 5160,
+   "lng": -118.4972468,
+   "lat": 34.0148921,
+   "corner": "Santa Monica Boulevard / 2nd Street"
+  },
+  {
+   "px": 4999,
+   "py": 7196,
+   "lng": -118.4980364,
+   "lat": 34.0142683,
+   "corner": "Santa Monica Boulevard / Ocean Avenue"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  1221,
+  166,
+  5234,
+  7491
+ ]
+}

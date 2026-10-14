@@ -14,6 +14,19 @@ export const TERRAIN_EXAGGERATION = 1.5;
 // Self-hosted label fonts for our own era styles (see data/LICENSES.md).
 export const GLYPHS_URL = "/fonts/{fontstack}/{range}.pbf";
 
+/**
+ * Where the large tile files (*.pmtiles) are served from. Empty: from this
+ * site (copied into public/ at build time). Set NEXT_PUBLIC_TILES_BASE_URL
+ * to a bucket such as https://tiles.historicalgeography.io to serve them
+ * from external storage instead (see scripts/upload-tiles.mjs).
+ */
+export const TILES_BASE_URL = (process.env.NEXT_PUBLIC_TILES_BASE_URL ?? "").replace(/\/$/, "");
+
+/** Full URL of a tile file given its site path, e.g. /data/tiles/landscape.pmtiles. */
+export function tileFileUrl(path: string) {
+  return TILES_BASE_URL ? `${TILES_BASE_URL}${path}` : new URL(path, window.location.origin).href;
+}
+
 // Time-ranged datasets, copied from data/ at build time
 // (scripts/prepare-public.mjs). The landscape is vector tiles (PMTiles).
 export const DATASETS = {

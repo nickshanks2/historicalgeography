@@ -16,6 +16,7 @@ from pathlib import Path
 
 import numpy as np
 import rasterio
+import rasterio.windows
 from rasterio.control import GroundControlPoint
 from rasterio.enums import Resampling
 from rasterio.transform import from_gcps
@@ -46,19 +47,23 @@ def _bounds(affine, width, height):
     return min(xs), min(ys), max(xs), max(ys)
 
 
-def warp(image: Path, gcps, out: Path):
+def warp(image: Path, gcps, out: Path, crop=None):
     """Affine fit (least squares) from the control points, then warp to Web Mercator.
 
     Sanborn sheets are plans drawn to scale, so an affine fit is the right
     model; /admin/georef shows its residuals while the points are picked.
     """
-    points = [GroundControlPoint(row=g["py"], col=g["px"], x=g["lng"], y=g["lat"]) for g in gcps]
+    x0, y0, x1, y1 = crop or (0, 0, None, None)
+    points = [GroundControlPoint(row=g["py"] - y0, col=g["px"] - x0, x=g["lng"], y=g["lat"]) for g in gcps]
     affine = from_gcps(points)
     with rasterio.open(image) as src:
-        data = src.read()
+        # A part of a sheet (an inset) is warped on its own.
+        window = rasterio.windows.Window.from_slices((y0, y1 or src.height), (x0, x1 or src.width))
+        data = src.read(window=window)
+        width_px, height_px = data.shape[2], data.shape[1]
         transform, width, height = calculate_default_transform(
-            "EPSG:4326", "EPSG:3857", src.width, src.height,
-            *_bounds(affine, src.width, src.height),
+            "EPSG:4326", "EPSG:3857", width_px, height_px,
+            *_bounds(affine, width_px, height_px),
         )
         rgba = np.zeros((4, height, width), np.uint8)
         for b in range(3):
@@ -68,7 +73,7 @@ def warp(image: Path, gcps, out: Path):
                 dst_transform=transform, dst_crs="EPSG:3857", resampling=Resampling.bilinear,
             )
         reproject(
-            np.full((src.height, src.width), 255, np.uint8), rgba[3],
+            np.full((height_px, width_px), 255, np.uint8), rgba[3],
             src_transform=affine, src_crs="EPSG:4326",
             dst_transform=transform, dst_crs="EPSG:3857", resampling=Resampling.nearest,
         )
@@ -92,16 +97,20 @@ def main():
         source_id = f"map-{atlas['id']}"
         sources[source_id] = {"id": source_id, "title": f"{atlas['title']} ({CREDIT})", "url": atlas["item_url"]}
         sheets = []
-        for path in sorted(atlas_dir.glob("sheet-*.json"), key=lambda p: int(p.stem.split("-")[1])):
+        def sheet_order(p):
+            name = p.stem.split("-", 1)[1]
+            return int("".join(c for c in name if c.isdigit())), name
+
+        for path in sorted(atlas_dir.glob("sheet-*.json"), key=sheet_order):
             georef = json.loads(path.read_text())
             if len(georef["gcps"]) < 3:
                 continue
-            sheet_id = f"{atlas['id']}-{georef['sheet']}"
+            sheet_id = f"{atlas['id']}-{georef['sheet']}{georef.get('part', '')}"
             print(f"- {sheet_id} ({len(georef['gcps'])} points)", flush=True)
             image = download(georef["iiif"], RAW / atlas["id"] / f"sheet-{georef['sheet']}.jpg")
             with tempfile.TemporaryDirectory() as tmp:
                 merc = Path(tmp) / "warped.tif"
-                bounds = warp(image, georef["gcps"], merc)
+                bounds = warp(image, georef["gcps"], merc, georef.get("crop"))
                 out = OUT_DIR / f"{sheet_id}.pmtiles"
                 max_zoom = tile(merc, out)
             print(f"  -> {out.relative_to(ROOT)} ({out.stat().st_size / 1e6:.1f} MB)")

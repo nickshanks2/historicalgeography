@@ -1,0 +1,87 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 19,
+ "part": "c",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0019",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 461,
+   "py": 7164,
+   "lng": -118.4825504,
+   "lat": 34.0010709,
+   "corner": "Hill Street / Main Street"
+  },
+  {
+   "px": 1649,
+   "py": 7164,
+   "lng": -118.4819914,
+   "lat": 34.0014464,
+   "corner": "Hill Street / 2nd Street"
+  },
+  {
+   "px": 1958,
+   "py": 7164,
+   "lng": -118.4818778,
+   "lat": 34.0015381,
+   "corner": "Hill Street / 2nd Street"
+  },
+  {
+   "px": 3488,
+   "py": 7164,
+   "lng": -118.4812071,
+   "lat": 34.0019912,
+   "corner": "Hill Street / 3rd Street"
+  },
+  {
+   "px": 3815,
+   "py": 7178,
+   "lng": -118.481084,
+   "lat": 34.0020905,
+   "corner": "Hill Street / 3rd Street"
+  },
+  {
+   "px": 5658,
+   "py": 7178,
+   "lng": -118.4803244,
+   "lat": 34.0026897,
+   "corner": "Hill Street / 4th Street"
+  },
+  {
+   "px": 3755,
+   "py": 4814,
+   "lng": -118.4819959,
+   "lat": 34.0029189,
+   "corner": "sheet corner implied by the fit (scale, rotation, shift)"
+  },
+  {
+   "px": 6450,
+   "py": 4814,
+   "lng": -118.4808489,
+   "lat": 34.003754,
+   "corner": "sheet corner implied by the fit (scale, rotation, shift)"
+  },
+  {
+   "px": 6450,
+   "py": 7648,
+   "lng": -118.4797897,
+   "lat": 34.0027546,
+   "corner": "sheet corner implied by the fit (scale, rotation, shift)"
+  },
+  {
+   "px": 3755,
+   "py": 7648,
+   "lng": -118.4809366,
+   "lat": 34.0019195,
+   "corner": "sheet corner implied by the fit (scale, rotation, shift)"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  3755,
+  4814,
+  6450,
+  7648
+ ]
+}

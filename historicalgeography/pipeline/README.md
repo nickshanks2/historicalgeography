@@ -17,7 +17,7 @@ sudo apt-get install mdbtools               # reads NOAA's .mdb shoreline geodat
 ```bash
 python3 pipeline/fetch_sources.py        # downloads ~2 GB into pipeline/raw/ (gitignored)
 python3 pipeline/build_landscape.py      # -> data/features/landscape.geojson, data/tiles/landscape.pmtiles
-python3 pipeline/build_built_samples.py  # -> data/features/built.geojson (Phase 1 samples)
+python3 pipeline/build_built_samples.py  # Phase 1 samples -> data/features/built.geojson (keeps sourced features)
 ```
 
 Overlays and tracing reference:
@@ -28,6 +28,22 @@ python3 pipeline/build_osm_reference.py     # today's named streets -> data/refe
 python3 pipeline/fetch_sanborn_index.py     # LOC Sanborn atlases -> data/reference/sanborn.json
 python3 pipeline/build_sanborn.py           # pinned Sanborn sheets (data/georef/) -> overlays
 ```
+
+Sanborn atlases (after pinning sheets, or reading block corners into
+`pipeline/samples/<atlas>-corners.json`):
+
+```bash
+python3 pipeline/georef_from_corners.py sanborn-santa-monica-1902-07        # corners -> data/georef/<atlas>/sheet-*.json
+python3 pipeline/build_sanborn.py                                           # -> overlays
+python3 pipeline/extract_sanborn_buildings.py sanborn-santa-monica-1902-07  # building outlines -> built.geojson
+python3 pipeline/build_streets.py                                           # data/street_names.json -> named streets in built.geojson
+```
+
+`extract_sanborn_buildings.py` and `build_streets.py` replace only their own
+earlier output in `data/features/built.geojson` (ids `<atlas>-bldg-*` and
+`street-<year>-*`); everything else there, including features traced in
+`/admin/trace`, is kept. Correct a traced building in `/admin/trace` by
+giving it a new id (or the extractor will overwrite it on its next run).
 
 `build_landscape.py` also adds an entry to `data/sources.json` for every
 NOAA T-sheet it uses. Record any new source in `data/LICENSES.md` too.

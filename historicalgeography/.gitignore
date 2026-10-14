@@ -47,3 +47,6 @@ next-env.d.ts
 # raw source downloads (pipeline/fetch_sources.py)
 /pipeline/raw/
 __pycache__/
+
+# record of tile uploads (scripts/upload-tiles.mjs)
+.tiles-uploaded.json

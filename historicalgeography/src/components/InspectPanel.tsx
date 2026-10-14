@@ -14,7 +14,11 @@ function year(value: number | null | undefined, approx?: boolean) {
 function dateRange(f: FeatureInfo) {
   if (f.type === "landmark") return "Where it is today, shown for orientation";
   const start = year(f.start_year, f.start_approx);
-  const end = year(f.end_year, f.end_approx);
+  // An approximate end the year after the last record means "still there
+  // when last recorded; when it went isn't known yet".
+  const lastSeen =
+    f.end_approx && f.observed_year != null && f.end_year === f.observed_year + 1;
+  const end = lastSeen ? `after ${f.observed_year}` : year(f.end_year, f.end_approx);
   if (start && end) return `${start} – ${end}`;
   if (start) return `From ${start}, still exists`;
   if (end) return `Until ${end}`;

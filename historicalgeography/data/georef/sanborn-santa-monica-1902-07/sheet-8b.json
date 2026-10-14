@@ -1,0 +1,45 @@
+{
+ "atlas": "sanborn-santa-monica-1902-07",
+ "sheet": 8,
+ "part": "b",
+ "iiif": "https://tile.loc.gov/image-services/iiif/service:gmd:gmd436m:g4364m:g4364sm:g4364sm_g008361902:00836_1902-0008",
+ "width": 6450,
+ "height": 7650,
+ "gcps": [
+  {
+   "px": 286,
+   "py": 5330,
+   "lng": -118.5065585,
+   "lat": 34.0228365,
+   "corner": "Montana Avenue / 2nd Street"
+  },
+  {
+   "px": 3824,
+   "py": 5330,
+   "lng": -118.5051647,
+   "lat": 34.0216557,
+   "corner": "Idaho Avenue / 2nd Street"
+  },
+  {
+   "px": 286,
+   "py": 7256,
+   "lng": -118.5072999,
+   "lat": 34.0222387,
+   "corner": "Montana Avenue / Ocean Avenue"
+  },
+  {
+   "px": 3824,
+   "py": 7256,
+   "lng": -118.5059186,
+   "lat": 34.0210564,
+   "corner": "Idaho Avenue / Ocean Avenue"
+  }
+ ],
+ "note": "Block corners read off the sheet; real corners from OSM street centrelines offset by half the street widths printed on the sheet (pipeline/samples/sanborn-santa-monica-1902-07-corners.json).",
+ "crop": [
+  0,
+  4976,
+  4031,
+  7648
+ ]
+}
