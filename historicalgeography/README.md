@@ -36,7 +36,11 @@ One-time setup:
 4. Create an API token: **R2 → Manage R2 API Tokens → Create API token**
    with *Object Read & Write* on that bucket. Note the token and your
    **Account ID** (shown on the R2 overview page).
-5. Upload the files from your computer:
+5. Upload the files. Easiest: let GitHub do it. In the GitHub repository,
+   **Settings → Secrets and variables → Actions → New repository secret**,
+   add `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`; then **Actions →
+   Upload tiles to R2 → Run workflow**. It also runs by itself whenever tile
+   files change. Or upload from your computer:
    ```bash
    CLOUDFLARE_API_TOKEN=<token> CLOUDFLARE_ACCOUNT_ID=<account id> \
      node scripts/upload-tiles.mjs historicalgeography-tiles
