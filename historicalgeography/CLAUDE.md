@@ -76,6 +76,7 @@ Every feature carries:
 - `subtype` (optional): the source's finer class, e.g. "Valley Freshwater Marsh"
 - `observed_year` (optional): year the source map, survey or photo recorded the feature
 - `source_note` (optional): how the source mapped it, e.g. "Mapped from: Tsheet Chase 1867."
+- Buildings also: `material` (`frame` | `brick` | `stone` | `iron_or_special`, from the Sanborn colour) and `stories` (as lettered on the map, e.g. 1.5; absent where none was read). The map draws buildings in 3D at `STOREY_HEIGHT_M` per storey (`src/config/map.ts`), a rendering assumption shown as such in the inspect panel.
 
 Natural features with no known end date are kept until 1900 or the year after their source last recorded them, whichever is later, and marked `end_approx`. Phases 3 and 4 refine this from later maps.
 

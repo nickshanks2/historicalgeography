@@ -4,6 +4,7 @@ import { useMemo, type ReactNode } from "react";
 import { type Era, eraYear } from "@/config/eras";
 import type { FeatureSummary } from "@/map/useDatasets";
 import {
+  BUILDING_MATERIALS,
   BUILT,
   BUILT_LAND,
   LAND_COVER_TYPES,
@@ -38,7 +39,6 @@ const LINES: Record<"painted" | "built", Record<string, LineLook>> = {
 const BUILT_FILLS: Record<string, string> = {
   park: BUILT.park,
   pier: BUILT.pier,
-  building: BUILT.building,
 };
 
 const ICONS: Record<string, string> = {
@@ -124,13 +124,33 @@ export default function Legend({ era, features, onClose }: LegendProps) {
       ) : (
         <>
           <ul className="mt-2 grid grid-cols-2 gap-x-3 gap-y-2 text-sm">
-            {items.map((type) => (
+            {items.filter((type) => type !== "building").map((type) => (
               <li key={type} className="flex items-center gap-2">
                 <Swatch style={era.style as "painted" | "built"} type={type} />
                 <span>{TYPE_LABELS[type] ?? type}</span>
               </li>
             ))}
           </ul>
+          {items.includes("building") && (
+            <>
+              <h3 className="mt-3 text-sm text-stone-500">Buildings, by what they were built of</h3>
+              <ul className="mt-1 grid grid-cols-2 gap-x-3 gap-y-2 text-sm">
+                {BUILDING_MATERIALS.map((m) => (
+                  <li key={m.material} className="flex items-center gap-2">
+                    <span
+                      className="h-5 w-7 shrink-0 rounded-sm border border-black/10"
+                      style={{ backgroundColor: m.color }}
+                    />
+                    <span>{m.label}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-1 text-xs text-stone-500">
+                Heights from the storeys lettered on the map. Tilt the map (two fingers, or
+                right-drag) to see them in 3D.
+              </p>
+            </>
+          )}
           <p className="mt-3 text-xs text-stone-500">Tap anything on the map for its dates and sources.</p>
         </>
       )}

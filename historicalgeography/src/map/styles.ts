@@ -13,12 +13,20 @@ import { type Era, eraYear } from "@/config/eras";
 import {
   DATASETS,
   GLYPHS_URL,
+  STOREY_HEIGHT_M,
   TERRAIN_ATTRIBUTION,
   TERRAIN_EXAGGERATION,
   TERRAIN_TILES_URL,
   tileFileUrl,
 } from "@/config/map";
-import { BUILT, BUILT_LAND, LAND_COVER_TYPES, PAINTED, PAINTED_INK } from "./featureTypes";
+import {
+  BUILDING_MATERIALS,
+  BUILT,
+  BUILT_LAND,
+  LAND_COVER_TYPES,
+  PAINTED,
+  PAINTED_INK,
+} from "./featureTypes";
 import type { Overlay } from "./overlays";
 import { existsInFilter } from "./timeFilter";
 
@@ -428,11 +436,26 @@ function builtLayers(year: number): LayerSpecification[] {
       paint: { "fill-color": BUILT.pier, "fill-outline-color": "#8c7458" },
     },
     {
+      // Buildings in 3D: coloured by what they were built of, raised by
+      // their recorded storeys (one where none was read). Tilt the map to see.
       id: "hg-building",
-      type: "fill",
+      type: "fill-extrusion",
       source: "built",
       filter: typeFilter(["building"], year),
-      paint: { "fill-color": BUILT.building, "fill-outline-color": BUILT.buildingLine },
+      paint: {
+        "fill-extrusion-color": [
+          "match",
+          ["get", "material"],
+          ...BUILDING_MATERIALS.flatMap((m) => [m.material, m.color]),
+          BUILT.building,
+        ] as unknown as ExpressionSpecification,
+        "fill-extrusion-height": [
+          "*",
+          ["coalesce", ["get", "stories"], 1],
+          STOREY_HEIGHT_M,
+        ],
+        "fill-extrusion-opacity": 0.92,
+      },
     },
     {
       id: "street-labels",

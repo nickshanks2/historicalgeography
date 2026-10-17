@@ -64,6 +64,14 @@ export const BUILT = {
   label: "#4a4239",
 };
 
+/** Building colours by construction, as Sanborn mapped it (the `material` property). */
+export const BUILDING_MATERIALS = [
+  { material: "frame", label: "Wood frame", color: "#dcbf8f" },
+  { material: "brick", label: "Brick", color: "#b8614c" },
+  { material: "stone", label: "Stone", color: "#a3a9ae" },
+  { material: "iron_or_special", label: "Iron-clad or special", color: "#7d8f88" },
+] as const;
+
 export const PAINTED_INK = {
   paper: "#f1e8d4",
   water: "#4f8597",

@@ -42,6 +42,8 @@ MAX_AREA_M2 = 6000  # bigger "buildings" are the coloured sea on beach sheets
 CLOSE_DEG = 0.000007  # about 0.7 m
 EDGE_DEG = 0.000001  # about 0.1 m
 CLASSES = {1: "frame", 2: "brick", 3: "stone", 4: "iron or special"}
+# Machine-readable construction, for map colours.
+MATERIALS = {"frame": "frame", "brick": "brick", "stone": "stone", "iron or special": "iron_or_special"}
 SUBTYPES = {
     "frame": "Frame (wood) building",
     "brick": "Brick building",
@@ -202,6 +204,7 @@ def main(atlas_id, preview):
                     "id": f"{prefix}{part}-{added}",
                     "type": "building",
                     "subtype": SUBTYPES[cls],
+                    "material": MATERIALS[cls],
                     # Standing when the map was drawn; when each was built is
                     # unknown. Later atlases will set real end years.
                     "start_year": year - 2, "start_approx": True,

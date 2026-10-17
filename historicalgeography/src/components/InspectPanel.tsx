@@ -1,5 +1,6 @@
 import { CONFIDENCE_LABELS, type Era } from "@/config/eras";
-import { TYPE_LABELS } from "@/map/featureTypes";
+import { STOREY_HEIGHT_M } from "@/config/map";
+import { BUILDING_MATERIALS, TYPE_LABELS } from "@/map/featureTypes";
 import type { FeatureInfo } from "@/map/featureInfo";
 import { type SpotHistory, spotLabel } from "@/map/throughTime";
 import sources from "../../data/sources.json";
@@ -25,6 +26,11 @@ function dateRange(f: FeatureInfo) {
   return "Present in every era shown";
 }
 
+function storeys(n: number) {
+  const whole = Math.floor(n);
+  return `${whole || ""}${n % 1 ? "½" : ""}`;
+}
+
 function FeatureDetails({ feature }: { feature: FeatureInfo }) {
   const typeLabel = TYPE_LABELS[feature.type] ?? feature.type;
   const title = feature.name_tongva ?? feature.name ?? feature.name_spanish ?? typeLabel;
@@ -38,7 +44,7 @@ function FeatureDetails({ feature }: { feature: FeatureInfo }) {
       <h2 className="text-lg leading-tight font-semibold">{title}</h2>
       {otherNames.length > 0 && <p className="text-sm text-stone-600">{otherNames.join(" · ")}</p>}
       {title !== typeLabel && <p className="text-sm text-stone-500">{typeLabel}</p>}
-      {feature.subtype && feature.subtype !== title && (
+      {feature.subtype && feature.subtype !== title && !feature.material && (
         <p className="text-sm text-stone-500">{feature.subtype}</p>
       )}
 
@@ -57,10 +63,34 @@ function FeatureDetails({ feature }: { feature: FeatureInfo }) {
             <dd>{feature.observed_year}</dd>
           </>
         )}
+        {feature.type === "building" && (
+          <>
+            {feature.material && (
+              <>
+                <dt className="text-stone-500">Built of</dt>
+                <dd>
+                  {BUILDING_MATERIALS.find((m) => m.material === feature.material)?.label ??
+                    feature.material}
+                </dd>
+              </>
+            )}
+            <dt className="text-stone-500">Storeys</dt>
+            <dd>
+              {feature.stories != null
+                ? `${storeys(feature.stories)}, as lettered on the map`
+                : "1 assumed (no other number read from the map)"}
+            </dd>
+          </>
+        )}
         <dt className="text-stone-500">Confidence</dt>
         <dd>{CONFIDENCE_LABELS[feature.confidence] ?? feature.confidence}</dd>
       </dl>
       {feature.source_note && <p className="mt-2 text-sm text-stone-600">{feature.source_note}</p>}
+      {feature.type === "building" && (
+        <p className="mt-1 text-xs text-stone-500">
+          Drawn in 3D at about {STOREY_HEIGHT_M} m per storey; the height is an estimate.
+        </p>
+      )}
 
       <h3 className="mt-3 text-sm text-stone-500">Sources</h3>
       <ul className="mt-1 space-y-1 text-sm">

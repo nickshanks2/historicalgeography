@@ -18,6 +18,10 @@ export type FeatureInfo = {
   subtype?: string | null;
   /** Year the source map or survey recorded this feature. */
   observed_year?: number | null;
+  /** Buildings: construction as mapped (frame, brick, stone, iron_or_special). */
+  material?: string | null;
+  /** Buildings: storeys recorded by the source, where read. */
+  stories?: number | null;
   /** How the source mapped it, e.g. "Mapped from: Tsheet Chase 1867." */
   source_note?: string | null;
 };

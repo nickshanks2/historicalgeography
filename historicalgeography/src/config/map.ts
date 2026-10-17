@@ -11,6 +11,13 @@ export const TERRAIN_ATTRIBUTION =
   '<a href="https://github.com/tilezen/joerd/blob/master/docs/attribution.md" target="_blank" rel="noopener">Terrain: Mapzen, AWS Open Data</a>';
 export const TERRAIN_EXAGGERATION = 1.5;
 
+/**
+ * Height drawn per storey for buildings in 3D. A rendering assumption (a
+ * typical floor-to-floor height for the period), not a sourced fact: the
+ * source gives the number of storeys, which the inspect panel shows.
+ */
+export const STOREY_HEIGHT_M = 3.5;
+
 // Self-hosted label fonts for our own era styles (see data/LICENSES.md).
 export const GLYPHS_URL = "/fonts/{fontstack}/{range}.pbf";
 

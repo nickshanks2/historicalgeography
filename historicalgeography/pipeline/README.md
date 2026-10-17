@@ -36,8 +36,14 @@ Sanborn atlases (after pinning sheets, or reading block corners into
 python3 pipeline/georef_from_corners.py sanborn-santa-monica-1902-07        # corners -> data/georef/<atlas>/sheet-*.json
 python3 pipeline/build_sanborn.py                                           # -> overlays
 python3 pipeline/extract_sanborn_buildings.py sanborn-santa-monica-1902-07  # building outlines -> built.geojson
+python3 pipeline/read_sanborn_stories.py sanborn-santa-monica-1902-07       # storeys lettered on each building
 python3 pipeline/build_streets.py                                           # data/street_names.json -> named streets in built.geojson
 ```
+
+`read_sanborn_stories.py` reads the storey numbers with a small classifier
+trained on hand-labelled marks in `pipeline/samples/<atlas>-glyphs.json`;
+re-run it after the extractor (which resets the buildings). To improve it,
+add mislabelled marks to that file and re-run.
 
 `extract_sanborn_buildings.py` and `build_streets.py` replace only their own
 earlier output in `data/features/built.geojson` (ids `<atlas>-bldg-*` and
