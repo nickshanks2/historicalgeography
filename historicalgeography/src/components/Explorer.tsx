@@ -9,12 +9,10 @@ import type { SpotHistory } from "@/map/throughTime";
 import { existsIn } from "@/map/timeFilter";
 import { type Overlay, useOverlaySets } from "@/map/overlays";
 import { useDatasetSummary } from "@/map/useDatasets";
-import { DEFAULT_OVERLAY_OPACITY } from "@/config/map";
 import EraCard from "./EraCard";
 import InspectPanel from "./InspectPanel";
 import Legend from "./Legend";
 import type { FlyTarget, Tap } from "./Map";
-import OverlayPicker from "./OverlayPicker";
 import SearchBox, { type SearchResult } from "./SearchBox";
 import TimeSlider from "./TimeSlider";
 
@@ -27,21 +25,15 @@ const Map = dynamic(() => import("./Map"), {
 type Sheet =
   | { kind: "legend" }
   | { kind: "search" }
-  | { kind: "maps" }
   | { kind: "spot"; feature: FeatureInfo | null; history: SpotHistory }
   | null;
 
 const ERA_PARAM = "era";
-const MAP_PARAM = "map";
 
 /** The era in the URL (?era=1850), so a place-in-time can be shared. */
 function eraFromUrl() {
   const id = new URLSearchParams(window.location.search).get(ERA_PARAM);
   return id && ERAS.some((e) => e.id === id) ? id : null;
-}
-
-function mapFromUrl() {
-  return new URLSearchParams(window.location.search).get(MAP_PARAM);
 }
 
 function writeParam(name: string, value: string | null) {
@@ -79,18 +71,12 @@ export default function Explorer() {
     if (chosenEraId) writeParam(ERA_PARAM, chosenEraId === DEFAULT_ERA_ID ? null : chosenEraId);
   }, [chosenEraId]);
 
-  // Historical map overlay; a shared link can name one (?map=set-id).
+  // The old map of the period that the era draws underneath (see eras.ts).
   const overlaySets = useOverlaySets();
-  const urlMapId = useSyncExternalStore(noSubscription, mapFromUrl, () => null);
-  const [chosenOverlay, setOverlay] = useState<Overlay | null | undefined>(undefined);
-  const overlay = useMemo(() => {
-    if (chosenOverlay !== undefined) return chosenOverlay;
-    const set = overlaySets.find((s) => s.id === urlMapId);
-    return set ? { set, opacity: DEFAULT_OVERLAY_OPACITY } : null;
-  }, [chosenOverlay, overlaySets, urlMapId]);
-  useEffect(() => {
-    if (chosenOverlay !== undefined) writeParam(MAP_PARAM, chosenOverlay?.set.id ?? null);
-  }, [chosenOverlay]);
+  const overlay = useMemo<Overlay | null>(() => {
+    const set = era.backdrop && overlaySets.find((s) => s.id === era.backdrop!.map);
+    return set ? { set, opacity: era.backdrop!.opacity } : null;
+  }, [era, overlaySets]);
 
   const showsSamples = useMemo(() => {
     if (era.style === "modern") return false;
@@ -141,7 +127,7 @@ export default function Explorer() {
     <div className="flex h-dvh w-full flex-col">
       <div className="relative min-h-0 flex-1 overflow-hidden">
         <Map era={era} overlay={overlay} onTap={onTap} flyTo={flyTo} />
-        <EraCard era={era} showsSamples={showsSamples} />
+        <EraCard era={era} showsSamples={showsSamples} backdrop={overlay?.set ?? null} />
         {sheet === null && (
           <div className="absolute bottom-3 left-3 z-10 flex gap-2">
             <button
@@ -163,29 +149,10 @@ export default function Explorer() {
               </svg>
               Search
             </button>
-            <button
-              type="button"
-              onClick={() => setSheet({ kind: "maps" })}
-              className={`h-11 rounded-full px-4 text-sm font-medium shadow-md ${
-                overlay ? "bg-stone-800 text-white" : "bg-white/95"
-              }`}
-            >
-              Old maps
-            </button>
           </div>
         )}
         {sheet?.kind === "search" && (
           <SearchBox onSelect={onSearch} onClose={() => setSheet(null)} />
-        )}
-        {sheet?.kind === "maps" && (
-          <OverlayPicker
-            era={era}
-            sets={overlaySets}
-            overlay={overlay}
-            onChange={setOverlay}
-            onClose={() => setSheet(null)}
-            defaultOpacity={DEFAULT_OVERLAY_OPACITY}
-          />
         )}
         {sheet?.kind === "legend" && (
           <Legend era={era} features={features} onClose={() => setSheet(null)} />

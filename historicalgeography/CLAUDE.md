@@ -34,6 +34,7 @@ Eras are defined in one config file (`src/config/eras.ts`). Never hard-code era 
 - **Painted (pre-1900: 1000, 1600, 1800, 1850):** soft, hand-drawn land-cover look on terrain hillshade, with a textured fill per land type (wetland, salt marsh, dune, beach, coastal sage scrub, chaparral, grassland, oak woodland, willow/riparian, open water). Shows creeks, the era's coastline and river course, and Tongva villages and trails, with Tongva names where sources give them. 1850 adds rancho boundaries and adobes.
 - **The LA River reaches the ocean through Ballona Creek in 1000, 1600 and 1800.** It shifted to San Pedro Bay in the 1825 flood.
 - **Built (1900, 1925, 1950):** the built environment redrawn as clean styled layers: streets with their names as of that year, building footprints, piers, rail and streetcar lines and parks, plus whatever natural land cover still remained (e.g. Ballona wetlands, open fields).
+- Built eras show buildings in 3D (tilting the view when you move into one) over the era's old map (`backdrop`).
 - Every era has a legend, and tapping a feature opens an inspect panel with its name, dates, confidence and sources.
 
 ## Stack
@@ -128,7 +129,7 @@ Both pages and their APIs return 404 in production. Commit the data files they w
 
 Batch alternatives in `pipeline/` (see `pipeline/README.md`): `georef_from_corners.py` pins a whole atlas from block corners read off the sheets; `extract_sanborn_buildings.py` traces every coloured building outline (construction type from the Sanborn colour) into `built.geojson`; `build_streets.py` writes streets named as printed on each atlas, with dated renames, from `data/street_names.json`. Features seen on one map only get `start_year` two years before it (`start_approx`), `observed_year`, and end the year after (`end_approx`) until a later map extends them.
 
-Old maps for every era are offered as overlays ("Old maps" button; `?map=<set>` in links): built by `pipeline/build_overlays.py` (USGS topos, NOAA T-sheets, from `pipeline/overlays.json`) and `pipeline/build_sanborn.py` (Sanborn sheets).
+Old maps are built by `pipeline/build_overlays.py` (USGS topos, NOAA T-sheets, from `pipeline/overlays.json`) and `pipeline/build_sanborn.py` (Sanborn sheets). The era slider is the only control: an era can draw an old map of its period underneath our layers (`backdrop` in `src/config/eras.ts`; the era card names it), strongly where we haven't redrawn the period yet. There is no separate old-map toggle; the tracing tools still pick any old map.
 
 ## Key sources (start here)
 

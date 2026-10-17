@@ -1,8 +1,9 @@
 import { CONFIDENCE_LABELS, type Era } from "@/config/eras";
+import type { OverlaySet } from "@/map/overlays";
 
-type EraCardProps = { era: Era; showsSamples: boolean };
+type EraCardProps = { era: Era; showsSamples: boolean; backdrop: OverlaySet | null };
 
-export default function EraCard({ era, showsSamples }: EraCardProps) {
+export default function EraCard({ era, showsSamples, backdrop }: EraCardProps) {
   return (
     <div
       aria-live="polite"
@@ -17,6 +18,9 @@ export default function EraCard({ era, showsSamples }: EraCardProps) {
       <p className="text-xs leading-tight text-stone-700">
         Confidence: {CONFIDENCE_LABELS[era.confidence]}
       </p>
+      {backdrop && (
+        <p className="text-xs leading-tight text-stone-700">Underneath: {backdrop.title}</p>
+      )}
       {showsSamples && (
         <p className="mt-1 rounded bg-amber-100 px-1.5 py-0.5 text-[11px] leading-tight text-amber-900">
           Includes placeholder features, labelled when tapped

@@ -19,6 +19,12 @@ export type Era = {
   /** Lowest confidence of anything shown in this era. */
   confidence: Confidence | "documented-inferred";
   style: EraStyle;
+  /**
+   * An old map of the period drawn under our layers (an overlay set id from
+   * data/overlays.json), so the era shows the period everywhere, including
+   * where we haven't redrawn it yet. Stronger where we have drawn less.
+   */
+  backdrop?: { map: string; opacity: number };
 };
 
 export const ERAS: readonly Era[] = [
@@ -38,9 +44,30 @@ export const ERAS: readonly Era[] = [
     confidence: "documented-inferred",
     style: "painted",
   },
-  { id: "1900", label: "1900", year: 1900, confidence: "documented", style: "built" },
-  { id: "1925", label: "1925", year: 1925, confidence: "documented", style: "built" },
-  { id: "1950", label: "1950", year: 1950, confidence: "documented", style: "built" },
+  {
+    id: "1900",
+    label: "1900",
+    year: 1900,
+    confidence: "documented",
+    style: "built",
+    backdrop: { map: "usgs-62500-1900", opacity: 0.45 },
+  },
+  {
+    id: "1925",
+    label: "1925",
+    year: 1925,
+    confidence: "documented",
+    style: "built",
+    backdrop: { map: "usgs-24000-1920s", opacity: 0.85 },
+  },
+  {
+    id: "1950",
+    label: "1950",
+    year: 1950,
+    confidence: "documented",
+    style: "built",
+    backdrop: { map: "usgs-24000-1950", opacity: 0.85 },
+  },
   { id: "today", label: "Today", year: null, confidence: "documented", style: "modern" },
 ];
 

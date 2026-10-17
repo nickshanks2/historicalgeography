@@ -224,6 +224,19 @@ export default function Map({ era, overlay, onTap, flyTo }: MapProps) {
     }
   }, [overlay, ready]);
 
+  // Moving into a built era from above tilts the view, so its buildings
+  // read in 3D (a camera that is already tilted is left alone).
+  const lastStyleRef = useRef(era.style);
+  useEffect(() => {
+    const map = mapRef.current;
+    const from = lastStyleRef.current;
+    lastStyleRef.current = era.style;
+    if (!ready || !map || from === "built" || era.style !== "built") return;
+    if (map.getPitch() < 20 && map.getZoom() >= 13) {
+      map.easeTo({ pitch: 55, duration: 1200, essential: true });
+    }
+  }, [era, ready]);
+
   useEffect(() => {
     if (!ready || !flyTo) return;
     mapRef.current?.flyTo({
