@@ -22,6 +22,21 @@ for (const key of ["CLOUDFLARE_API_TOKEN", "CLOUDFLARE_ACCOUNT_ID"]) {
   }
 }
 
+const wrangler = (args, opts = {}) =>
+  execFileSync("npx", ["--yes", "wrangler@4", ...args], { stdio: "inherit", ...opts });
+
+// Say which account and bucket this is, and what buckets the token can see,
+// so a "bucket does not exist" error can be traced to the right setting.
+const account = process.env.CLOUDFLARE_ACCOUNT_ID;
+console.log(`Cloudflare account ending …${account.slice(-4)}, bucket "${bucket}"`);
+try {
+  wrangler(["r2", "bucket", "list"]);
+} catch {
+  console.log("(this token may not list buckets; that's fine if it is limited to one bucket)");
+}
+// Buckets created with a jurisdiction (EU, FedRAMP) must be named with it.
+const jurisdiction = process.env.R2_JURISDICTION ? ["--jurisdiction", process.env.R2_JURISDICTION] : [];
+
 const LOG = ".tiles-uploaded.json";
 const uploaded = existsSync(LOG) ? JSON.parse(readFileSync(LOG, "utf8")) : {};
 const files = ["tiles", "overlays"].flatMap((dir) =>
@@ -34,12 +49,8 @@ for (const path of files) {
   const size = statSync(path).size;
   if (uploaded[path] === size) continue;
   console.log(`upload ${path} (${(size / 1e6).toFixed(1)} MB)`);
-  execFileSync(
-    "npx",
-    ["--yes", "wrangler@4", "r2", "object", "put", `${bucket}/${path}`, "--file", path,
-     "--content-type", "application/octet-stream", "--remote"],
-    { stdio: "inherit" },
-  );
+  wrangler(["r2", "object", "put", `${bucket}/${path}`, "--file", path,
+            "--content-type", "application/octet-stream", "--remote", ...jurisdiction]);
   uploaded[path] = size;
   writeFileSync(LOG, JSON.stringify(uploaded, null, 1));
 }
